@@ -5,9 +5,13 @@ Channel-agnostic interface with immediate alerts and daily digests.
 """
 
 import json
+import os
+import asyncio
+import aiohttp
 from datetime import datetime, time
 from typing import Dict, List, Any, Optional
 from enum import Enum
+from config import load_config, get_telegram_config
 
 
 class AlertPriority(Enum):
@@ -228,19 +232,16 @@ def _send_slack_alert(title: str, body: str, priority: AlertPriority) -> bool:
 
 
 def _load_config() -> Dict[str, Any]:
-    """Load configuration from config.json file.
+    """Load configuration using the new environment-aware config system.
     
     Returns:
         Configuration dictionary
         
     Raises:
         FileNotFoundError: When config.json is missing
+        ValueError: When required environment variables are missing
     """
-    try:
-        with open('config.json', 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError("config.json not found in project root")
+    return load_config()
 
 
 def _load_digest_queue() -> List[Dict[str, Any]]:

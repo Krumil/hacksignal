@@ -70,16 +70,22 @@ data/enriched/*
 !data/raw/.gitkeep
 !data/enriched/.gitkeep
 
-# Sensitive Configuration
+# Sensitive Configuration - CRITICAL SECURITY
+config.json
 config.local.json
 .env.local
 .env.production
+.env.development
 
 # API Credentials (CRITICAL: Never commit these)
 **/api_keys.json
 **/credentials.json
 **/.twitter_api_key
 **/.x_api_key
+
+# Environment Variables
+.env*
+!.env.example
 
 # Generated Files
 fixtures/sample_tweets.json
@@ -136,4 +142,3 @@ site/
 
 # Local config overrides
 config.*.json
-!config.json 

@@ -14,7 +14,7 @@
     },
     "telegram": {
         "enabled": true,
-        "bot_token": "7529490799:AAE6Aw2LAUleIHCiBjGg3hdaCPAWV6-pb40",
+        "bot_token": "REPLACE_WITH_TELEGRAM_BOT_TOKEN_ENV_VAR",
         "channel_id": "-1002694341917",
         "max_tweets_to_send": 15,
         "min_score_to_send": 0.3

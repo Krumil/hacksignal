@@ -5,7 +5,8 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Clock, DollarSign, Search, Trophy, Users } from "lucide-react";
+import { Clock, DollarSign, Search, Trophy, Users, RefreshCw, AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // Types
 interface HackathonCardProps {
@@ -19,6 +20,9 @@ interface HackathonCardProps {
 
 interface HackathonDashboardProps {
     hackathons: HackathonCardProps[];
+    isLoading?: boolean;
+    error?: string;
+    onRefresh?: () => void;
 }
 
 interface GridPatternProps {
@@ -146,7 +150,7 @@ const HackathonCard = ({ title, organizer, prizePool, duration, relevanceScore, 
 };
 
 // Main Dashboard Component
-const HackathonDashboard = ({ hackathons }: HackathonDashboardProps) => {
+const HackathonDashboard = ({ hackathons, isLoading, error, onRefresh }: HackathonDashboardProps) => {
     const [searchQuery, setSearchQuery] = useState("");
     const [prizeRange, setPrizeRange] = useState([0, 50000]);
     const [durationRange, setDurationRange] = useState([1, 30]);
@@ -164,7 +168,8 @@ const HackathonDashboard = ({ hackathons }: HackathonDashboardProps) => {
             hackathon.organizer.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesPrize = hackathon.prizePool >= prizeRange[0] && hackathon.prizePool <= prizeRange[1];
         const matchesDuration = hackathon.duration >= durationRange[0] && hackathon.duration <= durationRange[1];
-        const matchesTab = activeTab === "all" || hackathon.tags.includes(activeTab);
+        const matchesTab =
+            activeTab === "all" || hackathon.tags.some((tag) => tag.toLowerCase().includes(activeTab.toLowerCase()));
 
         return matchesSearch && matchesPrize && matchesDuration && matchesTab;
     });
@@ -215,9 +220,30 @@ const HackathonDashboard = ({ hackathons }: HackathonDashboardProps) => {
         <div className="container mx-auto py-8 px-4">
             <div className="flex flex-col space-y-6">
                 <div className="flex flex-col space-y-2">
-                    <h1 className="text-3xl font-bold">Hackathon Dashboard</h1>
-                    <p className="text-muted-foreground">Discover and join exciting hackathons from around the world</p>
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <h1 className="text-3xl font-bold">Hackathon Dashboard</h1>
+                            <p className="text-muted-foreground">
+                                Discover and join exciting hackathons from around the world
+                            </p>
+                        </div>
+                        <Button onClick={onRefresh} disabled={isLoading} variant="outline" size="sm">
+                            <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? "animate-spin" : ""}`} />
+                            Refresh Data
+                        </Button>
+                    </div>
                 </div>
+
+                {error && (
+                    <Card className="border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950">
+                        <CardContent className="pt-6">
+                            <div className="flex items-center space-x-2 text-red-600 dark:text-red-400">
+                                <AlertCircle className="h-4 w-4" />
+                                <p className="text-sm">{error}</p>
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-1 space-y-6">
@@ -292,45 +318,83 @@ const HackathonDashboard = ({ hackathons }: HackathonDashboardProps) => {
                             </CardHeader>
                             <CardContent>
                                 <div className="space-y-4">
-                                    {hackathons
-                                        .sort((a, b) => b.relevanceScore - a.relevanceScore)
-                                        .slice(0, 3)
-                                        .map((hackathon, index) => (
-                                            <div key={index} className="flex items-center space-x-3">
-                                                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
-                                                    <Trophy className="h-4 w-4" />
+                                    {isLoading ? (
+                                        <div className="space-y-3">
+                                            {[1, 2, 3].map((i) => (
+                                                <div key={i} className="animate-pulse flex items-center space-x-3">
+                                                    <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
+                                                    <div className="flex-1 space-y-1">
+                                                        <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                                                        <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <p className="text-sm font-medium">{hackathon.title}</p>
-                                                    <p className="text-xs text-muted-foreground">
-                                                        {hackathon.organizer}
-                                                    </p>
+                                            ))}
+                                        </div>
+                                    ) : hackathons.length > 0 ? (
+                                        hackathons
+                                            .sort((a, b) => b.relevanceScore - a.relevanceScore)
+                                            .slice(0, 3)
+                                            .map((hackathon, index) => (
+                                                <div key={index} className="flex items-center space-x-3">
+                                                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
+                                                        <Trophy className="h-4 w-4" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-sm font-medium">{hackathon.title}</p>
+                                                        <p className="text-xs text-muted-foreground">
+                                                            {hackathon.organizer}
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            ))
+                                    ) : (
+                                        <p className="text-sm text-muted-foreground">No hackathons available</p>
+                                    )}
                                 </div>
                             </CardContent>
                         </Card>
                     </div>
 
                     <div className="lg:col-span-2">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {filteredHackathons.length > 0 ? (
-                                filteredHackathons.map((hackathon, index) => (
-                                    <HackathonCard key={index} {...hackathon} />
-                                ))
-                            ) : (
-                                <div className="lg:col-span-2 flex flex-col items-center justify-center p-12 text-center">
-                                    <Search className="h-12 w-12 text-muted-foreground mb-4" />
-                                    <h3 className="text-lg font-medium">No hackathons found</h3>
-                                    <p className="text-muted-foreground">
-                                        Try adjusting your filters to find more hackathons
-                                    </p>
-                                </div>
-                            )}
-                        </div>
+                        {isLoading ? (
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                {[1, 2, 3, 4].map((i) => (
+                                    <div key={i} className="animate-pulse">
+                                        <Card className="h-64">
+                                            <CardHeader>
+                                                <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+                                                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <div className="space-y-3">
+                                                    <div className="h-4 bg-gray-200 rounded"></div>
+                                                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                {filteredHackathons.length > 0 ? (
+                                    filteredHackathons.map((hackathon, index) => (
+                                        <HackathonCard key={index} {...hackathon} />
+                                    ))
+                                ) : (
+                                    <div className="lg:col-span-2 flex flex-col items-center justify-center p-12 text-center">
+                                        <Search className="h-12 w-12 text-muted-foreground mb-4" />
+                                        <h3 className="text-lg font-medium">No hackathons found</h3>
+                                        <p className="text-muted-foreground">
+                                            Try adjusting your filters to find more hackathons
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        )}
                         <div className="mt-4 text-sm text-muted-foreground">
                             Showing {filteredHackathons.length} of {hackathons.length} hackathons
+                            {isLoading && " (Loading...)"}
                         </div>
                     </div>
                 </div>
@@ -339,58 +403,88 @@ const HackathonDashboard = ({ hackathons }: HackathonDashboardProps) => {
     );
 };
 
-// Example usage with sample data
+// Main page component with API integration
 export default function Home() {
-    const sampleHackathons: HackathonCardProps[] = [
-        {
-            title: "AI Innovation Challenge",
-            organizer: "TechCorp",
-            prizePool: 25000,
-            duration: 14,
-            relevanceScore: 95,
-            tags: ["AI", "Machine Learning", "Innovation"],
-        },
-        {
-            title: "Blockchain Builders Hackathon",
-            organizer: "CryptoFoundation",
-            prizePool: 15000,
-            duration: 7,
-            relevanceScore: 88,
-            tags: ["Crypto", "Blockchain", "Web3"],
-        },
-        {
-            title: "Global AI Summit Hackathon",
-            organizer: "AI Alliance",
-            prizePool: 30000,
-            duration: 21,
-            relevanceScore: 92,
-            tags: ["AI", "Data Science", "NLP"],
-        },
-        {
-            title: "DeFi Development Challenge",
-            organizer: "Ethereum Foundation",
-            prizePool: 20000,
-            duration: 10,
-            relevanceScore: 85,
-            tags: ["Crypto", "DeFi", "Smart Contracts"],
-        },
-        {
-            title: "Computer Vision Hackathon",
-            organizer: "Vision Tech",
-            prizePool: 12000,
-            duration: 5,
-            relevanceScore: 78,
-            tags: ["AI", "Computer Vision", "Deep Learning"],
-        },
-        {
-            title: "NFT Creation Challenge",
-            organizer: "Digital Art Collective",
-            prizePool: 8000,
-            duration: 3,
-            relevanceScore: 72,
-            tags: ["Crypto", "NFT", "Digital Art"],
-        },
-    ];
+    const [hackathons, setHackathons] = useState<HackathonCardProps[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | undefined>(undefined);
 
-    return <HackathonDashboard hackathons={sampleHackathons} />;
+    // Transform tweet data to hackathon format
+    const transformTweetToHackathon = (tweet: any): HackathonCardProps => {
+        // This is a simple transformation - you may need to adjust based on your actual tweet data structure
+        return {
+            title: tweet.title || tweet.text?.substring(0, 50) + "..." || "Hackathon Opportunity",
+            organizer: tweet.organizer || tweet.user?.name || "Unknown Organizer",
+            prizePool: tweet.prizePool || Math.floor(Math.random() * 50000) + 5000, // Random if not available
+            duration: tweet.duration || Math.floor(Math.random() * 21) + 3, // Random 3-23 days
+            relevanceScore: tweet.relevanceScore || tweet.score || Math.floor(Math.random() * 40) + 60,
+            tags: tweet.tags || tweet.hashtags || ["Hackathon", "Competition"],
+        };
+    };
+
+    const fetchHackathons = async () => {
+        setIsLoading(true);
+        setError(undefined);
+
+        try {
+            const response = await fetch("/api/hackathons");
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || "Failed to fetch hackathons");
+            }
+
+            // Transform the data based on the source
+            let transformedHackathons: HackathonCardProps[] = [];
+
+            if (data.source === "backend_api" && data.hackathons) {
+                // Transform tweet data from backend to hackathon format
+                transformedHackathons = data.hackathons.map(transformTweetToHackathon);
+            } else if (data.source === "fallback_data") {
+                // Use fallback data as-is (already in correct format)
+                transformedHackathons = data.hackathons;
+                setError("Using fallback data - backend not available");
+            } else if (data.hackathons) {
+                // Direct hackathon data
+                transformedHackathons = data.hackathons;
+            }
+
+            setHackathons(transformedHackathons);
+        } catch (err) {
+            console.error("Failed to fetch hackathons:", err);
+            setError(err instanceof Error ? err.message : "Failed to fetch hackathons");
+            // Set some fallback data
+            setHackathons([
+                {
+                    title: "AI Innovation Challenge",
+                    organizer: "TechCorp",
+                    prizePool: 25000,
+                    duration: 14,
+                    relevanceScore: 95,
+                    tags: ["AI", "Machine Learning", "Innovation"],
+                },
+                {
+                    title: "Blockchain Builders Hackathon",
+                    organizer: "CryptoFoundation",
+                    prizePool: 15000,
+                    duration: 7,
+                    relevanceScore: 88,
+                    tags: ["Crypto", "Blockchain", "Web3"],
+                },
+            ]);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleRefresh = async () => {
+        await fetchHackathons();
+    };
+
+    // Fetch data on component mount
+    useEffect(() => {
+        fetchHackathons();
+    }, []);
+
+    return <HackathonDashboard hackathons={hackathons} isLoading={isLoading} error={error} onRefresh={handleRefresh} />;
 }

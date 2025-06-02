@@ -6,10 +6,12 @@ Implements exponential back-off for rate-limit handling.
 
 import json
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Any
 import os
 import requests
+import glob
+from config import load_config
 
 
 def authenticate() -> bool:
@@ -69,7 +71,7 @@ def poll_sources() -> List[Dict[str, Any]]:
     """
     try:
         # Load configuration and sources
-        config = load_config()
+        config = _load_config()
         sources = load_sources()
         
         # Get API credentials
@@ -137,7 +139,7 @@ def _fetch_tweets_by_query(url: str, headers: Dict[str, str], query: str, config
         List of tweet objects
     """
 
-    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    yesterday = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
     payload = {
         "query": query,
         "limit": 5, 
@@ -228,7 +230,7 @@ def store_raw_tweet(tweet: Dict[str, Any]) -> str:
     
     try:
         # Create timestamp and filename
-        timestamp = datetime.now().isoformat()
+        timestamp = datetime.now(timezone.utc).isoformat()
         tweet_id = tweet['id']
         filename = f"tweet_{tweet_id}_{timestamp.replace(':', '-')}.json"
         filepath = os.path.join("data", "raw", filename)
@@ -264,7 +266,7 @@ def handle_rate_limit(retry_count: int) -> float:
     Raises:
         MaxRetriesExceededError: When max retries reached
     """
-    config = load_config()
+    config = _load_config()
     max_retries = config.get('api', {}).get('max_retries', 3)
     backoff_factor = config.get('api', {}).get('backoff_factor', 2)
     
@@ -277,23 +279,17 @@ def handle_rate_limit(retry_count: int) -> float:
     return min(wait_time, 60)  # Cap at 60 seconds
 
 
-def load_config() -> Dict[str, Any]:
-    """Load configuration from config.json file.
+def _load_config() -> Dict[str, Any]:
+    """Load configuration using the new environment-aware config system.
     
     Returns:
-        Configuration dictionary with all settings
+        Configuration dictionary
         
     Raises:
         FileNotFoundError: When config.json is missing
-        ValueError: When config.json contains invalid JSON
+        ValueError: When required environment variables are missing
     """
-    try:
-        with open('config.json', 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError("config.json not found in project root")
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Invalid JSON in config.json: {e}")
+    return load_config()
 
 
 def load_sources() -> Dict[str, Any]:

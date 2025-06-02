@@ -10,8 +10,11 @@ import glob
 import asyncio
 import telegram
 import shutil
-from typing import Dict, List, Any, Tuple
+import re
+import aiohttp
+from typing import Dict, List, Any, Tuple, Union, Optional
 from datetime import datetime
+from config import load_config, get_telegram_config, get_thresholds_config
 
 
 def _find_project_root() -> str:
@@ -155,27 +158,16 @@ def assess_topic_confidence(text: str) -> float:
 
 
 def _load_config() -> Dict[str, Any]:
-    """Load configuration from config.json file.
+    """Load configuration using the new environment-aware config system.
     
     Returns:
         Configuration dictionary with thresholds
         
     Raises:
         FileNotFoundError: When config.json is missing
-        JSONDecodeError: When config.json is invalid
+        ValueError: When required environment variables are missing
     """
-    # Get the directory where this script is located
-    script_dir = _find_project_root()
-    
-    config_path = os.path.join(script_dir, 'config.json')
-    
-    try:
-        with open(config_path, 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError("config.json not found in project root")
-    except json.JSONDecodeError as e:
-        raise json.JSONDecodeError(f"Invalid JSON in config.json: {e}")
+    return load_config()
 
 
 def _load_keyword_patterns() -> List[str]:
