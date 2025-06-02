@@ -2,10 +2,19 @@ import os
 import json
 from typing import Dict, Any, Optional
 
+# Try to load python-dotenv for .env file support
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # Load .env file if it exists
+except ImportError:
+    # python-dotenv not installed, rely on system environment variables
+    pass
+
 def load_config() -> Dict[str, Any]:
     """Load configuration from config.json and environment variables.
     
     Environment variables take precedence over config.json for sensitive data.
+    Telegram credentials are loaded exclusively from environment variables.
     
     Returns:
         Configuration dictionary with all settings
@@ -26,25 +35,56 @@ def load_config() -> Dict[str, Any]:
         except FileNotFoundError:
             raise FileNotFoundError("config.json not found in backend/ or current directory")
     
-    # Override sensitive values with environment variables
-    telegram_config = config.get('telegram', {})
+    # Build telegram configuration entirely from environment variables
+    telegram_config = {
+        'enabled': _get_env_bool('TELEGRAM_ENABLED', True),
+        'max_tweets_to_send': _get_env_int('TELEGRAM_MAX_TWEETS_TO_SEND', 15),
+        'min_score_to_send': _get_env_float('TELEGRAM_MIN_SCORE_TO_SEND', 0.3)
+    }
     
-    # Get bot token from environment (required)
+    # Get required telegram credentials from environment
     bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-    if bot_token:
-        telegram_config['bot_token'] = bot_token
-    elif not telegram_config.get('bot_token'):
-        raise ValueError("TELEGRAM_BOT_TOKEN environment variable is required")
-    
-    # Get channel ID from environment (optional override)
     channel_id = os.getenv('TELEGRAM_CHANNEL_ID')
-    if channel_id:
-        telegram_config['channel_id'] = channel_id
     
-    # Update config with potentially modified telegram settings
+    if not bot_token:
+        raise ValueError("TELEGRAM_BOT_TOKEN environment variable is required")
+    if not channel_id:
+        raise ValueError("TELEGRAM_CHANNEL_ID environment variable is required")
+    
+    telegram_config['bot_token'] = bot_token
+    telegram_config['channel_id'] = channel_id
+    
+    # Replace any telegram config from JSON with environment-based config
     config['telegram'] = telegram_config
     
     return config
+
+def _get_env_bool(key: str, default: bool) -> bool:
+    """Get boolean environment variable with default fallback."""
+    value = os.getenv(key)
+    if value is None:
+        return default
+    return value.lower() in ('true', '1', 'yes', 'on')
+
+def _get_env_int(key: str, default: int) -> int:
+    """Get integer environment variable with default fallback."""
+    value = os.getenv(key)
+    if value is None:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        return default
+
+def _get_env_float(key: str, default: float) -> float:
+    """Get float environment variable with default fallback."""
+    value = os.getenv(key)
+    if value is None:
+        return default
+    try:
+        return float(value)
+    except ValueError:
+        return default
 
 def get_telegram_config() -> Dict[str, Any]:
     """Get Telegram-specific configuration.

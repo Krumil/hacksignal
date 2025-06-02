@@ -11,12 +11,5 @@
         "poll_interval_seconds": 300,
         "alert_threshold_percentile": 90,
         "digest_send_time": "18:00"
-    },
-    "telegram": {
-        "enabled": true,
-        "bot_token": "REPLACE_WITH_TELEGRAM_BOT_TOKEN_ENV_VAR",
-        "channel_id": "-1002694341917",
-        "max_tweets_to_send": 15,
-        "min_score_to_send": 0.3
     }
 }
