@@ -1,0 +1,22 @@
+{
+    "thresholds": {
+        "follower_min": 1000,
+        "follower_max": 50000,
+        "prize_min_usd": 2160,
+        "prize_max_usd": 50000,
+        "max_duration_hours": 2160,
+        "relevance_threshold": 0.4
+    },
+    "processing": {
+        "poll_interval_seconds": 300,
+        "alert_threshold_percentile": 90,
+        "digest_send_time": "18:00"
+    },
+    "telegram": {
+        "enabled": true,
+        "bot_token": "7529490799:AAE6Aw2LAUleIHCiBjGg3hdaCPAWV6-pb40",
+        "channel_id": "-1002694341917",
+        "max_tweets_to_send": 15,
+        "min_score_to_send": 0.3
+    }
+}

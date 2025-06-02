@@ -1,0 +1,564 @@
+{
+  "collected_at": "2025-06-02T10:57:28.798562",
+  "tweet_data": {
+    "id": "1929119325031706988",
+    "text": "Inspired by the recent hackathon collaboration between @Humanityprot and @blockchainkor, our team (@CyberRektruck and me) partnered with Humanity to host Humanity Ideathon last week. \n\nThe judging criteria for this event were designed to reward not just technical depth but also the clarity and originality of ideas. Submissions were evaluated based on:\n\n· Creativity: Originality of the idea\n· Relevance: Effective use of Humanity Protocol technology\n· Impact: Potential to influence the Web3 ecosystem\n· Clarity: Conciseness and effectiveness of idea communication\n· Feasibility: Practicality of implementation\n\nWhile factors like length and effort were considered, these were not decisive; even concise submissions that clearly delivered a strong idea aligned with the event’s purpose received high marks.\n\nHumanTrade: 1st Place Winner and a Paradigm Shift in P2P Trading by @0xKimBab.\n\nIntroducing HumanTrade\nHumanTrade is a next-generation P2P trading platform built on the Humanity Protocol, designed to restore trust and security in crypto transactions while preserving the core values of decentralization and privacy.\n\nWhy HumanTrade?\nCryptocurrency’s founding ideals—decentralization and anonymity—have enabled borderless, peer-to-peer transactions. However, these same features have also facilitated scams, money laundering, and other illicit activities, eroding public trust. HumanTrade was created to address these challenges: it aims to protect honest users’ privacy while deterring malicious actors, using innovative biometric and zero-knowledge proof (ZK Proof) technologies.\n\nHow HumanTrade Works\nThe HumanTrade platform enables secure, privacy-preserving P2P transactions by integrating Humanity Protocol’s decentralized identity and biometric verification. Here’s how a typical transaction unfolds:\n\n1. Transaction Initiation & Biometric Verification: \nWhen creating a trade, users authenticate themselves using Humanity Protocol’s biometric methods—such as palm vein, iris, or fingerprint scans.\n\n2. Permissioned Access to KYC/Social Data: HumanTrade or the user requests permissioned access to KYC or social credentials as needed for the transaction.\n\n3. Privacy Assurance via ZK Proofs: \nAccess rights and sensitive data are managed using ZK Proofs, ensuring that no personal information is stored or accessed unless absolutely necessary, and only in the event of a security issue.\n\n4. Token Deposit for Transaction Security: \nThe user deposits the required amount of tokens to initiate the trade and minimize potential risks.\n\n5. Counterparty Deposit:\nThe counterparty deposits their tokens to confirm participation.\n\n6. Completion or Dispute Resolution: \n· If both parties are satisfied, they confirm and complete the transaction. \n· If fraud or suspicious activity is detected, users can flag the transaction. \n· Upon a report, HumanTrade collects all relevant KYC, social, and wallet data of the suspected scammer. \n· This information is then provided to law enforcement or blockchain investigators as needed.\n\n7. Finalization: \nThe transaction is finalized, with all parties protected by Humanity Protocol’s privacy-preserving identity framework.\n\nThe HumanTrade Vision\nHumanTrade’s goal is to create a crypto trading environment where trust is so robust that even high-value or sensitive transactions can occur safely and transparently. By leveraging Humanity Protocol’s decentralized, biometric-based identity and ZK Proofs, HumanTrade ensures honest users retain full privacy, while malicious actors can be reliably identified and excluded from the ecosystem.\n\n(You can find more information on the website he created : https://t.co/M9dFmJxNP0)\n\nConclusion: Expanding the Horizons of Decentralized Identity\nThe Humanity Ideathon revealed just how versatile Humanity’s technology can be enabling applications from P2P authentication all the way to digital legacy management and beyond. Building on these ideas, I hope we can continue to shape a future where Humanity’s technology is truly put to use in the real world.\n\nFinally, I would like to thank @Humanity, @TK_Humanity,  and especially @CyberRektruck, who joined me as a judge, for their dedication to this event.\n\n(You can learn more about the second to fifth place award-winning projects in the next page)",
+    "user": {
+      "screen_name": "hyeon__dev",
+      "followers_count": 2728,
+      "name": "Hyeon",
+      "verified": false
+    },
+    "created_at": "Sun Jun 01 10:14:23 +0000 2025",
+    "favorite_count": 54,
+    "retweet_count": 5,
+    "reply_count": 27,
+    "lang": "en",
+    "_raw_api_response": {
+      "tweet_id": "1929119325031706988",
+      "creation_date": "Sun Jun 01 10:14:23 +0000 2025",
+      "text": "Inspired by the recent hackathon collaboration between @Humanityprot and @blockchainkor, our team (@CyberRektruck and me) partnered with Humanity to host Humanity Ideathon last week. \n\nThe judging criteria for this event were designed to reward not just technical depth but also the clarity and originality of ideas. Submissions were evaluated based on:\n\n· Creativity: Originality of the idea\n· Relevance: Effective use of Humanity Protocol technology\n· Impact: Potential to influence the Web3 ecosystem\n· Clarity: Conciseness and effectiveness of idea communication\n· Feasibility: Practicality of implementation\n\nWhile factors like length and effort were considered, these were not decisive; even concise submissions that clearly delivered a strong idea aligned with the event’s purpose received high marks.\n\nHumanTrade: 1st Place Winner and a Paradigm Shift in P2P Trading by @0xKimBab.\n\nIntroducing HumanTrade\nHumanTrade is a next-generation P2P trading platform built on the Humanity Protocol, designed to restore trust and security in crypto transactions while preserving the core values of decentralization and privacy.\n\nWhy HumanTrade?\nCryptocurrency’s founding ideals—decentralization and anonymity—have enabled borderless, peer-to-peer transactions. However, these same features have also facilitated scams, money laundering, and other illicit activities, eroding public trust. HumanTrade was created to address these challenges: it aims to protect honest users’ privacy while deterring malicious actors, using innovative biometric and zero-knowledge proof (ZK Proof) technologies.\n\nHow HumanTrade Works\nThe HumanTrade platform enables secure, privacy-preserving P2P transactions by integrating Humanity Protocol’s decentralized identity and biometric verification. Here’s how a typical transaction unfolds:\n\n1. Transaction Initiation & Biometric Verification: \nWhen creating a trade, users authenticate themselves using Humanity Protocol’s biometric methods—such as palm vein, iris, or fingerprint scans.\n\n2. Permissioned Access to KYC/Social Data: HumanTrade or the user requests permissioned access to KYC or social credentials as needed for the transaction.\n\n3. Privacy Assurance via ZK Proofs: \nAccess rights and sensitive data are managed using ZK Proofs, ensuring that no personal information is stored or accessed unless absolutely necessary, and only in the event of a security issue.\n\n4. Token Deposit for Transaction Security: \nThe user deposits the required amount of tokens to initiate the trade and minimize potential risks.\n\n5. Counterparty Deposit:\nThe counterparty deposits their tokens to confirm participation.\n\n6. Completion or Dispute Resolution: \n· If both parties are satisfied, they confirm and complete the transaction. \n· If fraud or suspicious activity is detected, users can flag the transaction. \n· Upon a report, HumanTrade collects all relevant KYC, social, and wallet data of the suspected scammer. \n· This information is then provided to law enforcement or blockchain investigators as needed.\n\n7. Finalization: \nThe transaction is finalized, with all parties protected by Humanity Protocol’s privacy-preserving identity framework.\n\nThe HumanTrade Vision\nHumanTrade’s goal is to create a crypto trading environment where trust is so robust that even high-value or sensitive transactions can occur safely and transparently. By leveraging Humanity Protocol’s decentralized, biometric-based identity and ZK Proofs, HumanTrade ensures honest users retain full privacy, while malicious actors can be reliably identified and excluded from the ecosystem.\n\n(You can find more information on the website he created : https://t.co/M9dFmJxNP0)\n\nConclusion: Expanding the Horizons of Decentralized Identity\nThe Humanity Ideathon revealed just how versatile Humanity’s technology can be enabling applications from P2P authentication all the way to digital legacy management and beyond. Building on these ideas, I hope we can continue to shape a future where Humanity’s technology is truly put to use in the real world.\n\nFinally, I would like to thank @Humanity, @TK_Humanity,  and especially @CyberRektruck, who joined me as a judge, for their dedication to this event.\n\n(You can learn more about the second to fifth place award-winning projects in the next page)",
+      "media_url": [
+        "https://pbs.twimg.com/media/GsWYN6rbsAAFtgn.jpg",
+        "https://pbs.twimg.com/media/GsWYkvlasAADBMO.jpg",
+        "https://pbs.twimg.com/media/GsWYvlZa4AAOMk5.jpg",
+        "https://pbs.twimg.com/media/GsWbq5raYAAz8I7.jpg"
+      ],
+      "video_url": null,
+      "user": {
+        "creation_date": "Wed Oct 13 17:46:38 +0000 2021",
+        "user_id": "1448344399931326464",
+        "username": "hyeon__dev",
+        "name": "Hyeon",
+        "follower_count": 2728,
+        "following_count": 1705,
+        "favourites_count": 4803,
+        "is_private": null,
+        "is_verified": false,
+        "is_blue_verified": true,
+        "location": "korea",
+        "profile_pic_url": "https://pbs.twimg.com/profile_images/1886694852764819460/zMM2LW13_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1448344399931326464/1740406402",
+        "description": "FE developer & community builder in Korea \n\nResume: https://t.co/UF0SPVWGsE",
+        "external_url": "http://bit.ly/40g2ZbT",
+        "number_of_tweets": 3446,
+        "bot": false,
+        "timestamp": 1634147198,
+        "has_nft_avatar": false,
+        "category": null,
+        "default_profile": true,
+        "default_profile_image": false,
+        "listed_count": 26,
+        "verified_type": null
+      },
+      "language": "en",
+      "favorite_count": 54,
+      "retweet_count": 5,
+      "reply_count": 27,
+      "quote_count": 0,
+      "retweet": false,
+      "views": 1953,
+      "timestamp": 1748772863,
+      "video_view_count": null,
+      "in_reply_to_status_id": null,
+      "quoted_status_id": null,
+      "binding_values": null,
+      "expanded_url": "https://x.com/hyeon__dev/status/1929119325031706988/photo/1",
+      "retweet_tweet_id": null,
+      "extended_entities": {
+        "media": [
+          {
+            "display_url": "pic.x.com/F3uaJUZzAt",
+            "expanded_url": "https://x.com/hyeon__dev/status/1929119325031706988/photo/1",
+            "id_str": "1929115380255272960",
+            "indices": [
+              279,
+              302
+            ],
+            "media_key": "3_1929115380255272960",
+            "media_url_https": "https://pbs.twimg.com/media/GsWYN6rbsAAFtgn.jpg",
+            "type": "photo",
+            "url": "https://t.co/F3uaJUZzAt",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 307,
+                    "y": 448,
+                    "h": 50,
+                    "w": 50
+                  },
+                  {
+                    "x": 847,
+                    "y": 43,
+                    "h": 210,
+                    "w": 210
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 287,
+                    "y": 420,
+                    "h": 46,
+                    "w": 46
+                  },
+                  {
+                    "x": 794,
+                    "y": 40,
+                    "h": 196,
+                    "w": 196
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 163,
+                    "y": 238,
+                    "h": 26,
+                    "w": 26
+                  },
+                  {
+                    "x": 449,
+                    "y": 22,
+                    "h": 111,
+                    "w": 111
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 307,
+                    "y": 448,
+                    "h": 50,
+                    "w": 50
+                  },
+                  {
+                    "x": 847,
+                    "y": 43,
+                    "h": 210,
+                    "w": 210
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 690,
+                "w": 1280,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 647,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 367,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 690,
+              "width": 1280,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1232,
+                  "h": 690
+                },
+                {
+                  "x": 5,
+                  "y": 0,
+                  "w": 690,
+                  "h": 690
+                },
+                {
+                  "x": 48,
+                  "y": 0,
+                  "w": 605,
+                  "h": 690
+                },
+                {
+                  "x": 178,
+                  "y": 0,
+                  "w": 345,
+                  "h": 690
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1280,
+                  "h": 690
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/F3uaJUZzAt",
+            "expanded_url": "https://x.com/hyeon__dev/status/1929119325031706988/photo/1",
+            "id_str": "1929115772414242816",
+            "indices": [
+              279,
+              302
+            ],
+            "media_key": "3_1929115772414242816",
+            "media_url_https": "https://pbs.twimg.com/media/GsWYkvlasAADBMO.jpg",
+            "type": "photo",
+            "url": "https://t.co/F3uaJUZzAt",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1117,
+                "w": 1728,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 776,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 440,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1117,
+              "width": 1728,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1728,
+                  "h": 968
+                },
+                {
+                  "x": 262,
+                  "y": 0,
+                  "w": 1117,
+                  "h": 1117
+                },
+                {
+                  "x": 330,
+                  "y": 0,
+                  "w": 980,
+                  "h": 1117
+                },
+                {
+                  "x": 541,
+                  "y": 0,
+                  "w": 559,
+                  "h": 1117
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1728,
+                  "h": 1117
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/F3uaJUZzAt",
+            "expanded_url": "https://x.com/hyeon__dev/status/1929119325031706988/photo/1",
+            "id_str": "1929115958658129920",
+            "indices": [
+              279,
+              302
+            ],
+            "media_key": "3_1929115958658129920",
+            "media_url_https": "https://pbs.twimg.com/media/GsWYvlZa4AAOMk5.jpg",
+            "type": "photo",
+            "url": "https://t.co/F3uaJUZzAt",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 1213,
+                    "y": 447,
+                    "h": 91,
+                    "w": 91
+                  },
+                  {
+                    "x": 1151,
+                    "y": 563,
+                    "h": 187,
+                    "w": 187
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 710,
+                    "y": 262,
+                    "h": 53,
+                    "w": 53
+                  },
+                  {
+                    "x": 674,
+                    "y": 330,
+                    "h": 109,
+                    "w": 109
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 402,
+                    "y": 148,
+                    "h": 30,
+                    "w": 30
+                  },
+                  {
+                    "x": 382,
+                    "y": 187,
+                    "h": 62,
+                    "w": 62
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 1410,
+                    "y": 520,
+                    "h": 106,
+                    "w": 106
+                  },
+                  {
+                    "x": 1338,
+                    "y": 655,
+                    "h": 218,
+                    "w": 218
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1435,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 841,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 477,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1668,
+              "width": 2380,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2380,
+                  "h": 1333
+                },
+                {
+                  "x": 177,
+                  "y": 0,
+                  "w": 1668,
+                  "h": 1668
+                },
+                {
+                  "x": 280,
+                  "y": 0,
+                  "w": 1463,
+                  "h": 1668
+                },
+                {
+                  "x": 594,
+                  "y": 0,
+                  "w": 834,
+                  "h": 1668
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2380,
+                  "h": 1668
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/F3uaJUZzAt",
+            "expanded_url": "https://x.com/hyeon__dev/status/1929119325031706988/photo/1",
+            "id_str": "1929119176737841152",
+            "indices": [
+              279,
+              302
+            ],
+            "media_key": "3_1929119176737841152",
+            "media_url_https": "https://pbs.twimg.com/media/GsWbq5raYAAz8I7.jpg",
+            "type": "photo",
+            "url": "https://t.co/F3uaJUZzAt",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 1203,
+                    "y": 315,
+                    "h": 365,
+                    "w": 365
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 705,
+                    "y": 184,
+                    "h": 214,
+                    "w": 214
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 399,
+                    "y": 104,
+                    "h": 121,
+                    "w": 121
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 1393,
+                    "y": 365,
+                    "h": 423,
+                    "w": 423
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1402,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 821,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 465,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1622,
+              "width": 2370,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 295,
+                  "w": 2370,
+                  "h": 1327
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1622,
+                  "h": 1622
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1423,
+                  "h": 1622
+                },
+                {
+                  "x": 9,
+                  "y": 0,
+                  "w": 811,
+                  "h": 1622
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2370,
+                  "h": 1622
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "conversation_id": "1929119325031706988",
+      "retweet_status": null,
+      "quoted_status": null,
+      "bookmark_count": 4,
+      "source": "Twitter Web App",
+      "community_note": null
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# This file ensures the data/enriched directory is preserved in version control
+# Enriched event data with scores and metadata will be stored here 

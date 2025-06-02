@@ -1,0 +1,79 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Hackathon Monitor - Project Architecture
+
+## Project Overview
+This is a lightweight system that monitors posts on **X** (formerly Twitter) to surface AI and crypto-focused hackathons matching an "indie-friendly" profile.
+
+## Target Criteria
+| Criterion | Target Band |
+|-----------|-------------|
+| Promoter follower count | **2,000 – 50,000** |
+| Prize pool | **$2,160 – $27,000** (or equivalent) |
+| Event duration | **≤ 72 hours** |
+| Team size implied | Solo or small team (≤ 3) |
+
+## Core Architecture Principles
+- **Platform compliance** – respect rate limits and platform guidelines; ethical data collection practices
+- **Modularity** – every logical concern in its own module/package; clear interfaces
+- **Documentation & tests first-class** – each public function has docstring; every module ships with unit tests
+- **Configurability** – follower, prize, and duration thresholds live in [config.json](mdc:config.json)
+
+## Project Structure
+```
+/
+├── README.md                    # Project description, quick-start, prerequisites
+├── config.json                  # Central configuration file with thresholds
+├── sources/
+│   └── catalog.json            # Hashtags, keywords, X accounts for monitoring
+├── data/
+│   ├── raw/                    # Timestamped raw tweet objects
+│   ├── enriched/               # Processed tweets with scores and metadata
+│   └── feedback/
+│       └── feedback.csv        # User feedback for threshold tuning
+├── fixtures/                   # Static test data for demo scenarios
+├── examples/                   # Archived sample data
+├── ingestion.py               # Platform authentication and tweet polling
+├── scoring.py                 # Relevance scoring engine
+├── enrichment.py              # Prize/duration extraction and ROI calculation
+├── alert.py                   # Alert delivery layer
+├── demo_run.py               # End-to-end demo with fixture data
+├── tune_thresholds.py        # CLI tool for threshold optimization
+├── Policy.md                 # Data retention and privacy policies
+├── CHANGELOG.md              # Semantic versioning history
+└── LICENSE                   # Permissive license file
+```
+
+## Development Phases
+The project follows a 12-step development process where each step must pass tests before proceeding to the next:
+
+1. **Bootstrap Brief** - Project skeleton and config setup
+2. **Source Catalogue** - Generate [sources/catalog.json](mdc:sources/catalog.json) with hashtags/accounts
+3. **Data Ingestion** - [ingestion.py](mdc:ingestion.py) with platform integration
+4. **Relevance Scoring** - [scoring.py](mdc:scoring.py) with numeric relevance scoring
+5. **Enrichment & ROI** - Prize/duration extraction in [enrichment.py](mdc:enrichment.py)
+6. **Alert Delivery** - [alert.py](mdc:alert.py) with immediate alerts and daily digests
+7. **Feedback Capture** - User feedback system for threshold tuning
+8. **Governance & Documentation** - [Policy.md](mdc:Policy.md) and comprehensive docs
+9. **Validation & Demo** - [demo_run.py](mdc:demo_run.py) with expected output validation
+10. **Success Criteria** - ≥95% test pass rate and complete documentation
+11. **Coding Guidelines** - Style enforcement and best practices
+12. **Handoff** - Release tagging and production readiness
+
+## Key Configuration
+All thresholds and settings should be centralized in [config.json](mdc:config.json):
+- `FOLLOWER_MIN`: 2000
+- `FOLLOWER_MAX`: 50000
+- `PRIZE_MIN_USD`: 2160
+- `PRIZE_MAX_USD`: 27000
+- `MAX_DURATION_HOURS`: 72
+- `POLL_INTERVAL_SECONDS`: Configurable polling cadence
+- `ALERT_THRESHOLD`: Top 10% ROI score threshold
+- `DIGEST_SEND_TIME`: "18:00" (daily digest delivery)
+
+
+
+

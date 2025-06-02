@@ -1,0 +1,165 @@
+{
+  "collected_at": "2025-06-02T11:22:11.360881",
+  "tweet_data": {
+    "id": "1929467893684801758",
+    "text": "💸 Weekly Rewards Deployed! 🏆🎮\nAnother round in the books and the legends rise again! 💥\nMassive respect to our top players from all games and partner Game Centers, your efforts have paid off, and your rewards are already on the way! 🚚💰\n\n🎁 This week’s prize pool included:\n🔹 165,633 $PMD\n🔹 16,560 $KLV\n🔹 3,038,701 $BPGOK\n🔹 419,500 $VLX\n🔹 43 $KID\n🔹 7,128 $MOTO\n🔹 1,815 $PMT\n🔹 2,301 $SKC\n🔹 98 $KTC\n🔹 442 $KPEPE\n🔹 25,000 $NJA\n\n⚠️ Next round launches tomorrow!\n\nGrab your gear, sharpen those skills, and battle your way back to the top! 🕹️💪\n\nLet’s go again! 🚀\n#PandemicMultiverse #PlayAndEarn #CryptoRewards #Web3Gaming #KleverGaming #NextRoundIncoming",
+    "user": {
+      "screen_name": "Pandemic_Games_",
+      "followers_count": 11606,
+      "name": "Pandemic Games",
+      "verified": false
+    },
+    "created_at": "Mon Jun 02 09:19:28 +0000 2025",
+    "favorite_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "_raw_api_response": {
+      "tweet_id": "1929467893684801758",
+      "creation_date": "Mon Jun 02 09:19:28 +0000 2025",
+      "text": "💸 Weekly Rewards Deployed! 🏆🎮\nAnother round in the books and the legends rise again! 💥\nMassive respect to our top players from all games and partner Game Centers, your efforts have paid off, and your rewards are already on the way! 🚚💰\n\n🎁 This week’s prize pool included:\n🔹 165,633 $PMD\n🔹 16,560 $KLV\n🔹 3,038,701 $BPGOK\n🔹 419,500 $VLX\n🔹 43 $KID\n🔹 7,128 $MOTO\n🔹 1,815 $PMT\n🔹 2,301 $SKC\n🔹 98 $KTC\n🔹 442 $KPEPE\n🔹 25,000 $NJA\n\n⚠️ Next round launches tomorrow!\n\nGrab your gear, sharpen those skills, and battle your way back to the top! 🕹️💪\n\nLet’s go again! 🚀\n#PandemicMultiverse #PlayAndEarn #CryptoRewards #Web3Gaming #KleverGaming #NextRoundIncoming",
+      "media_url": [
+        "https://pbs.twimg.com/media/GsbXTF5XkAAsnmk.jpg"
+      ],
+      "video_url": null,
+      "user": {
+        "creation_date": "Fri Apr 05 17:16:41 +0000 2019",
+        "user_id": "1114215293000273921",
+        "username": "Pandemic_Games_",
+        "name": "Pandemic Games",
+        "follower_count": 11606,
+        "following_count": 422,
+        "favourites_count": 7355,
+        "is_private": null,
+        "is_verified": false,
+        "is_blue_verified": true,
+        "location": "Germany",
+        "profile_pic_url": "https://pbs.twimg.com/profile_images/1390945490041249793/lh686Xb2_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1114215293000273921/1620462128",
+        "description": "☢ #PandemicGames ☢         \n#PlayAndEarn with #PandemicMultiverse\nEng Telegram: https://t.co/Esyl30131N",
+        "external_url": "https://t.me/PandemicGames_EN",
+        "number_of_tweets": 3737,
+        "bot": false,
+        "timestamp": 1554484601,
+        "has_nft_avatar": false,
+        "category": null,
+        "default_profile": true,
+        "default_profile_image": false,
+        "listed_count": 35,
+        "verified_type": null
+      },
+      "language": "en",
+      "favorite_count": 1,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "quote_count": 0,
+      "retweet": false,
+      "views": 2,
+      "timestamp": 1748855968,
+      "video_view_count": null,
+      "in_reply_to_status_id": null,
+      "quoted_status_id": null,
+      "binding_values": null,
+      "expanded_url": "https://x.com/Pandemic_Games_/status/1929467893684801758/photo/1",
+      "retweet_tweet_id": null,
+      "extended_entities": {
+        "media": [
+          {
+            "display_url": "pic.x.com/y0wtnRubVB",
+            "expanded_url": "https://x.com/Pandemic_Games_/status/1929467893684801758/photo/1",
+            "id_str": "1929466213375119360",
+            "indices": [
+              273,
+              296
+            ],
+            "media_key": "3_1929466213375119360",
+            "media_url_https": "https://pbs.twimg.com/media/GsbXTF5XkAAsnmk.jpg",
+            "type": "photo",
+            "url": "https://t.co/y0wtnRubVB",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1024,
+                "w": 1024,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 1024,
+                "w": 1024,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 680,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1024,
+              "width": 1024,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 149,
+                  "w": 1024,
+                  "h": 573
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 1024
+                },
+                {
+                  "x": 37,
+                  "y": 0,
+                  "w": 898,
+                  "h": 1024
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "w": 512,
+                  "h": 1024
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 1024
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "conversation_id": "1929467893684801758",
+      "retweet_status": null,
+      "quoted_status": null,
+      "bookmark_count": 0,
+      "source": "Twitter Web App",
+      "community_note": null
+    }
+  }
+}

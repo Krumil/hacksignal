@@ -1,0 +1,255 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Hackathon Monitor - Testing & Documentation
+
+## Testing Requirements Overview
+- **Minimum Test Coverage**: ≥ 95% pass rate
+- **Test-Driven Development**: Red → Green → Refactor cycle mandatory
+- **Mock External Dependencies**: No real API calls in unit tests
+- **Fixture-Based Testing**: Use `/fixtures/` for consistent test data
+
+## Module-Specific Test Requirements
+
+### Data Ingestion Tests (`test_ingestion.py`)
+**Required Test Cases:**
+```python
+def test_authenticate_with_valid_credentials():
+    """Verify platform authentication with valid credentials."""
+    
+def test_authenticate_with_invalid_credentials():
+    """Ensure proper error handling for invalid credentials."""
+    
+def test_poll_sources_rate_limit_handling():
+    """Test exponential back-off when rate limits are hit."""
+    
+def test_store_raw_tweet_with_timestamp():
+    """Verify tweet storage with proper timestamp formatting."""
+    
+def test_handle_api_connection_errors():
+    """Test resilience against network connectivity issues."""
+```
+
+**Mock Requirements:**
+- Mock platform API responses
+- Mock file system operations
+- Mock network timeouts and errors
+
+### Scoring Engine Tests (`test_scoring.py`)
+**Required Test Cases:**
+```python
+def test_calculate_relevance_score_follower_fit():
+    """Test binary follower count scoring (0 or 1)."""
+    
+def test_keyword_matching_accuracy():
+    """Verify keyword detection and weighting."""
+    
+def test_topic_confidence_ai_crypto():
+    """Test AI/crypto topic relevance scoring."""
+    
+def test_score_ordering_consistency():
+    """Ensure higher relevance tweets get higher scores."""
+    
+def test_edge_cases_empty_tweets():
+    """Handle malformed or empty tweet content gracefully."""
+```
+
+**Test Data Requirements:**
+- Tweets with varying follower counts (below, within, above range)
+- AI-related content samples
+- Crypto-related content samples
+- Mixed content with partial matches
+
+### Enrichment Tests (`test_enrichment.py`)
+**Required Test Cases:**
+```python
+def test_extract_prize_amount_various_formats():
+    """Test prize extraction: $10.8k, €5,000, 10 ETH, etc."""
+    
+def test_parse_duration_edge_cases():
+    """Test: 'weekend sprint' → 48h, '3-day hackathon' → 72h."""
+    
+def test_currency_conversion_accuracy():
+    """Verify EUR/ETH/BTC to USD conversion."""
+    
+def test_detect_registration_deadlines():
+    """Extract deadline dates from various text formats."""
+    
+def test_roi_calculation_accuracy():
+    """Verify ROI = prize_value ÷ duration_hours."""
+```
+
+**Edge Case Scenarios:**
+- Multiple prize amounts in single tweet
+- Ambiguous duration descriptions
+- Missing or unclear deadline information
+- Invalid currency formats
+
+### Alert System Tests (`test_alert.py`)
+**Required Test Cases:**
+```python
+def test_message_formatting_consistency():
+    """Ensure all alerts follow template requirements."""
+    
+def test_immediate_alert_threshold():
+    """Verify top 10% ROI events trigger immediate alerts."""
+    
+def test_daily_digest_batching():
+    """Test digest compilation and scheduling."""
+    
+def test_channel_agnostic_interface():
+    """Verify alert.send() works across different channels."""
+    
+def test_alert_queue_management():
+    """Test alert queuing and deduplication."""
+```
+
+## Integration Testing
+
+### End-to-End Pipeline Tests
+**[demo_run.py](mdc:demo_run.py) Validation:**
+- Must process fixture data without errors
+- Output must match [demo_expected_output.txt](mdc:demo_expected_output.txt) exactly
+- CI fails if demo output diverges
+- Performance benchmarks within acceptable ranges
+
+**Pipeline Test Scenarios:**
+1. **Complete Success Flow**: fixtures → scoring → enrichment → alerts
+2. **Rate Limit Handling**: Mock platform limits and verify back-off
+3. **Error Recovery**: Inject failures and test graceful degradation
+4. **Configuration Changes**: Test with different threshold values
+
+### Performance Testing
+```python
+def test_processing_speed_benchmarks():
+    """Ensure tweet processing meets performance requirements."""
+    
+def test_memory_usage_constraints():
+    """Verify memory efficiency with large datasets."""
+    
+def test_concurrent_processing():
+    """Test thread safety and concurrent tweet handling."""
+```
+
+## Fixture Data Requirements
+
+### `/fixtures/` Directory Structure
+```
+fixtures/
+├── tweets/
+│   ├── high_relevance_samples.json     # Top-tier hackathon tweets
+│   ├── medium_relevance_samples.json   # Borderline relevant tweets
+│   ├── low_relevance_samples.json      # Below-threshold tweets
+│   └── edge_cases.json                 # Malformed/unusual tweets
+├── expected_scores.json                # Expected scoring outputs
+├── expected_enrichment.json            # Expected enrichment results
+└── expected_alerts.json               # Expected alert formatting
+```
+
+### Fixture Content Standards
+- **Realistic Data**: Based on actual tweet patterns
+- **Anonymized**: No real user data or personal information
+- **Comprehensive Coverage**: All scoring scenarios represented
+- **Version Controlled**: Fixtures updated with code changes
+
+## Documentation Standards
+
+### Required Documentation Files
+- **[README.md](mdc:README.md)**: Project overview, quick-start, prerequisites
+- **[Policy.md](mdc:Policy.md)**: Data retention, privacy, platform compliance
+- **[CHANGELOG.md](mdc:CHANGELOG.md)**: Semantic versioning history
+- **API Documentation**: Generated from docstrings
+
+### Docstring Requirements
+**Function Documentation Template:**
+```python
+def function_name(param1: type, param2: type) -> return_type:
+    """One-line summary of function purpose.
+    
+    Detailed description of function behavior, including any important
+    algorithmic details or business logic.
+    
+    Args:
+        param1: Description of first parameter
+        param2: Description of second parameter
+        
+    Returns:
+        Description of return value structure and meaning
+        
+    Raises:
+        SpecificError: When this specific error condition occurs
+        AnotherError: When this other condition fails
+        
+    Example:
+        >>> result = function_name("test", 42)
+        >>> print(result)
+        {'status': 'success', 'value': 42}
+    """
+```
+
+### Code Documentation Coverage
+- **Public API Coverage**: ≥ 80% documented functions
+- **Complex Algorithms**: Inline comments explaining logic
+- **Configuration Options**: Each config value documented
+- **Error Conditions**: All custom exceptions documented
+
+## Continuous Integration Requirements
+
+### CI Pipeline Steps
+1. **Dependency Installation**: `pip install -r requirements.txt`
+2. **Linting**: Code style validation (PEP 8)
+3. **Unit Tests**: Full test suite execution
+4. **Integration Tests**: [demo_run.py](mdc:demo_run.py) validation
+5. **Documentation**: Docstring coverage check
+6. **Security**: Credential scanning and vulnerability checks
+
+### Success Criteria Gates
+- **All unit tests pass**: Zero failures allowed
+- **Demo output matches**: Byte-for-byte comparison with expected output
+- **Test coverage**: ≥ 95% line coverage
+- **Documentation coverage**: ≥ 80% public API coverage
+- **No security vulnerabilities**: Clean security scan
+
+### Release Validation
+```bash
+# Example CI validation commands
+python -m pytest tests/ --cov=. --cov-report=term-missing
+python demo_run.py > actual_output.txt
+diff actual_output.txt demo_expected_output.txt
+python -m pydoc -w .  # Generate documentation
+```
+
+## Feedback System Testing
+
+### User Feedback Validation (`test_feedback.py`)
+```python
+def test_feedback_csv_schema():
+    """Validate feedback.csv structure and data types."""
+    
+def test_threshold_tuning_algorithm():
+    """Test precision/recall calculations with mock feedback."""
+    
+def test_suggestion_generation():
+    """Verify threshold suggestions based on feedback patterns."""
+```
+
+### Feedback Categories Testing
+- **Useful**: Correctly identified relevant hackathons
+- **Too Big**: Events exceeding target size criteria  
+- **Low Prize**: Events below minimum prize threshold
+- **Irrelevant**: Non-hackathon or wrong topic content
+
+## Quality Assurance Checklist
+- [ ] All modules have corresponding test files
+- [ ] Test coverage ≥ 95% overall
+- [ ] All public functions documented with docstrings
+- [ ] Demo scenario passes without errors
+- [ ] CI pipeline executes successfully
+- [ ] No hardcoded credentials or API keys
+- [ ] Configuration values centralized in [config.json](mdc:config.json)
+- [ ] Error handling covers all external dependencies
+- [ ] Performance benchmarks within acceptable ranges
+- [ ] Security scan passes without critical issues
+

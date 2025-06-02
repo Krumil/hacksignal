@@ -1,0 +1,165 @@
+{
+  "collected_at": "2025-06-02T10:57:28.716960",
+  "tweet_data": {
+    "id": "1929416100242214953",
+    "text": "🔥DeFiHackLabs Community Monthly Recap - May 2025  \n\n🧵Details \n#Web3 #Security #DeFiHackLabs #Whitehat #ETH https://t.co/KoDcveDakL",
+    "user": {
+      "screen_name": "1nf0s3cpt",
+      "followers_count": 13291,
+      "name": "SunSec",
+      "verified": false
+    },
+    "created_at": "Mon Jun 02 05:53:39 +0000 2025",
+    "favorite_count": 11,
+    "retweet_count": 3,
+    "reply_count": 1,
+    "lang": "en",
+    "_raw_api_response": {
+      "tweet_id": "1929416100242214953",
+      "creation_date": "Mon Jun 02 05:53:39 +0000 2025",
+      "text": "🔥DeFiHackLabs Community Monthly Recap - May 2025  \n\n🧵Details \n#Web3 #Security #DeFiHackLabs #Whitehat #ETH https://t.co/KoDcveDakL",
+      "media_url": [
+        "https://pbs.twimg.com/media/GsapqKCbMAACLfy.jpg"
+      ],
+      "video_url": null,
+      "user": {
+        "creation_date": "Thu Nov 25 02:39:18 +0000 2010",
+        "user_id": "219517617",
+        "username": "1nf0s3cpt",
+        "name": "SunSec",
+        "follower_count": 13291,
+        "following_count": 1387,
+        "favourites_count": 10934,
+        "is_private": null,
+        "is_verified": false,
+        "is_blue_verified": true,
+        "location": "",
+        "profile_pic_url": "https://pbs.twimg.com/profile_images/522376377824067585/zi_Fj-gd_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/219517617/1657934718",
+        "description": "CISO @xrexinc | Founder @DeFiHackLabs Web3 Security Community.",
+        "external_url": "https://web3sec.xrex.io",
+        "number_of_tweets": 81511,
+        "bot": false,
+        "timestamp": 1290652758,
+        "has_nft_avatar": false,
+        "category": null,
+        "default_profile": false,
+        "default_profile_image": false,
+        "listed_count": 243,
+        "verified_type": null
+      },
+      "language": "en",
+      "favorite_count": 11,
+      "retweet_count": 3,
+      "reply_count": 1,
+      "quote_count": 1,
+      "retweet": false,
+      "views": 523,
+      "timestamp": 1748843619,
+      "video_view_count": null,
+      "in_reply_to_status_id": null,
+      "quoted_status_id": null,
+      "binding_values": null,
+      "expanded_url": "https://x.com/1nf0s3cpt/status/1929416100242214953/photo/1",
+      "retweet_tweet_id": null,
+      "extended_entities": {
+        "media": [
+          {
+            "display_url": "pic.x.com/KoDcveDakL",
+            "expanded_url": "https://x.com/1nf0s3cpt/status/1929416100242214953/photo/1",
+            "id_str": "1929416032088961024",
+            "indices": [
+              107,
+              130
+            ],
+            "media_key": "3_1929416032088961024",
+            "media_url_https": "https://pbs.twimg.com/media/GsapqKCbMAACLfy.jpg",
+            "type": "photo",
+            "url": "https://t.co/KoDcveDakL",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 900,
+                "w": 1620,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 667,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 378,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 900,
+              "width": 1620,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1607,
+                  "h": 900
+                },
+                {
+                  "x": 318,
+                  "y": 0,
+                  "w": 900,
+                  "h": 900
+                },
+                {
+                  "x": 374,
+                  "y": 0,
+                  "w": 789,
+                  "h": 900
+                },
+                {
+                  "x": 543,
+                  "y": 0,
+                  "w": 450,
+                  "h": 900
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1620,
+                  "h": 900
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "conversation_id": "1929416100242214953",
+      "retweet_status": null,
+      "quoted_status": null,
+      "bookmark_count": 0,
+      "source": "Twitter Web App",
+      "community_note": null
+    }
+  }
+}

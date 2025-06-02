@@ -1,0 +1,221 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Hackathon Monitor - Module Responsibilities
+
+## Core Processing Modules
+
+### [ingestion.py](mdc:ingestion.py) - Data Ingestion Module
+**Primary Responsibilities:**
+- Authenticate with platform using credentials
+- Poll defined hashtags/accounts/keywords on configurable cadence
+- Store raw tweet objects in `/data/raw/` with timestamped filenames
+- Implement exponential back-off for rate-limit handling
+
+**Key Functions:**
+- `authenticate()` - Handle platform authentication
+- `poll_sources()` - Fetch tweets from configured sources
+- `store_raw_tweet()` - Persist tweet data with timestamps
+- `handle_rate_limit()` - Exponential back-off implementation
+
+**Configuration Dependencies:**
+- `POLL_INTERVAL_SECONDS` from [config.json](mdc:config.json)
+- Platform credentials from environment variables
+
+### [scoring.py](mdc:scoring.py) - Relevance Scoring Engine
+**Primary Responsibilities:**
+- Convert raw tweet objects into numeric Relevance Scores
+- Pure, side-effect-free scoring functions
+- Centralized scoring formula for easy threshold adjustments
+
+**Scoring Components:**
+1. **Follower count fit** (binary 0/1) - Within 2K-50K range
+2. **Hackathon keywords presence** (weighted) - AI/crypto hackathon indicators
+3. **Topic confidence** (weighted) - AI/crypto relevance strength
+
+**Output Schema:**
+```json
+{ 
+  "tweet_id": "1234567890", 
+  "score": 0.83, 
+  "account_followers": 14500,
+  "keyword_matches": ["hackathon", "AI", "$10.8k"],
+  "follower_fit": 1
+}
+```
+
+**Key Functions:**
+- `calculate_relevance_score()` - Main scoring algorithm
+- `check_follower_fit()` - Binary follower count validation
+- `extract_keywords()` - Identify hackathon-related terms
+- `assess_topic_confidence()` - AI/crypto topic strength
+
+### [enrichment.py](mdc:enrichment.py) - Enrichment & ROI Estimator
+**Primary Responsibilities:**
+- Extract prize values with currency conversion to USD
+- Parse event duration in hours
+- Calculate ROI score: `prize_value ÷ duration_hours`
+
+**Data Extraction:**
+- **Prize Detection**: Regex heuristics for "$10.8k", "€5,000", "10 ETH"
+- **Duration Parsing**: "48-hour", "weekend", "3-day" → hours
+- **Currency Conversion**: Convert EUR, ETH, BTC to USD equivalent
+
+**Output Schema:**
+```json
+{
+  "tweet_id": "1234567890",
+  "prize_value": 10000,
+  "duration_hours": 48,
+  "roi_score": 208.33,
+  "currency_detected": "USD",
+  "registration_deadline": "2024-12-31T23:59:59Z"
+}
+```
+
+**Key Functions:**
+- `extract_prize_amount()` - Parse and convert prize values
+- `parse_duration()` - Extract event duration from text
+- `calculate_roi()` - Compute ROI score
+- `detect_deadline()` - Find registration deadlines
+
+### [alert.py](mdc:alert.py) - Alert Delivery Layer
+**Primary Responsibilities:**
+- Transform enriched events into user-visible messages
+- Channel-agnostic interface implementation
+- Two delivery modes: immediate alerts and daily digests
+
+**Alert Types:**
+1. **Immediate Alert** - Top 10% by ROI score
+2. **Daily Digest** - All above relevance threshold at 18:00 local
+
+**Interface Design:**
+```python
+def send_alert(title: str, body: str, priority: str = 'normal') -> bool:
+    """Channel-agnostic alert delivery interface."""
+    pass
+```
+
+**Message Template Requirements:**
+- Event name (if parseable)
+- Prize amount with currency
+- Duration in hours
+- Registration deadline (if found)
+- Direct link to original tweet
+
+**Key Functions:**
+- `send_immediate_alert()` - High-priority notifications
+- `queue_for_digest()` - Batch low-priority alerts
+- `format_alert_message()` - Consistent message formatting
+- `send_daily_digest()` - Scheduled digest delivery
+
+## Data and Configuration Modules
+
+### [sources/catalog.json](mdc:sources/catalog.json) - Source Catalogue
+**Structure Requirements:**
+```json
+{
+  "hashtags": [
+    { 
+      "tag": "#AIHack", 
+      "relevance": "High", 
+      "evidence": "Frequently used for AI hackathon announcements" 
+    }
+  ],
+  "accounts": [
+    { 
+      "handle": "@AICompetitions", 
+      "followers": 25000, 
+      "relevance": "Medium", 
+      "evidence": "Regular hackathon organizer in target range" 
+    }
+  ],
+  "keywords": [
+    "blockchain hackathon",
+    "defi sprint", 
+    "AI challenge",
+    "crypto bounty"
+  ]
+}
+```
+
+**Relevance Scoring:**
+- **High**: Direct hackathon organizers in target follower range
+- **Medium**: Related accounts with occasional relevant content
+- **Low**: Broad tech accounts with rare hackathon mentions
+
+## Utility and Feedback Modules
+
+### [tune_thresholds.py](mdc:tune_thresholds.py) - Threshold Optimization
+**Primary Responsibilities:**
+- Read user feedback from `/data/feedback/feedback.csv`
+- Calculate precision/recall metrics
+- Suggest new threshold constants for [config.json](mdc:config.json)
+
+**CLI Interface:**
+```bash
+python tune_thresholds.py --analyze-feedback --suggest-thresholds
+```
+
+**Feedback Categories:**
+- `useful` - Correctly identified relevant hackathon
+- `too_big` - Prize or event too large for target audience
+- `low_prize` - Prize below minimum threshold
+- `irrelevant` - Not actually a hackathon or wrong topic
+
+### [demo_run.py](mdc:demo_run.py) - Validation & Demo
+**Primary Responsibilities:**
+- Execute full pipeline: ingestion → scoring → enrichment → alerting
+- Use static fixture data from `/fixtures/` directory
+- Generate consistent output for CI validation
+
+**Demo Output Requirements:**
+1. "Top Alert" details with full event information
+2. Daily digest summary list
+3. Performance metrics (processing time, score distribution)
+
+**Expected Output Validation:**
+- Must match [demo_expected_output.txt](mdc:demo_expected_output.txt)
+- CI failure if actual output diverges
+- Include sample tweet processing and alert generation
+
+## Configuration and Documentation
+
+### [config.json](mdc:config.json) - Central Configuration
+**Required Settings:**
+```json
+{
+  "thresholds": {
+    "follower_min": 2000,
+    "follower_max": 50000,
+    "prize_min_usd": 2160,
+    "prize_max_usd": 27000,
+    "max_duration_hours": 72,
+    "relevance_threshold": 0.6
+  },
+  "processing": {
+    "poll_interval_seconds": 300,
+    "alert_threshold_percentile": 90,
+    "digest_send_time": "18:00"
+  },
+  "api": {
+    "rate_limit_window": 900,
+    "max_retries": 3,
+    "backoff_factor": 2
+  }
+}
+```
+
+### [Policy.md](mdc:Policy.md) - Governance Document
+**Required Sections:**
+- Data retention policy (30 days default)
+- Privacy stance and user data handling
+- Platform developer policy compliance references
+- Rate limiting and platform usage guidelines
+- Feedback data usage and storage
+
+
+
+

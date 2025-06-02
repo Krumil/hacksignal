@@ -1,0 +1,117 @@
+---
+description: Those are the coding standards for everything coding related
+globs: 
+alwaysApply: false
+---
+# Hackathon Monitor - Coding Standards
+
+## File Organization Guidelines
+- Keep each file ≤ 400 logical lines
+- Every logical concern should be in its own module/package with clear interfaces
+- Use semantic naming for files and functions
+- Group related functionality together
+- use the documentation folder when adding .md and 
+
+## Code Quality Requirements
+- **Unit Test Pass Rate**: ≥ 95%
+- **Public API Documentation Coverage**: ≥ 80% (docstrings required)
+- **Error Handling**: Fail fast with clear exceptions; never silently pass
+- **Pure Functions**: Prefer pure functions; isolate I/O at boundaries
+
+## Function Documentation Standards
+Every public function must include a docstring with:
+```python
+def example_function(arg1: str, arg2: int) -> dict:
+    """Brief description of function purpose.
+    
+    Args:
+        arg1: Description of first argument
+        arg2: Description of second argument
+        
+    Returns:
+        Description of return value and structure
+        
+    Raises:
+        SpecificException: When this error condition occurs
+    """
+```
+
+## Testing Requirements
+- **Tests alongside code**: Treat red → green cycle as mandatory
+- **Test file naming**: `test_[module_name].py`
+- **Unit tests required for**:
+  - All public functions
+  - Error handling scenarios
+  - Edge cases and boundary conditions
+  - Mock external API calls
+
+### Critical Test Cases
+Each module must include tests for:
+
+**[ingestion.py](mdc:ingestion.py)**:
+- Auth credentials loading
+- Rate-limit back-off behavior (mocked)
+- Tweet object persistence with fixture data
+
+**[scoring.py](mdc:scoring.py)**:
+- Score ordering with mocked tweets
+- Follower count filtering
+- Keyword matching accuracy
+
+**[enrichment.py](mdc:enrichment.py)**:
+- Prize amount extraction from various formats
+- Duration parsing edge cases ("weekend sprint" ⇒ 48h)
+- Currency conversion accuracy
+
+**[alert.py](mdc:alert.py)**:
+- Message formatting consistency
+- Queue batching behavior
+- Channel-agnostic interface compliance
+
+## Error Handling Standards
+- Use specific exception types, not generic `Exception`
+- Include context in error messages
+- Implement exponential back-off for external service rate limits
+- Log errors with appropriate severity levels
+
+## Configuration Management
+- All configurable values must be in [config.json](mdc:config.json)
+- No hardcoded thresholds in business logic
+- Environment-specific configs should override base config
+- Validate configuration on startup
+
+## Code Style Guidelines
+- Follow PEP 8 for Python code formatting
+- Use type hints for function parameters and returns
+- Prefer explicit over implicit behavior
+- Use meaningful variable and function names
+- Comment complex business logic and algorithms
+
+## Version Control Standards
+- Use semantic commit messages
+- Tag releases with semantic versioning (starting at v0.1.0)
+- Update [CHANGELOG.md](mdc:CHANGELOG.md) for each release
+- No commits to main without passing tests
+
+## CI/CD Requirements
+- Empty or minimal CI/test workflow that executes the unit suite
+- [demo_run.py](mdc:demo_run.py) must complete without error
+- CI must fail if demo output diverges from [demo_expected_output.txt](mdc:demo_expected_output.txt)
+- All tests must pass before any merge
+
+## Performance Considerations
+- Implement rate limiting respect for platform APIs
+- Use efficient data structures for tweet processing
+- Minimize memory usage for large datasets
+- Cache computed values where appropriate
+
+## Security Guidelines
+- Never commit API keys or sensitive credentials
+- Use environment variables for authentication
+- Respect platform developer policy compliance
+- Implement data retention policies (30 days default in [Policy.md](mdc:Policy.md))
+
+
+
+
+

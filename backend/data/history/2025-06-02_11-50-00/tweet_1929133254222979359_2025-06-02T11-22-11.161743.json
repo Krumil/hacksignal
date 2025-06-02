@@ -1,0 +1,1000 @@
+{
+  "collected_at": "2025-06-02T11:22:11.161743",
+  "tweet_data": {
+    "id": "1929133254222979359",
+    "text": "[RECAP] SAGA MEETUP – WHERE THE ONES WHO STAYED, SHINE\n\n935 learners joined the Saga journey to explore Web3.\n🔥 183 builders made it to the end — completing the course, shipping projects, and taking their first real steps into Web3.\nAt Saga Meetup, we:\n- Reflected on our learning journey\n- Celebrated top contributors\n- Gave away 10 TOPCV Pro accounts to devs ready to level up their careers\n\nAnd more than that!\n💡 17 blockchain game ideas were born from class projects. These aren’t just concepts. They're seeds of what could be the next big thing in Web3 gaming.\n\nBut this is just the beginning.\n🔥 We’ve officially kicked off the Web3 Hackathon (150,000,000 VND prize pool) — where these ideas will evolve into battle-tested products.\n\nSaga isn’t just a place to learn code. It’s where devs, mentors & builders gather to push boundaries and build a stronger Web3 ecosystem from Vietnam to the world.\n\nWe’re proud to have you in the movement. We build together. We stay together @Sagaxyz__ . 💙\n\n#SagaMeetup #Web3HackFest #Saga #VBIAcademy #Learn2Earn \n\n👉 Join the Hackathon: https://t.co/60NTIQgnNG",
+    "user": {
+      "screen_name": "vbi_academy",
+      "followers_count": 13014,
+      "name": "VBI Academy",
+      "verified": false
+    },
+    "created_at": "Sun Jun 01 11:09:44 +0000 2025",
+    "favorite_count": 6,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "lang": "en",
+    "_raw_api_response": {
+      "tweet_id": "1929133254222979359",
+      "creation_date": "Sun Jun 01 11:09:44 +0000 2025",
+      "text": "[RECAP] SAGA MEETUP – WHERE THE ONES WHO STAYED, SHINE\n\n935 learners joined the Saga journey to explore Web3.\n🔥 183 builders made it to the end — completing the course, shipping projects, and taking their first real steps into Web3.\nAt Saga Meetup, we:\n- Reflected on our learning journey\n- Celebrated top contributors\n- Gave away 10 TOPCV Pro accounts to devs ready to level up their careers\n\nAnd more than that!\n💡 17 blockchain game ideas were born from class projects. These aren’t just concepts. They're seeds of what could be the next big thing in Web3 gaming.\n\nBut this is just the beginning.\n🔥 We’ve officially kicked off the Web3 Hackathon (150,000,000 VND prize pool) — where these ideas will evolve into battle-tested products.\n\nSaga isn’t just a place to learn code. It’s where devs, mentors & builders gather to push boundaries and build a stronger Web3 ecosystem from Vietnam to the world.\n\nWe’re proud to have you in the movement. We build together. We stay together @Sagaxyz__ . 💙\n\n#SagaMeetup #Web3HackFest #Saga #VBIAcademy #Learn2Earn \n\n👉 Join the Hackathon: https://t.co/60NTIQgnNG",
+      "media_url": [
+        "https://pbs.twimg.com/media/GsWoFGJbQAAalGR.jpg",
+        "https://pbs.twimg.com/media/GsWoQE2bcAAET6L.jpg",
+        "https://pbs.twimg.com/media/GsWoQE4bsAAz48I.jpg",
+        "https://pbs.twimg.com/media/GsWoQFGboAApy49.jpg"
+      ],
+      "video_url": null,
+      "user": {
+        "creation_date": "Wed Jun 21 10:14:32 +0000 2023",
+        "user_id": "1671461541634523136",
+        "username": "vbi_academy",
+        "name": "VBI Academy",
+        "follower_count": 13014,
+        "following_count": 35,
+        "favourites_count": 55,
+        "is_private": null,
+        "is_verified": false,
+        "is_blue_verified": true,
+        "location": "",
+        "profile_pic_url": "https://pbs.twimg.com/profile_images/1927227938254012430/5VwcZQBQ_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1671461541634523136/1741074302",
+        "description": "Vietnam's #1 #Blockchain Development Academy – Trusted Partner of Leading Web3 Unicorn Ecosystems \n\n#Learn2Earn #Web3 #Edtech",
+        "external_url": "https://vbiacademy.edu.vn/",
+        "number_of_tweets": 134,
+        "bot": false,
+        "timestamp": 1687342472,
+        "has_nft_avatar": false,
+        "category": null,
+        "default_profile": true,
+        "default_profile_image": false,
+        "listed_count": 1,
+        "verified_type": null
+      },
+      "language": "en",
+      "favorite_count": 6,
+      "retweet_count": 0,
+      "reply_count": 2,
+      "quote_count": 0,
+      "retweet": false,
+      "views": 1639,
+      "timestamp": 1748776184,
+      "video_view_count": null,
+      "in_reply_to_status_id": null,
+      "quoted_status_id": null,
+      "binding_values": null,
+      "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359/photo/1",
+      "retweet_tweet_id": null,
+      "extended_entities": {
+        "media": [
+          {
+            "display_url": "pic.x.com/kmA4Z7pVoC",
+            "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359/photo/1",
+            "id_str": "1929132820901085184",
+            "indices": [
+              272,
+              295
+            ],
+            "media_key": "3_1929132820901085184",
+            "media_url_https": "https://pbs.twimg.com/media/GsWoFGJbQAAalGR.jpg",
+            "type": "photo",
+            "url": "https://t.co/kmA4Z7pVoC",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 998,
+                    "y": 688,
+                    "h": 78,
+                    "w": 78
+                  },
+                  {
+                    "x": 1140,
+                    "y": 694,
+                    "h": 74,
+                    "w": 74
+                  },
+                  {
+                    "x": 642,
+                    "y": 696,
+                    "h": 74,
+                    "w": 74
+                  },
+                  {
+                    "x": 440,
+                    "y": 700,
+                    "h": 78,
+                    "w": 78
+                  },
+                  {
+                    "x": 814,
+                    "y": 712,
+                    "h": 76,
+                    "w": 76
+                  },
+                  {
+                    "x": 1336,
+                    "y": 712,
+                    "h": 76,
+                    "w": 76
+                  },
+                  {
+                    "x": 1792,
+                    "y": 720,
+                    "h": 86,
+                    "w": 86
+                  },
+                  {
+                    "x": 164,
+                    "y": 728,
+                    "h": 88,
+                    "w": 88
+                  },
+                  {
+                    "x": 1262,
+                    "y": 732,
+                    "h": 78,
+                    "w": 78
+                  },
+                  {
+                    "x": 688,
+                    "y": 738,
+                    "h": 80,
+                    "w": 80
+                  },
+                  {
+                    "x": 560,
+                    "y": 740,
+                    "h": 80,
+                    "w": 80
+                  },
+                  {
+                    "x": 896,
+                    "y": 744,
+                    "h": 80,
+                    "w": 80
+                  },
+                  {
+                    "x": 1528,
+                    "y": 738,
+                    "h": 90,
+                    "w": 90
+                  },
+                  {
+                    "x": 1112,
+                    "y": 780,
+                    "h": 76,
+                    "w": 76
+                  },
+                  {
+                    "x": 376,
+                    "y": 778,
+                    "h": 80,
+                    "w": 80
+                  },
+                  {
+                    "x": 1596,
+                    "y": 660,
+                    "h": 84,
+                    "w": 84
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 584,
+                    "y": 403,
+                    "h": 45,
+                    "w": 45
+                  },
+                  {
+                    "x": 667,
+                    "y": 406,
+                    "h": 43,
+                    "w": 43
+                  },
+                  {
+                    "x": 376,
+                    "y": 407,
+                    "h": 43,
+                    "w": 43
+                  },
+                  {
+                    "x": 257,
+                    "y": 410,
+                    "h": 45,
+                    "w": 45
+                  },
+                  {
+                    "x": 476,
+                    "y": 417,
+                    "h": 44,
+                    "w": 44
+                  },
+                  {
+                    "x": 782,
+                    "y": 417,
+                    "h": 44,
+                    "w": 44
+                  },
+                  {
+                    "x": 1050,
+                    "y": 421,
+                    "h": 50,
+                    "w": 50
+                  },
+                  {
+                    "x": 96,
+                    "y": 426,
+                    "h": 51,
+                    "w": 51
+                  },
+                  {
+                    "x": 739,
+                    "y": 428,
+                    "h": 45,
+                    "w": 45
+                  },
+                  {
+                    "x": 403,
+                    "y": 432,
+                    "h": 46,
+                    "w": 46
+                  },
+                  {
+                    "x": 328,
+                    "y": 433,
+                    "h": 46,
+                    "w": 46
+                  },
+                  {
+                    "x": 525,
+                    "y": 435,
+                    "h": 46,
+                    "w": 46
+                  },
+                  {
+                    "x": 895,
+                    "y": 432,
+                    "h": 52,
+                    "w": 52
+                  },
+                  {
+                    "x": 651,
+                    "y": 457,
+                    "h": 44,
+                    "w": 44
+                  },
+                  {
+                    "x": 220,
+                    "y": 455,
+                    "h": 46,
+                    "w": 46
+                  },
+                  {
+                    "x": 935,
+                    "y": 386,
+                    "h": 49,
+                    "w": 49
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 331,
+                    "y": 228,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 378,
+                    "y": 230,
+                    "h": 24,
+                    "w": 24
+                  },
+                  {
+                    "x": 213,
+                    "y": 231,
+                    "h": 24,
+                    "w": 24
+                  },
+                  {
+                    "x": 146,
+                    "y": 232,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 270,
+                    "y": 236,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 443,
+                    "y": 236,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 595,
+                    "y": 239,
+                    "h": 28,
+                    "w": 28
+                  },
+                  {
+                    "x": 54,
+                    "y": 241,
+                    "h": 29,
+                    "w": 29
+                  },
+                  {
+                    "x": 419,
+                    "y": 243,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 228,
+                    "y": 245,
+                    "h": 26,
+                    "w": 26
+                  },
+                  {
+                    "x": 185,
+                    "y": 245,
+                    "h": 26,
+                    "w": 26
+                  },
+                  {
+                    "x": 297,
+                    "y": 247,
+                    "h": 26,
+                    "w": 26
+                  },
+                  {
+                    "x": 507,
+                    "y": 245,
+                    "h": 29,
+                    "w": 29
+                  },
+                  {
+                    "x": 369,
+                    "y": 258,
+                    "h": 25,
+                    "w": 25
+                  },
+                  {
+                    "x": 124,
+                    "y": 258,
+                    "h": 26,
+                    "w": 26
+                  },
+                  {
+                    "x": 529,
+                    "y": 219,
+                    "h": 27,
+                    "w": 27
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 1996,
+                    "y": 1376,
+                    "h": 156,
+                    "w": 156
+                  },
+                  {
+                    "x": 2280,
+                    "y": 1388,
+                    "h": 148,
+                    "w": 148
+                  },
+                  {
+                    "x": 1284,
+                    "y": 1392,
+                    "h": 148,
+                    "w": 148
+                  },
+                  {
+                    "x": 880,
+                    "y": 1400,
+                    "h": 156,
+                    "w": 156
+                  },
+                  {
+                    "x": 1628,
+                    "y": 1424,
+                    "h": 152,
+                    "w": 152
+                  },
+                  {
+                    "x": 2672,
+                    "y": 1424,
+                    "h": 152,
+                    "w": 152
+                  },
+                  {
+                    "x": 3584,
+                    "y": 1440,
+                    "h": 172,
+                    "w": 172
+                  },
+                  {
+                    "x": 328,
+                    "y": 1456,
+                    "h": 176,
+                    "w": 176
+                  },
+                  {
+                    "x": 2524,
+                    "y": 1464,
+                    "h": 156,
+                    "w": 156
+                  },
+                  {
+                    "x": 1376,
+                    "y": 1476,
+                    "h": 160,
+                    "w": 160
+                  },
+                  {
+                    "x": 1120,
+                    "y": 1480,
+                    "h": 160,
+                    "w": 160
+                  },
+                  {
+                    "x": 1792,
+                    "y": 1488,
+                    "h": 160,
+                    "w": 160
+                  },
+                  {
+                    "x": 3056,
+                    "y": 1476,
+                    "h": 180,
+                    "w": 180
+                  },
+                  {
+                    "x": 2224,
+                    "y": 1560,
+                    "h": 152,
+                    "w": 152
+                  },
+                  {
+                    "x": 752,
+                    "y": 1556,
+                    "h": 160,
+                    "w": 160
+                  },
+                  {
+                    "x": 3192,
+                    "y": 1320,
+                    "h": 168,
+                    "w": 168
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1366,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 800,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 453,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2731,
+              "width": 4096,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 389,
+                  "w": 4096,
+                  "h": 2294
+                },
+                {
+                  "x": 375,
+                  "y": 0,
+                  "w": 2731,
+                  "h": 2731
+                },
+                {
+                  "x": 542,
+                  "y": 0,
+                  "w": 2396,
+                  "h": 2731
+                },
+                {
+                  "x": 1057,
+                  "y": 0,
+                  "w": 1366,
+                  "h": 2731
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4096,
+                  "h": 2731
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/kmA4Z7pVoC",
+            "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359/photo/1",
+            "id_str": "1929133009531531264",
+            "indices": [
+              272,
+              295
+            ],
+            "media_key": "3_1929133009531531264",
+            "media_url_https": "https://pbs.twimg.com/media/GsWoQE2bcAAET6L.jpg",
+            "type": "photo",
+            "url": "https://t.co/kmA4Z7pVoC",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 692,
+                    "y": 632,
+                    "h": 84,
+                    "w": 84
+                  },
+                  {
+                    "x": 1900,
+                    "y": 512,
+                    "h": 94,
+                    "w": 94
+                  },
+                  {
+                    "x": 1394,
+                    "y": 232,
+                    "h": 208,
+                    "w": 208
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 405,
+                    "y": 370,
+                    "h": 49,
+                    "w": 49
+                  },
+                  {
+                    "x": 1113,
+                    "y": 300,
+                    "h": 55,
+                    "w": 55
+                  },
+                  {
+                    "x": 816,
+                    "y": 135,
+                    "h": 121,
+                    "w": 121
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 229,
+                    "y": 209,
+                    "h": 27,
+                    "w": 27
+                  },
+                  {
+                    "x": 630,
+                    "y": 170,
+                    "h": 31,
+                    "w": 31
+                  },
+                  {
+                    "x": 462,
+                    "y": 77,
+                    "h": 69,
+                    "w": 69
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 1384,
+                    "y": 1264,
+                    "h": 168,
+                    "w": 168
+                  },
+                  {
+                    "x": 3800,
+                    "y": 1024,
+                    "h": 188,
+                    "w": 188
+                  },
+                  {
+                    "x": 2788,
+                    "y": 464,
+                    "h": 416,
+                    "w": 416
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1366,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 800,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 453,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2731,
+              "width": 4096,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 184,
+                  "w": 4096,
+                  "h": 2294
+                },
+                {
+                  "x": 375,
+                  "y": 0,
+                  "w": 2731,
+                  "h": 2731
+                },
+                {
+                  "x": 542,
+                  "y": 0,
+                  "w": 2396,
+                  "h": 2731
+                },
+                {
+                  "x": 1057,
+                  "y": 0,
+                  "w": 1366,
+                  "h": 2731
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4096,
+                  "h": 2731
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/kmA4Z7pVoC",
+            "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359/photo/1",
+            "id_str": "1929133009539936256",
+            "indices": [
+              272,
+              295
+            ],
+            "media_key": "3_1929133009539936256",
+            "media_url_https": "https://pbs.twimg.com/media/GsWoQE4bsAAz48I.jpg",
+            "type": "photo",
+            "url": "https://t.co/kmA4Z7pVoC",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 1314,
+                    "y": 10,
+                    "h": 126,
+                    "w": 126
+                  },
+                  {
+                    "x": 836,
+                    "y": 470,
+                    "h": 212,
+                    "w": 212
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 769,
+                    "y": 5,
+                    "h": 73,
+                    "w": 73
+                  },
+                  {
+                    "x": 489,
+                    "y": 275,
+                    "h": 124,
+                    "w": 124
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 436,
+                    "y": 3,
+                    "h": 41,
+                    "w": 41
+                  },
+                  {
+                    "x": 277,
+                    "y": 156,
+                    "h": 70,
+                    "w": 70
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 2628,
+                    "y": 20,
+                    "h": 252,
+                    "w": 252
+                  },
+                  {
+                    "x": 1672,
+                    "y": 940,
+                    "h": 424,
+                    "w": 424
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1366,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 800,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 453,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2731,
+              "width": 4096,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4096,
+                  "h": 2294
+                },
+                {
+                  "x": 375,
+                  "y": 0,
+                  "w": 2731,
+                  "h": 2731
+                },
+                {
+                  "x": 542,
+                  "y": 0,
+                  "w": 2396,
+                  "h": 2731
+                },
+                {
+                  "x": 1057,
+                  "y": 0,
+                  "w": 1366,
+                  "h": 2731
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4096,
+                  "h": 2731
+                }
+              ]
+            }
+          },
+          {
+            "display_url": "pic.x.com/kmA4Z7pVoC",
+            "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359/photo/1",
+            "id_str": "1929133009598652416",
+            "indices": [
+              272,
+              295
+            ],
+            "media_key": "3_1929133009598652416",
+            "media_url_https": "https://pbs.twimg.com/media/GsWoQFGboAApy49.jpg",
+            "type": "photo",
+            "url": "https://t.co/kmA4Z7pVoC",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 649,
+                    "y": 535,
+                    "h": 103,
+                    "w": 103
+                  },
+                  {
+                    "x": 1733,
+                    "y": 719,
+                    "h": 275,
+                    "w": 275
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 380,
+                    "y": 313,
+                    "h": 60,
+                    "w": 60
+                  },
+                  {
+                    "x": 1015,
+                    "y": 421,
+                    "h": 161,
+                    "w": 161
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 215,
+                    "y": 177,
+                    "h": 34,
+                    "w": 34
+                  },
+                  {
+                    "x": 575,
+                    "y": 238,
+                    "h": 91,
+                    "w": 91
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 1279,
+                    "y": 1055,
+                    "h": 204,
+                    "w": 204
+                  },
+                  {
+                    "x": 3413,
+                    "y": 1417,
+                    "h": 543,
+                    "w": 543
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1152,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 675,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 383,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2268,
+              "width": 4032,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 10,
+                  "w": 4032,
+                  "h": 2258
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2268,
+                  "h": 2268
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1989,
+                  "h": 2268
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1134,
+                  "h": 2268
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4032,
+                  "h": 2268
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "conversation_id": "1929133254222979359",
+      "retweet_status": null,
+      "quoted_status": null,
+      "bookmark_count": 0,
+      "source": "Twitter Web App",
+      "community_note": null
+    }
+  }
+}

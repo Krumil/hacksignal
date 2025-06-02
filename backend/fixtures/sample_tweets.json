@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1234567890",
+        "text": "\ud83d\ude80 AI Hackathon this weekend! \u20ac10k prize pool, 48-hour sprint. Solo developers welcome! Register by Friday. #AIHack #IndieDevs",
+        "user": {
+            "screen_name": "TechEvents",
+            "followers_count": 15000
+        },
+        "created_at": "2024-12-01T10:00:00Z"
+    },
+    {
+        "id": "1234567891",
+        "text": "Crypto hackathon next month - $5000 prize, weekend format. Perfect for solo builders! #CryptoHackathon #SoloBuilders",
+        "user": {
+            "screen_name": "CryptoCompetitions",
+            "followers_count": 8000
+        },
+        "created_at": "2024-12-01T11:00:00Z"
+    },
+    {
+        "id": "1234567892",
+        "text": "Major enterprise hackathon - $100k prize pool but requires teams of 10+. Probably not for indie developers.",
+        "user": {
+            "screen_name": "BigCorpEvents",
+            "followers_count": 150000
+        },
+        "created_at": "2024-12-01T12:00:00Z"
+    }
+]

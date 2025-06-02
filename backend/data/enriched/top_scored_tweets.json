@@ -1,0 +1,251 @@
+[
+  {
+    "tweet_id": "1929223304587465196",
+    "score": 0.864,
+    "account_followers": 18107,
+    "keyword_matches": [
+      "ends",
+      "challenge",
+      "competition"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/CryptoJournaal/status/1929223304587465196",
+    "source_file": "tweet_1929223304587465196_2025-06-02T11-22-11.580934.json",
+    "collected_at": "2025-06-02T11:22:11.580934"
+  },
+  {
+    "tweet_id": "1929291867411136715",
+    "score": 0.7,
+    "account_followers": 6255,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/andresvilarino/status/1929291867411136715",
+    "source_file": "tweet_1929291867411136715_2025-06-02T11-22-11.563615.json",
+    "collected_at": "2025-06-02T11:22:11.563615"
+  },
+  {
+    "tweet_id": "1929108697328029887",
+    "score": 0.6000000000000001,
+    "account_followers": 1577,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/OkiksFi_02/status/1929108697328029887",
+    "source_file": "tweet_1929108697328029887_2025-06-02T11-22-11.420420.json",
+    "collected_at": "2025-06-02T11:22:11.420420"
+  },
+  {
+    "tweet_id": "1929133254222979359",
+    "score": 0.6000000000000001,
+    "account_followers": 13014,
+    "keyword_matches": [
+      "Web3 hackathon",
+      "prize pool",
+      "hackathon",
+      "hack"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359",
+    "source_file": "tweet_1929133254222979359_2025-06-02T11-22-11.161743.json",
+    "collected_at": "2025-06-02T11:22:11.161743"
+  },
+  {
+    "tweet_id": "1929347410163053045",
+    "score": 0.6000000000000001,
+    "account_followers": 1061,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/ebere_onyibor/status/1929347410163053045",
+    "source_file": "tweet_1929347410163053045_2025-06-02T11-22-11.653048.json",
+    "collected_at": "2025-06-02T11:22:11.653048"
+  },
+  {
+    "tweet_id": "1929461324611731621",
+    "score": 0.6000000000000001,
+    "account_followers": 4750,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/comidoc/status/1929461324611731621",
+    "source_file": "tweet_1929461324611731621_2025-06-02T11-22-11.508453.json",
+    "collected_at": "2025-06-02T11:22:11.508453"
+  },
+  {
+    "tweet_id": "1929427883514098053",
+    "score": 0.6,
+    "account_followers": 3523,
+    "keyword_matches": [
+      "AI agent",
+      "agentic",
+      "agentic internet",
+      "autonomous infrastructure",
+      "cross-chain",
+      "submit by",
+      "opens",
+      "prizes",
+      "Genesis",
+      "hackathon",
+      "hack",
+      "challenge"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/nearhorizon/status/1929427883514098053",
+    "source_file": "tweet_1929427883514098053_2025-06-02T11-22-11.156422.json",
+    "collected_at": "2025-06-02T11:22:11.156422"
+  },
+  {
+    "tweet_id": "1929103088381518109",
+    "score": 0.5640000000000001,
+    "account_followers": 2063,
+    "keyword_matches": [
+      "cross-chain",
+      "interoperability"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/Dablendo01/status/1929103088381518109",
+    "source_file": "tweet_1929103088381518109_2025-06-02T11-22-11.600273.json",
+    "collected_at": "2025-06-02T11:22:11.600273"
+  },
+  {
+    "tweet_id": "1929467893684801758",
+    "score": 0.5640000000000001,
+    "account_followers": 11606,
+    "keyword_matches": [
+      "ends",
+      "prize pool"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/Pandemic_Games_/status/1929467893684801758",
+    "source_file": "tweet_1929467893684801758_2025-06-02T11-22-11.360881.json",
+    "collected_at": "2025-06-02T11:22:11.360881"
+  },
+  {
+    "tweet_id": "1929433053547344028",
+    "score": 0.536,
+    "account_followers": 1278,
+    "keyword_matches": [
+      "hackathon",
+      "hack"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/Blockhacks/status/1929433053547344028",
+    "source_file": "tweet_1929433053547344028_2025-06-02T11-22-11.187355.json",
+    "collected_at": "2025-06-02T11:22:11.187355"
+  },
+  {
+    "tweet_id": "1929446413290590542",
+    "score": 0.536,
+    "account_followers": 1278,
+    "keyword_matches": [
+      "hackathon",
+      "hack"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/Blockhacks/status/1929446413290590542",
+    "source_file": "tweet_1929446413290590542_2025-06-02T11-22-11.180793.json",
+    "collected_at": "2025-06-02T11:22:11.180793"
+  },
+  {
+    "tweet_id": "1929087231698022794",
+    "score": 0.532,
+    "account_followers": 3283,
+    "keyword_matches": [
+      "opens"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/trang110998/status/1929087231698022794",
+    "source_file": "tweet_1929087231698022794_2025-06-02T11-22-11.425633.json",
+    "collected_at": "2025-06-02T11:22:11.425633"
+  },
+  {
+    "tweet_id": "1929245830986285211",
+    "score": 0.532,
+    "account_followers": 12760,
+    "keyword_matches": [
+      "registration"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/MetaDAOProject/status/1929245830986285211",
+    "source_file": "tweet_1929245830986285211_2025-06-02T11-22-11.641136.json",
+    "collected_at": "2025-06-02T11:22:11.641136"
+  },
+  {
+    "tweet_id": "1929338331394883940",
+    "score": 0.516,
+    "account_followers": 1770,
+    "keyword_matches": [
+      "challenge"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/gabrielbajohn/status/1929338331394883940",
+    "source_file": "tweet_1929338331394883940_2025-06-02T11-22-11.564771.json",
+    "collected_at": "2025-06-02T11:22:11.564771"
+  },
+  {
+    "tweet_id": "1929416100242214953",
+    "score": 0.516,
+    "account_followers": 13289,
+    "keyword_matches": [
+      "hack"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/1nf0s3cpt/status/1929416100242214953",
+    "source_file": "tweet_1929416100242214953_2025-06-02T11-22-11.289945.json",
+    "collected_at": "2025-06-02T11:22:11.289945"
+  },
+  {
+    "tweet_id": "1929468270018715667",
+    "score": 0.516,
+    "account_followers": 3093,
+    "keyword_matches": [
+      "challenge"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/Dragon_Taiwan/status/1929468270018715667",
+    "source_file": "tweet_1929468270018715667_2025-06-02T11-22-11.557206.json",
+    "collected_at": "2025-06-02T11:22:11.557206"
+  },
+  {
+    "tweet_id": "1929123375319851198",
+    "score": 0.5,
+    "account_followers": 4146,
+    "keyword_matches": [
+      "winners",
+      "judges",
+      "hackathon",
+      "hack"
+    ],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/crtr0/status/1929123375319851198",
+    "source_file": "tweet_1929123375319851198_2025-06-02T11-22-11.509875.json",
+    "collected_at": "2025-06-02T11:22:11.509875"
+  },
+  {
+    "tweet_id": "1929277316158599605",
+    "score": 0.5,
+    "account_followers": 1070,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/nice012023/status/1929277316158599605",
+    "source_file": "tweet_1929277316158599605_2025-06-02T11-22-11.573313.json",
+    "collected_at": "2025-06-02T11:22:11.573313"
+  },
+  {
+    "tweet_id": "1929302914138276224",
+    "score": 0.5,
+    "account_followers": 4747,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://x.com/soyjaviergil/status/1929302914138276224",
+    "source_file": "tweet_1929302914138276224_2025-06-02T11-22-11.342599.json",
+    "collected_at": "2025-06-02T11:22:11.342599"
+  },
+  {
+    "tweet_id": "1929303024993804571",
+    "score": 0.5,
+    "account_followers": 1109,
+    "keyword_matches": [],
+    "follower_fit": 1,
+    "expanded_url": "https://www.geekmetaverse.com/how-ai-is-creating-self-owned-crypto-companies-the-dao-revolution/",
+    "source_file": "tweet_1929303024993804571_2025-06-02T11-22-11.339594.json",
+    "collected_at": "2025-06-02T11:22:11.339594"
+  }
+]
