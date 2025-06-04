@@ -1,0 +1,139 @@
+{
+  "hackathons": [
+    {
+      "id": "hack_1234567892",
+      "title": "AI Innovation Challenge",
+      "organizer": "AI Research Institute",
+      "prizePool": 28000,
+      "duration": 21,
+      "relevanceScore": 93,
+      "tags": [
+        "Cross-Chain",
+        "Interoperability",
+        "Competition"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $28,000 in total prizes. Great opportunity to showcase your skills and win significant rewards.",
+      "deadline": "2025-06-28T20:27:19.289473",
+      "registrationUrl": "https://x.com/protocol_labs/status/1234567892",
+      "website": "https://x.com/protocol_labs/status/1234567892",
+      "location": "Remote/Online",
+      "sourceScore": 0.93,
+      "sourceFollowers": 25000,
+      "sourceKeywords": [
+        "cross-chain",
+        "interoperability",
+        "competition"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    },
+    {
+      "id": "hack_1234567890",
+      "title": "AI Innovation Challenge",
+      "organizer": "Innovation Hub",
+      "prizePool": 15000,
+      "duration": 7,
+      "relevanceScore": 85,
+      "tags": [
+        "AI",
+        "Machine learning"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $15,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-14T20:27:19.288471",
+      "registrationUrl": "https://x.com/tech_user/status/1234567890",
+      "website": "https://x.com/tech_user/status/1234567890",
+      "location": "Remote/Online",
+      "sourceScore": 0.85,
+      "sourceFollowers": 15000,
+      "sourceKeywords": [
+        "ai",
+        "hackathon",
+        "machine learning"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.288471"
+    },
+    {
+      "id": "hack_1234567891",
+      "title": "AI Revolution Hackathon",
+      "organizer": "DeFi Collective",
+      "prizePool": 7000,
+      "duration": 5,
+      "relevanceScore": 72,
+      "tags": [
+        "Web3",
+        "Blockchain",
+        "DeFi"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $7,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-12T20:27:19.289473",
+      "registrationUrl": "https://x.com/crypto_dev/status/1234567891",
+      "website": "https://x.com/crypto_dev/status/1234567891",
+      "location": "Remote/Online",
+      "sourceScore": 0.72,
+      "sourceFollowers": 8500,
+      "sourceKeywords": [
+        "web3",
+        "blockchain",
+        "challenge",
+        "defi"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    },
+    {
+      "id": "hack_1234567894",
+      "title": "Protocol Builder Hackathon",
+      "organizer": "Protocol Labs",
+      "prizePool": 10000,
+      "duration": 5,
+      "relevanceScore": 67,
+      "tags": [
+        "Infrastructure",
+        "DAO",
+        "Developer"
+      ],
+      "description": "Build innovative solutions using developer infrastructure and tooling. Compete with developers worldwide for $10,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-12T20:27:19.289473",
+      "registrationUrl": "https://x.com/dev_tools/status/1234567894",
+      "website": "https://x.com/dev_tools/status/1234567894",
+      "location": "Remote/Online",
+      "sourceScore": 0.67,
+      "sourceFollowers": 12000,
+      "sourceKeywords": [
+        "infrastructure",
+        "dao",
+        "developer"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    },
+    {
+      "id": "hack_1234567893",
+      "title": "NFT Innovation Contest",
+      "organizer": "Developer Community",
+      "prizePool": 5000,
+      "duration": 5,
+      "relevanceScore": 57,
+      "tags": [
+        "NFT",
+        "Gaming",
+        "GameFi"
+      ],
+      "description": "Build innovative solutions using non-fungible tokens and digital collectibles. Compete with developers worldwide for $5,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-12T20:27:19.289473",
+      "registrationUrl": "https://x.com/game_dev/status/1234567893",
+      "website": "https://x.com/game_dev/status/1234567893",
+      "location": "Remote/Online",
+      "sourceScore": 0.58,
+      "sourceFollowers": 3200,
+      "sourceKeywords": [
+        "nft",
+        "gaming",
+        "gamefi"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    }
+  ],
+  "metadata": {
+    "count": 5,
+    "last_updated": "2025-06-02T20:27:19.968691",
+    "version": "1.0"
+  }
+}

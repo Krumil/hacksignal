@@ -1,0 +1,87 @@
+{
+  "hackathons": [
+    {
+      "id": "hack_1234567892",
+      "title": "AI Innovation Challenge",
+      "organizer": "AI Research Institute",
+      "prizePool": 28000,
+      "duration": 21,
+      "relevanceScore": 93,
+      "tags": [
+        "Cross-Chain",
+        "Interoperability",
+        "Competition"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $28,000 in total prizes. Great opportunity to showcase your skills and win significant rewards.",
+      "deadline": "2025-06-28T20:27:19.289473",
+      "registrationUrl": "https://x.com/protocol_labs/status/1234567892",
+      "website": "https://x.com/protocol_labs/status/1234567892",
+      "location": "Remote/Online",
+      "sourceScore": 0.93,
+      "sourceFollowers": 25000,
+      "sourceKeywords": [
+        "cross-chain",
+        "interoperability",
+        "competition"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    },
+    {
+      "id": "hack_1234567890",
+      "title": "AI Innovation Challenge",
+      "organizer": "Innovation Hub",
+      "prizePool": 15000,
+      "duration": 7,
+      "relevanceScore": 85,
+      "tags": [
+        "AI",
+        "Machine learning"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $15,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-14T20:27:19.288471",
+      "registrationUrl": "https://x.com/tech_user/status/1234567890",
+      "website": "https://x.com/tech_user/status/1234567890",
+      "location": "Remote/Online",
+      "sourceScore": 0.85,
+      "sourceFollowers": 15000,
+      "sourceKeywords": [
+        "ai",
+        "hackathon",
+        "machine learning"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.288471"
+    },
+    {
+      "id": "hack_1234567891",
+      "title": "AI Revolution Hackathon",
+      "organizer": "DeFi Collective",
+      "prizePool": 7000,
+      "duration": 5,
+      "relevanceScore": 72,
+      "tags": [
+        "Web3",
+        "Blockchain",
+        "DeFi"
+      ],
+      "description": "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $7,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+      "deadline": "2025-06-12T20:27:19.289473",
+      "registrationUrl": "https://x.com/crypto_dev/status/1234567891",
+      "website": "https://x.com/crypto_dev/status/1234567891",
+      "location": "Remote/Online",
+      "sourceScore": 0.72,
+      "sourceFollowers": 8500,
+      "sourceKeywords": [
+        "web3",
+        "blockchain",
+        "challenge",
+        "defi"
+      ],
+      "lastUpdated": "2025-06-02T20:27:19.289473"
+    }
+  ],
+  "metadata": {
+    "count": 3,
+    "last_updated": "2025-06-02T20:27:19.969694",
+    "version": "1.0"
+  }
+}

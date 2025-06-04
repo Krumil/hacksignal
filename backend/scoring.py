@@ -10,11 +10,9 @@ import glob
 import asyncio
 import telegram
 import shutil
-import re
-import aiohttp
-from typing import Dict, List, Any, Tuple, Union, Optional
+from typing import Dict, List, Any, Tuple, Union, Optional  
 from datetime import datetime
-from config import load_config, get_telegram_config, get_thresholds_config
+from config import load_config
 
 
 def _find_project_root() -> str:
@@ -508,7 +506,7 @@ def _normalize_tweet_structure(tweet: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def save_scored_tweets(scored_tweets: List[Dict[str, Any]], output_file: str = "data/enriched/scored_tweets.json") -> None:
-    """Save scored tweets to output file.
+    """Save scored tweets to output file and generate hackathon data.
     
     Args:
         scored_tweets: List of scored tweet objects
@@ -528,6 +526,29 @@ def save_scored_tweets(scored_tweets: List[Dict[str, Any]], output_file: str = "
         json.dump(scored_tweets, f, indent=2, ensure_ascii=False)
     
     print(f"Saved {len(scored_tweets)} scored tweets to {output_file}")
+    
+    # Generate hackathon data from scored tweets
+    try:
+        from hackathon_transformer import transform_tweets_batch, save_hackathons
+        
+        print("Transforming tweets to hackathon format...")
+        hackathons = transform_tweets_batch(scored_tweets)
+        
+        # Save hackathon data
+        hackathon_file = os.path.join(os.path.dirname(output_file), "hackathons.json")
+        save_hackathons(hackathons, hackathon_file)
+        
+        # Also save top 20 for quick access
+        top_hackathons = hackathons[:20]
+        top_hackathon_file = os.path.join(os.path.dirname(output_file), "top_hackathons.json")
+        save_hackathons(top_hackathons, top_hackathon_file)
+        
+        print(f"Generated {len(hackathons)} hackathon entries")
+        
+    except ImportError:
+        print("Warning: hackathon_transformer not available, skipping hackathon data generation")
+    except Exception as e:
+        print(f"Error generating hackathon data: {e}")
 
 
 def print_scoring_summary(scored_tweets: List[Dict[str, Any]], top_n: int = 10) -> None:
