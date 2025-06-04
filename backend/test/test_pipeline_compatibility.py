@@ -17,7 +17,7 @@ from ingestion import _transform_tweet_format
 from hackathon_transformer import transform_tweet_to_hackathon, validate_hackathon_data
 
 
-def test_twitter_api_compatibility():
+def _twitter_api_compatibility():
     """Test that new Twitter API response transforms correctly."""
     
     # Sample response from new Twitter API (twitter-api45.p.rapidapi.com)
@@ -59,7 +59,7 @@ def test_twitter_api_compatibility():
     return transformed_tweet
 
 
-def test_scoring_compatibility(transformed_tweet):
+def _scoring_compatibility(transformed_tweet):
     """Test that the transformed tweet works with scoring pipeline."""
     
     print("\n2. Testing scoring pipeline compatibility...")
@@ -84,7 +84,7 @@ def test_scoring_compatibility(transformed_tweet):
     return scored_tweet
 
 
-def test_hackathon_transformation(scored_tweet):
+def _hackathon_transformation(scored_tweet):
     """Test hackathon transformation and frontend compatibility."""
     
     print("\n3. Testing hackathon transformation...")
@@ -107,7 +107,7 @@ def test_hackathon_transformation(scored_tweet):
     return hackathon
 
 
-def test_frontend_compatibility(hackathon):
+def _frontend_compatibility(hackathon):
     """Test that hackathon data matches frontend interface."""
     
     print("\n4. Testing frontend interface compatibility...")
@@ -147,37 +147,10 @@ def test_frontend_compatibility(hackathon):
     return True
 
 
-def main():
-    """Run complete pipeline compatibility test."""
-    
-    print("=== Pipeline Compatibility Test ===\n")
-    
-    try:
-        # Test each stage of the pipeline
-        transformed_tweet = test_twitter_api_compatibility()
-        scored_tweet = test_scoring_compatibility(transformed_tweet)
-        hackathon = test_hackathon_transformation(scored_tweet)
-        test_frontend_compatibility(hackathon)
-        
-        print("\n" + "="*50)
-        print("🎉 ALL TESTS PASSED!")
-        print("The updated Twitter API integration is compatible")
-        print("with the existing hackathon transformation pipeline.")
-        print("="*50)
-        
-        # Output sample hackathon data
-        print("\nSample hackathon output:")
-        print(json.dumps(hackathon, indent=2))
-        
-        return True
-        
-    except Exception as e:
-        print(f"\n❌ TEST FAILED: {e}")
-        import traceback
-        traceback.print_exc()
-        return False
+def test_pipeline_compatibility():
+    """Run the full pipeline and assert compatibility."""
+    transformed = _twitter_api_compatibility()
+    scored = _scoring_compatibility(transformed)
+    hackathon = _hackathon_transformation(scored)
+    assert _frontend_compatibility(hackathon)
 
-
-if __name__ == "__main__":
-    success = main()
-    sys.exit(0 if success else 1) 

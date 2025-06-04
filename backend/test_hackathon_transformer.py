@@ -93,14 +93,7 @@ def test_single_transformation():
     print(f"   Tags: {', '.join(hackathon['tags'])}")
     print(f"   Location: {hackathon['location']}")
     
-    # Validate the result
-    if validate_hackathon_data(hackathon):
-        print("✅ Validation passed!")
-    else:
-        print("❌ Validation failed!")
-        return False
-    
-    return True
+    assert validate_hackathon_data(hackathon)
 
 
 def test_batch_transformation():
@@ -115,13 +108,7 @@ def test_batch_transformation():
     print(f"   Output: {len(hackathons)} hackathons")
     
     # Check if all hackathons are valid
-    valid_count = 0
-    for i, hackathon in enumerate(hackathons):
-        if validate_hackathon_data(hackathon):
-            valid_count += 1
-        else:
-            print(f"❌ Hackathon {i} failed validation")
-    
+    valid_count = sum(1 for h in hackathons if validate_hackathon_data(h))
     print(f"✅ {valid_count}/{len(hackathons)} hackathons passed validation")
     
     # Show top 3 hackathons
@@ -129,7 +116,7 @@ def test_batch_transformation():
     for i, hackathon in enumerate(hackathons[:3]):
         print(f"   #{i+1}: {hackathon['title']} (Score: {hackathon['relevanceScore']})")
     
-    return valid_count == len(hackathons)
+    assert valid_count == len(hackathons)
 
 
 def test_save_and_load():
@@ -142,26 +129,17 @@ def test_save_and_load():
     # Save to test file
     test_file = "data/enriched/test_hackathons.json"
     save_hackathons(hackathons, test_file)
-    
+
+    from scoring import _find_project_root
+    project_root = _find_project_root()
+    expected_path = os.path.join(project_root, test_file)
+
     # Check if file was created and has correct structure
-    if os.path.exists(test_file):
-        with open(test_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        if 'hackathons' in data and 'metadata' in data:
-            print("✅ File saved with correct structure!")
-            print(f"   Hackathons: {data['metadata']['count']}")
-            print(f"   Last updated: {data['metadata']['last_updated']}")
-            
-            # Clean up test file
-            os.remove(test_file)
-            return True
-        else:
-            print("❌ File structure invalid!")
-            return False
-    else:
-        print("❌ File was not created!")
-        return False
+    assert os.path.exists(expected_path)
+    with open(expected_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    assert 'hackathons' in data and 'metadata' in data
+    os.remove(expected_path)
 
 
 def test_api_integration():
@@ -189,70 +167,10 @@ def test_api_integration():
         
         # Check that frontend interface fields are present
         frontend_fields = ["title", "organizer", "prizePool", "duration", "relevanceScore", "tags"]
-        if hackathons:
-            first_hackathon = hackathons[0]
-            missing_fields = [field for field in frontend_fields if field not in first_hackathon]
-            if not missing_fields:
-                print("✅ All frontend interface fields are present!")
-                return True
-            else:
-                print(f"❌ Missing frontend fields: {missing_fields}")
-                return False
-        else:
-            print("❌ No hackathons in response!")
-            return False
+        assert hackathons
+        first_hackathon = hackathons[0]
+        missing_fields = [field for field in frontend_fields if field not in first_hackathon]
+        assert not missing_fields
     else:
-        print("❌ API response structure is incorrect!")
-        return False
+        assert False, "API response structure is incorrect"
 
-
-def run_all_tests():
-    """Run all tests and report results."""
-    print("🚀 Starting hackathon transformer tests...\n")
-    
-    tests = [
-        ("Single Transformation", test_single_transformation),
-        ("Batch Transformation", test_batch_transformation),
-        ("Save and Load", test_save_and_load),
-        ("API Integration", test_api_integration)
-    ]
-    
-    results = []
-    for test_name, test_func in tests:
-        try:
-            result = test_func()
-            results.append((test_name, result))
-        except Exception as e:
-            print(f"❌ {test_name} failed with error: {e}")
-            results.append((test_name, False))
-    
-    # Print summary
-    print("\n" + "="*50)
-    print("TEST SUMMARY")
-    print("="*50)
-    
-    passed = 0
-    total = len(results)
-    
-    for test_name, result in results:
-        status = "✅ PASSED" if result else "❌ FAILED"
-        print(f"{test_name:<25} {status}")
-        if result:
-            passed += 1
-    
-    print(f"\nOverall: {passed}/{total} tests passed")
-    
-    if passed == total:
-        print("🎉 All tests passed! Hackathon transformer is working correctly.")
-        return True
-    else:
-        print("⚠️ Some tests failed. Please check the implementation.")
-        return False
-
-
-if __name__ == "__main__":
-    # Ensure data directory exists
-    os.makedirs("data/enriched", exist_ok=True)
-    
-    success = run_all_tests()
-    exit(0 if success else 1) 

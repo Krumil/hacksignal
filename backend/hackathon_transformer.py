@@ -145,17 +145,27 @@ Generate a hackathon that would realistically be associated with this tweet. Con
 10. REASONING: Briefly explain your decisions based on the tweet content"""
 
         # Call OpenAI API with structured output
-        response = client.responses.parse(
+        response = client.chat.completions.create(
             model="gpt-4o",
-            instructions="""
-            You are an expert hackathon organizer who creates realistic and engaging hackathon events based on technology trends and community engagement. Generate structured hackathon data that matches the quality and scope indicated by the tweet metrics.
-            """,
-            input=prompt,
-            text_format=HackathonData,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are an expert hackathon organizer who creates realistic "
+                        "and engaging hackathon events based on technology trends "
+                        "and community engagement. Generate structured hackathon "
+                        "data that matches the quality and scope indicated by the "
+                        "tweet metrics."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            response_format={"type": "json_object"},
         )
-        
+
         # Extract and validate the result
-        result = response.output_parsed
+        result_data = json.loads(response.choices[0].message.content)
+        result = HackathonData.model_validate(result_data)
 
         print(result)
         

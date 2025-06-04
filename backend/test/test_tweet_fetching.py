@@ -8,6 +8,7 @@ import os
 import sys
 import json
 import dotenv
+import pytest
 
 # Add parent directory to path so we can import ingestion
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -16,6 +17,7 @@ from ingestion import poll_sources
 
 dotenv.load_dotenv()
 
+@pytest.mark.skip(reason="requires RapidAPI credentials and network access")
 def test_tweet_fetching():
     """Test the tweet fetching functionality."""
     

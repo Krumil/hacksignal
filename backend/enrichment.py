@@ -26,10 +26,21 @@ def extract_prize_amount(text: str) -> Tuple[float, str]:
     if not isinstance(text, str):
         raise TypeError("Text must be a string")
     
-    # TODO: Implement prize detection with regex heuristics
-    # Should detect "$10.8k", "€5,000", "10 ETH", etc.
-    # Convert EUR, ETH, BTC to USD equivalent
-    pass
+    patterns = _parse_prize_patterns()
+    for pattern, currency in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            amount_str = match.group(1).replace(",", "")
+            amount = float(amount_str)
+            # Handle "10k" style amounts
+            if "k" in match.group(0).lower():
+                amount *= 1000
+            if currency != "USD":
+                rate = _get_currency_conversion_rate(currency, "USD")
+                amount *= rate
+            return float(amount), currency
+
+    raise ValueError("Prize amount not found")
 
 
 def parse_duration(text: str) -> int:
@@ -48,9 +59,17 @@ def parse_duration(text: str) -> int:
     if not isinstance(text, str):
         raise TypeError("Text must be a string")
     
-    # TODO: Implement duration parsing
-    # "weekend sprint" ⇒ 48h, "72-hour hackathon" ⇒ 72h
-    pass
+    patterns = _parse_duration_patterns()
+    for pattern, multiplier in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            if match.groups():
+                hours = int(match.group(1)) * multiplier
+            else:
+                hours = multiplier
+            return hours
+
+    raise ValueError("Duration not found")
 
 
 def calculate_roi(prize_value: float, duration_hours: int) -> float:
@@ -91,9 +110,27 @@ def detect_deadline(text: str) -> Optional[str]:
     if not isinstance(text, str):
         raise TypeError("Text must be a string")
     
-    # TODO: Implement deadline detection
-    # Should find registration deadlines and convert to ISO format
-    pass
+    # Very simple date detection (e.g., "December 31, 2024")
+    month_names = (
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    )
+    month_regex = "|".join(month_names)
+    match = re.search(
+        rf"({month_regex})\s+(\d{{1,2}})(?:st|nd|rd|th)?(?:,)?\s*(\d{{4}})",
+        text,
+        re.IGNORECASE,
+    )
+
+    if match:
+        month, day, year = match.groups()
+        try:
+            dt = datetime.strptime(f"{month} {day} {year}", "%B %d %Y")
+            return dt.isoformat() + "Z"
+        except ValueError:
+            pass
+
+    return None
 
 
 def enrich_event(tweet: Dict[str, Any]) -> Dict[str, Any]:
@@ -108,17 +145,34 @@ def enrich_event(tweet: Dict[str, Any]) -> Dict[str, Any]:
     Raises:
         ValueError: When tweet is missing required fields
     """
-    # TODO: Implement main enrichment pipeline
-    # Should return schema:
-    # {
-    #   "tweet_id": "1234567890",
-    #   "prize_value": 10000,
-    #   "duration_hours": 48,
-    #   "roi_score": 208.33,
-    #   "currency_detected": "USD",
-    #   "registration_deadline": "2024-12-31T23:59:59Z"
-    # }
-    pass
+    if "tweet_id" not in tweet or "text" not in tweet:
+        raise ValueError("Tweet missing required fields")
+
+    text = tweet["text"]
+    try:
+        prize, currency = extract_prize_amount(text)
+    except ValueError:
+        prize, currency = 0.0, "USD"
+
+    try:
+        duration = parse_duration(text)
+    except ValueError:
+        duration = 48  # Assume weekend if not found
+
+    roi = calculate_roi(prize, duration) if prize and duration else 0.0
+    deadline = detect_deadline(text)
+
+    enriched = {
+        "tweet_id": tweet["tweet_id"],
+        "prize_value": prize,
+        "duration_hours": duration,
+        "roi_score": roi,
+        "currency_detected": currency,
+        "registration_deadline": deadline,
+        "user": tweet.get("user", {}),
+    }
+
+    return enriched
 
 
 def _get_currency_conversion_rate(from_currency: str, to_currency: str = "USD") -> float:
@@ -135,8 +189,7 @@ def _get_currency_conversion_rate(from_currency: str, to_currency: str = "USD") 
         CurrencyNotSupportedError: When currency is not supported
         APIError: When conversion API is unavailable
     """
-    # TODO: Implement currency conversion
-    # For now, return mock rates
+    # Simple mock conversion rates
     mock_rates = {
         "USD": 1.0,  # USD to USD
         "ETH": 2800.0,  # ETH to USD (approximate)

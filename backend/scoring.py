@@ -255,7 +255,10 @@ def _load_catalog_data() -> Dict[str, Any]:
     except FileNotFoundError:
         raise FileNotFoundError("sources/catalog.json not found")
     except json.JSONDecodeError as e:
-        raise json.JSONDecodeError(f"Invalid JSON in catalog.json: {e}")
+        # Re-raise with proper initialization args to preserve context
+        raise json.JSONDecodeError(
+            "Invalid JSON in catalog.json", e.doc, e.pos
+        )
 
 
 def _build_keyword_weights(catalog: Dict[str, Any]) -> Dict[str, float]:
@@ -481,8 +484,10 @@ def _normalize_tweet_structure(tweet: Dict[str, Any]) -> Dict[str, Any]:
         
         # Update follower count from raw response if available
         if 'user' in raw_response:
-            normalized['user']['followers_count'] = raw_response['user'].get('follower_count', 
-                                                                           normalized['user']['followers_count'])
+            normalized['user']['followers_count'] = raw_response['user'].get(
+                'followers_count',
+                normalized['user']['followers_count']
+            )
         
         # Get expanded_url, but clean it up if it's a media URL
         if 'expanded_url' in raw_response:
