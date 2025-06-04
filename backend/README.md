@@ -65,7 +65,11 @@ The system now uses **OpenAI's Structured Outputs** for generating high-quality 
 -   **Reasoning Field**: LLM explains its decisions for transparency
 -   **Robust Fallback**: Graceful degradation if API unavailable
 
-For detailed documentation, see [STRUCTURED_OUTPUTS_README.md](STRUCTURED_OUTPUTS_README.md).
+For detailed documentation, see:
+
+-   [STRUCTURED_OUTPUTS_README.md](STRUCTURED_OUTPUTS_README.md) - Structured outputs implementation
+-   [SCORING_README.md](documentation/SCORING_README.md) - Scoring algorithm details
+-   [Policy.md](Policy.md) - Data retention and privacy policies
 
 ## 📊 API Endpoints
 
@@ -117,6 +121,6 @@ This test script validates:
 
 For detailed documentation, see:
 
--   [STRUCTURED_OUTPUTS_README.md](STRUCTURED_OUTPUTS_README.md) - **NEW**: Structured outputs implementation
--   [SCORING_README.md](SCORING_README.md) - Scoring algorithm details
+-   [STRUCTURED_OUTPUTS_README.md](STRUCTURED_OUTPUTS_README.md) - Structured outputs implementation
+-   [SCORING_README.md](documentation/SCORING_README.md) - Scoring algorithm details
 -   [Policy.md](Policy.md) - Data retention and privacy policies
