@@ -1,0 +1,204 @@
+{
+  "collected_at": "2025-06-04T10:32:42.065013+00:00",
+  "tweet_data": {
+    "id": "1930173896419893427",
+    "text": "5 hours to start. \n+160 registrations.\n\nStill room to join: https://t.co/EoYKKj3HjP\n\n#NYTechWeek #Ideathon #Hackathon #ai https://t.co/WS1idcvhwy",
+    "user": {
+      "screen_name": "0d_xyzet",
+      "followers_count": 0,
+      "name": "0d_xyzet",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 08:04:52 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/EoYKKj3HjP",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930173896419893427",
+      "screen_name": "0d_xyzet",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 08:04:52 +0000 2025",
+      "text": "5 hours to start. \n+160 registrations.\n\nStill room to join: https://t.co/EoYKKj3HjP\n\n#NYTechWeek #Ideathon #Hackathon #ai https://t.co/WS1idcvhwy",
+      "lang": "en",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930173896419893427",
+      "retweets": 0,
+      "views": "8",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              85,
+              96
+            ],
+            "text": "NYTechWeek"
+          },
+          {
+            "indices": [
+              97,
+              106
+            ],
+            "text": "Ideathon"
+          },
+          {
+            "indices": [
+              107,
+              117
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              118,
+              121
+            ],
+            "text": "ai"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/WS1idcvhwy",
+            "expanded_url": "https://x.com/0d_xyzet/status/1930173896419893427/photo/1",
+            "id_str": "1930173513110810624",
+            "indices": [
+              122,
+              145
+            ],
+            "media_key": "3_1930173513110810624",
+            "media_url_https": "https://pbs.twimg.com/media/GslalWvWcAAxw0E.jpg",
+            "type": "photo",
+            "url": "https://t.co/WS1idcvhwy",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1280,
+                "w": 1023,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 1200,
+                "w": 959,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 680,
+                "w": 543,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1280,
+              "width": 1023,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 707,
+                  "w": 1023,
+                  "h": 573
+                },
+                {
+                  "x": 0,
+                  "y": 257,
+                  "w": 1023,
+                  "h": 1023
+                },
+                {
+                  "x": 0,
+                  "y": 114,
+                  "w": 1023,
+                  "h": 1166
+                },
+                {
+                  "x": 95,
+                  "y": 0,
+                  "w": 640,
+                  "h": 1280
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1023,
+                  "h": 1280
+                }
+              ]
+            },
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930173513110810624"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "partiful.com/e/TcpxBAnX90bB…",
+            "expanded_url": "https://partiful.com/e/TcpxBAnX90bBr8eLJzHN",
+            "url": "https://t.co/EoYKKj3HjP",
+            "indices": [
+              60,
+              83
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "0d_xyzet",
+        "name": "0D",
+        "created_at": "Wed Apr 23 15:44:35 +0000 2025",
+        "description": "Turn Ideas Into Working Software.\n\nAI-powered software generator that builds real, functional applications in minutes - no coding skills required.✨",
+        "rest_id": "1915069142006116352",
+        "followers_count": 16,
+        "favourites_count": 0,
+        "avatar": "https://pbs.twimg.com/profile_images/1915133824628908032/ayKdYTcG_normal.jpg",
+        "verified": false,
+        "friends_count": 0,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/GslalWvWcAAxw0E.jpg",
+            "id": "1930173513110810624",
+            "sizes": {
+              "h": 1200,
+              "w": 959
+            }
+          }
+        ]
+      }
+    }
+  }
+}

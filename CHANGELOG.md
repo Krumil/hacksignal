@@ -79,6 +79,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Implement email and webhook alert channels
 -   Add real currency conversion API integration
 
+## [2024-01-XX] - LLM-Based Scoring Integration
+
+### Changed
+
+-   **Major Pipeline Overhaul**: Replaced rule-based scoring in `scoring.py` with LLM-based scoring in `hackathon_transformer.py`
+-   **Enhanced HackathonData Schema**: Added `score` field (0.0-1.0) to capture LLM-assigned tweet quality scores
+-   **Unified Processing**: Combined scoring and hackathon transformation into single LLM call for better consistency
+-   **Updated Main Pipeline**: Modified `main.py` to use `process_raw_tweets_with_llm_scoring()` instead of separate scoring step
+
+### Added
+
+-   **New Function**: `process_raw_tweets_with_llm_scoring()` - processes raw tweets with LLM scoring and hackathon transformation
+-   **Enhanced LLM Prompt**: Updated to include detailed scoring criteria based on follower count, keywords, and topic relevance
+-   **Fallback Scoring**: Added rule-based fallback scoring for cases where LLM processing fails
+-   **Simple Keyword Extraction**: Added `_extract_simple_keywords()` for LLM processing
+
+### Technical Details
+
+-   LLM now assigns scores based on follower count fit (0.3 weight), keyword presence (0.2 weight), and topic relevance (0.5 weight)
+-   Maintains backward compatibility with existing Telegram integration and summary functions
+-   Returns both scored tweets and hackathon objects for comprehensive pipeline support
+-   Enhanced validation to include score field validation (0.0-1.0 range)
+
+### Benefits
+
+-   More intelligent and context-aware scoring using OpenAI's language models
+-   Consistent scoring criteria applied through structured LLM outputs
+-   Better hackathon quality assessment based on actual tweet content and context
+-   Reduced complexity by combining scoring and transformation steps
+
 ---
 
 ## Release Process

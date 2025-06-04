@@ -1,19 +1,48 @@
 """Hackathon Data Transformer
 
 Converts scored tweet data into hackathon-formatted data for frontend consumption.
-Moves complex transformation logic from frontend to backend for better performance and maintainability.
+Uses OpenAI's structured outputs to generate complete hackathon objects in a single LLM call.
 """
 
 import json
 import os
 import re
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime, timedelta
-from config import load_config
+from enum import Enum
+from pydantic import BaseModel, Field
+import openai
+
+client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+
+class HackathonLocation(str, Enum):
+    """Predefined location options for hackathons."""
+    remote_online = "Remote/Online"
+    global_remote = "Global/Remote"
+    san_francisco = "San Francisco, CA"
+    new_york = "New York, NY"
+    london = "London, UK"
+    singapore = "Singapore"
+    hybrid = "Hybrid"
+
+
+class HackathonData(BaseModel):
+    """Pydantic model for structured hackathon output."""
+    title: str = Field(description="Engaging hackathon title (2-5 words max, should indicate the host organization)")
+    organizer: str = Field(description="Organization or entity hosting the hackathon")
+    prizePool: int = Field(description="Total prize money in USD (range: 5000-250000)", ge=5000, le=250000)
+    duration: int = Field(description="Duration in days (range: 3-21)", ge=3, le=21)
+    relevanceScore: int = Field(description="Relevance score from 1-100 based on tweet quality and engagement", ge=1, le=100)
+    score: float = Field(description="Overall tweet quality score from 0.0-1.0 based on follower count, keywords, and hackathon relevance", ge=0.0, le=1.0)
+    tags: List[str] = Field(description="3-5 relevant technology tags (e.g., 'AI', 'Web3', 'Blockchain')", min_items=1, max_items=5)
+    description: str = Field(description="2-3 sentence description of the hackathon and what participants will build", min_length=50)
+    location: HackathonLocation = Field(description="Event location, default to Remote/Online if unclear")
+    reasoning: str = Field(description="Brief explanation of how you determined the hackathon details from the tweet")
 
 
 def transform_tweet_to_hackathon(tweet_data: Dict[str, Any]) -> Dict[str, Any]:
-    """Transform a single scored tweet into hackathon format.
+    """Transform a single scored tweet into hackathon format using structured LLM output.
     
     Args:
         tweet_data: Scored tweet object with score, keywords, etc.
@@ -27,10 +56,170 @@ def transform_tweet_to_hackathon(tweet_data: Dict[str, Any]) -> Dict[str, Any]:
     followers = tweet_data.get('account_followers', 0)
     keywords = tweet_data.get('keyword_matches', [])
     expanded_url = tweet_data.get('expanded_url', '')
-    tweet_text = tweet_data.get('text', '')  # Add tweet text extraction
+    tweet_text = tweet_data.get('text', '')
     
-    # Generate hackathon data
-    title = _generate_title(keywords, score, tweet_text)  # Pass tweet text to title generation
+    # Generate hackathon data using LLM structured output
+    llm_result = _generate_hackathon_with_llm(tweet_text, keywords, score, followers)
+    
+    if not llm_result:
+        # Fallback to rule-based generation if LLM fails
+        print(f"LLM generation failed for tweet {tweet_id}, using fallback")
+        return _generate_hackathon_fallback(tweet_data)
+    
+    # Calculate deadline based on duration
+    deadline = _generate_deadline(llm_result.duration)
+    
+    # Build final hackathon object
+    hackathon = {
+        'id': f"hack_{tweet_id}",
+        'title': llm_result.title,
+        'organizer': llm_result.organizer,
+        'prizePool': llm_result.prizePool,
+        'duration': llm_result.duration,
+        'relevanceScore': llm_result.relevanceScore,
+        'tags': llm_result.tags,
+        'description': llm_result.description,
+        'deadline': deadline,
+        'registrationUrl': expanded_url,
+        'website': expanded_url,
+        'location': llm_result.location.value,
+        'sourceScore': llm_result.score,
+        'sourceFollowers': followers,
+        'sourceKeywords': keywords,
+        'lastUpdated': datetime.now().isoformat(),
+        'reasoning': llm_result.reasoning
+    }
+    
+    return hackathon
+
+
+def _generate_hackathon_with_llm(tweet_text: str, keywords: List[str], score: float, followers: int) -> Optional[HackathonData]:
+    """Generate complete hackathon data using OpenAI structured outputs."""
+    try:
+        # Get OpenAI API key
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            print("Warning: OPENAI_API_KEY not found, using fallback generation")
+            return None
+        
+        # Prepare context for the LLM
+        keywords_str = ", ".join(keywords) if keywords else "technology, innovation"
+        
+        # Create comprehensive prompt
+        prompt = f"""Analyze this tweet and generate a realistic hackathon based on the content and context:
+
+TWEET: "{tweet_text}"
+KEYWORDS: {keywords_str}
+ENGAGEMENT SCORE: {score:.2f} (0.0-1.0 scale)
+ACCOUNT FOLLOWERS: {followers:,}
+
+Generate a hackathon that would realistically be associated with this tweet. Consider:
+
+1. TITLE: Create an exciting, professional title that reflects the main technology/theme and the host organization.
+
+2. ORGANIZER: The name of the organization hosting the hackathon.
+
+3. PRIZE POOL: Calculate based on followers and engagement:
+   - Base: max(5000, min(followers * 0.8, 100000))
+   - Multiply by engagement score (0.5x to 2.0x)
+   - Round to nearest 1000, keep between 5000-250000
+
+4. DURATION: 
+   - Higher prizes = longer events (21 days for 50K+, 14 days for 25K+, 7 days for 10K+)
+   - Adjust for event type (sprints shorter, competitions longer)
+
+5. RELEVANCE SCORE: Convert engagement score to 1-100 scale, capped at 100. MINIMUM VALUE IS 1 (never 0).
+
+6. SCORE: Calculate overall tweet quality score (0.0-1.0) based on:
+   - Follower count fit (0.3 weight): 1.0 if 2K-50K followers, 0.0 otherwise
+   - Keyword presence (0.2 weight): 0.1 per relevant keyword, capped at 0.2
+   - Topic relevance (0.5 weight): How well the tweet relates to hackathons/tech competitions
+   Final score = (follower_fit * 0.3) + (keyword_score * 0.2) + (topic_relevance * 0.5), capped at 1.0
+
+7. TAGS: Extract 3-5 relevant technology tags from keywords and tweet content
+
+8. DESCRIPTION: Write 2-3 sentences about what participants will build and why it's exciting
+
+9. LOCATION: Choose based on keywords or default to Remote/Online
+
+10. REASONING: Briefly explain your decisions based on the tweet content"""
+
+        # Call OpenAI API with structured output
+        response = client.responses.parse(
+            model="gpt-4o",
+            instructions="""
+            You are an expert hackathon organizer who creates realistic and engaging hackathon events based on technology trends and community engagement. Generate structured hackathon data that matches the quality and scope indicated by the tweet metrics.
+            """,
+            input=prompt,
+            text_format=HackathonData,
+        )
+        
+        # Extract and validate the result
+        result = response.output_parsed
+
+        print(result)
+        
+        if result and _validate_llm_hackathon_data(result):
+            return result
+        else:
+            print(f"Warning: Generated hackathon data failed validation")
+            return None
+            
+    except Exception as e:
+        print(f"Error generating LLM hackathon data: {e}")
+        return None
+
+
+def _validate_llm_hackathon_data(data: HackathonData) -> bool:
+    """Validate the LLM-generated hackathon data."""
+    try:
+        # Check title length
+        if not data.title or len(data.title) > 50 or len(data.title.split()) > 6:
+            return False
+        
+        # Check prize pool range
+        if not (5000 <= data.prizePool <= 250000):
+            return False
+        
+        # Check duration range
+        if not (3 <= data.duration <= 21):
+            return False
+        
+        # Check relevance score range
+        if not (1 <= data.relevanceScore <= 100):
+            return False
+        
+        # Check score range
+        if not (0.0 <= data.score <= 1.0):
+            return False
+        
+        # Check tags
+        if not data.tags or len(data.tags) == 0 or len(data.tags) > 5:
+            return False
+        
+        # Check description length
+        if not data.description or len(data.description) < 50:
+            return False
+        
+        return True
+        
+    except Exception as e:
+        print(f"Validation error: {e}")
+        return False
+
+
+def _generate_hackathon_fallback(tweet_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Fallback hackathon generation using rule-based approach (original logic)."""
+    # Extract basic data
+    tweet_id = str(tweet_data.get('tweet_id', ''))
+    score = tweet_data.get('score', 0.0)
+    followers = tweet_data.get('account_followers', 0)
+    keywords = tweet_data.get('keyword_matches', [])
+    expanded_url = tweet_data.get('expanded_url', '')
+    tweet_text = tweet_data.get('text', '')
+    
+    # Generate using original rule-based methods
+    title = _generate_rule_based_title(keywords, score, tweet_text)
     organizer = _generate_organizer(followers, keywords)
     prize_pool = _calculate_prize_pool(score, followers)
     duration = _generate_duration(prize_pool, keywords)
@@ -38,6 +227,12 @@ def transform_tweet_to_hackathon(tweet_data: Dict[str, Any]) -> Dict[str, Any]:
     tags = _generate_tags(keywords)
     description = _generate_description(keywords, prize_pool)
     deadline = _generate_deadline(duration)
+    
+    # Calculate fallback score using rule-based approach
+    follower_fit = 1 if 2000 <= followers <= 50000 else 0
+    keyword_score = min(len(keywords) * 0.1, 0.2)
+    topic_confidence = min(len([k for k in keywords if any(tech in k.lower() for tech in ['ai', 'crypto', 'blockchain', 'hackathon'])]) * 0.1, 0.5)
+    fallback_score = min((follower_fit * 0.3) + keyword_score + (topic_confidence * 0.5), 1.0)
     
     hackathon = {
         'id': f"hack_{tweet_id}",
@@ -52,10 +247,11 @@ def transform_tweet_to_hackathon(tweet_data: Dict[str, Any]) -> Dict[str, Any]:
         'registrationUrl': expanded_url,
         'website': expanded_url,
         'location': _determine_location(keywords),
-        'sourceScore': score,
+        'sourceScore': fallback_score,  # Use calculated fallback score
         'sourceFollowers': followers,
         'sourceKeywords': keywords,
-        'lastUpdated': datetime.now().isoformat()
+        'lastUpdated': datetime.now().isoformat(),
+        'reasoning': 'Generated using fallback rule-based approach'
     }
     
     return hackathon
@@ -120,8 +316,8 @@ def save_hackathons(hackathons: List[Dict[str, Any]], output_file: str = "data/e
     print(f"Saved {len(hackathons)} hackathons to {output_file}")
 
 
-def _generate_title(keywords: List[str], score: float, tweet_text: str) -> str:
-    """Generate hackathon title based on keywords, score, and tweet content."""
+def _generate_rule_based_title(keywords: List[str], score: float, tweet_text: str) -> str:
+    """Generate hackathon title using rule-based approach (original logic)."""
     if not tweet_text:
         return "Innovation Challenge"
     
@@ -503,4 +699,144 @@ def validate_hackathon_data(hackathon: Dict[str, Any]) -> bool:
         assert isinstance(hackathon['organizer'], str) and len(hackathon['organizer']) > 0
         return True
     except (AssertionError, TypeError):
-        return False 
+        return False
+
+
+def process_raw_tweets_with_llm_scoring(raw_data_dir: str = "data/raw") -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Process raw tweets with LLM-based scoring and transformation.
+    
+    Args:
+        raw_data_dir: Path to directory containing raw tweet JSON files
+        
+    Returns:
+        Tuple of (scored_tweets, hackathons) - both lists sorted by score (highest first)
+        
+    Raises:
+        FileNotFoundError: When raw data directory doesn't exist
+    """
+    import glob
+    
+    # Get the directory where this script is located (project root)
+    from scoring import _find_project_root, _normalize_tweet_structure
+    
+    script_dir = _find_project_root()
+    
+    # If raw_data_dir is relative, make it relative to the script directory
+    if not os.path.isabs(raw_data_dir):
+        raw_data_dir = os.path.join(script_dir, raw_data_dir)
+    
+    if not os.path.exists(raw_data_dir):
+        raise FileNotFoundError(f"Raw data directory '{raw_data_dir}' not found")
+    
+    scored_tweets = []
+    hackathons = []
+    tweet_files = glob.glob(os.path.join(raw_data_dir, "tweet_*.json"))
+    
+    print(f"Found {len(tweet_files)} tweet files to process with LLM scoring...")
+    
+    for file_path in tweet_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+            # Extract tweet_data from the file structure
+            if 'tweet_data' in data:
+                tweet = data['tweet_data']
+                
+                # Normalize the tweet structure
+                normalized_tweet = _normalize_tweet_structure(tweet)
+                
+                # Extract basic data for LLM processing
+                tweet_id = str(normalized_tweet.get('id', ''))
+                tweet_text = normalized_tweet.get('text', '')
+                followers = normalized_tweet.get('user', {}).get('followers_count', 0)
+                expanded_url = normalized_tweet.get('expanded_url', '')
+                
+                # Extract keywords from the text (simple extraction)
+                keywords = _extract_simple_keywords(tweet_text)
+                
+                # Generate hackathon data using LLM (which now includes scoring)
+                llm_result = _generate_hackathon_with_llm(tweet_text, keywords, 0.0, followers)
+                
+                if llm_result:
+                    # Create hackathon object
+                    deadline = _generate_deadline(llm_result.duration)
+                    hackathon = {
+                        'id': f"hack_{tweet_id}",
+                        'title': llm_result.title,
+                        'organizer': llm_result.organizer,
+                        'prizePool': llm_result.prizePool,
+                        'duration': llm_result.duration,
+                        'relevanceScore': llm_result.relevanceScore,
+                        'tags': llm_result.tags,
+                        'description': llm_result.description,
+                        'deadline': deadline,
+                        'registrationUrl': expanded_url,
+                        'website': expanded_url,
+                        'location': llm_result.location.value,
+                        'sourceScore': llm_result.score,
+                        'sourceFollowers': followers,
+                        'sourceKeywords': keywords,
+                        'lastUpdated': datetime.now().isoformat(),
+                        'reasoning': llm_result.reasoning
+                    }
+                    hackathons.append(hackathon)
+                    
+                    # Create scored tweet object for compatibility with existing pipeline
+                    scored_tweet = {
+                        "tweet_id": tweet_id,
+                        "score": llm_result.score,
+                        "account_followers": followers,
+                        "keyword_matches": keywords,
+                        "follower_fit": 1 if 2000 <= followers <= 50000 else 0,
+                        "expanded_url": expanded_url,
+                        "source_file": os.path.basename(file_path),
+                        "collected_at": data.get('collected_at', ''),
+                        "text": tweet_text[:200] + "..." if len(tweet_text) > 200 else tweet_text
+                    }
+                    scored_tweets.append(scored_tweet)
+                    
+                    print(f"✅ Processed tweet {tweet_id} with LLM score: {llm_result.score:.3f}")
+                else:
+                    print(f"❌ Failed to process tweet {tweet_id} with LLM")
+                    
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSON in {file_path}: {e}")
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    # Sort both lists by score (highest first)
+    scored_tweets.sort(key=lambda x: x['score'], reverse=True)
+    hackathons.sort(key=lambda x: x['sourceScore'], reverse=True)
+    
+    print(f"Successfully processed {len(scored_tweets)} tweets with LLM scoring")
+    return scored_tweets, hackathons
+
+
+def _extract_simple_keywords(text: str) -> List[str]:
+    """Simple keyword extraction for LLM processing."""
+    if not text:
+        return []
+    
+    text_lower = text.lower()
+    keywords = []
+    
+    # Common hackathon/tech keywords
+    keyword_patterns = [
+        'hackathon', 'hack', 'challenge', 'competition', 'sprint', 'contest',
+        'ai', 'artificial intelligence', 'machine learning', 'ml', 'neural',
+        'blockchain', 'crypto', 'bitcoin', 'ethereum', 'web3', 'defi', 'nft',
+        'gamefi', 'dao', 'dapp', 'smart contract', 'infrastructure', 'build',
+        'developer', 'coding', 'programming', 'innovation', 'technology'
+    ]
+    
+    for keyword in keyword_patterns:
+        if keyword in text_lower:
+            keywords.append(keyword)
+    
+    # Extract hashtags
+    import re
+    hashtags = re.findall(r'#(\w+)', text)
+    keywords.extend([f"#{tag}" for tag in hashtags[:5]])  # Limit hashtags
+    
+    return list(set(keywords))  # Remove duplicates 

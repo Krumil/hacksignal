@@ -1,0 +1,483 @@
+{
+  "collected_at": "2025-06-04T10:32:42.060555+00:00",
+  "tweet_data": {
+    "id": "1930207954235437121",
+    "text": "At our #hackathon today, we are challenging attendees to develop solutions to some of the toughest problems in pensions. If you have answers to the questions we posed, share them with us in the comments or read more about how we are supporting innovation: https://t.co/o77OYl6ITi https://t.co/O3x7wPg3BH",
+    "user": {
+      "screen_name": "TPRgovuk",
+      "followers_count": 0,
+      "name": "TPRgovuk",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 10:20:12 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/o77OYl6ITi",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930207954235437121",
+      "screen_name": "TPRgovuk",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 10:20:12 +0000 2025",
+      "text": "At our #hackathon today, we are challenging attendees to develop solutions to some of the toughest problems in pensions. If you have answers to the questions we posed, share them with us in the comments or read more about how we are supporting innovation: https://t.co/o77OYl6ITi https://t.co/O3x7wPg3BH",
+      "lang": "en",
+      "source": "<a href=\"https://www.hootsuite.com\" rel=\"nofollow\">Hootsuite Inc.</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930207954235437121",
+      "retweets": 1,
+      "views": "48",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              7,
+              17
+            ],
+            "text": "hackathon"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/O3x7wPg3BH",
+            "expanded_url": "https://x.com/TPRgovuk/status/1930207954235437121/photo/1",
+            "id_str": "1930207947876884480",
+            "indices": [
+              280,
+              303
+            ],
+            "media_key": "3_1930207947876884480",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55uPWYAAMzl3.jpg",
+            "type": "photo",
+            "url": "https://t.co/O3x7wPg3BH",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1087,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 637,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 361,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1605,
+              "width": 3024,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2866,
+                  "h": 1605
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1605,
+                  "h": 1605
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1408,
+                  "h": 1605
+                },
+                {
+                  "x": 127,
+                  "y": 0,
+                  "w": 803,
+                  "h": 1605
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3024,
+                  "h": 1605
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930207947876884480"
+              }
+            }
+          },
+          {
+            "display_url": "pic.x.com/O3x7wPg3BH",
+            "expanded_url": "https://x.com/TPRgovuk/status/1930207954235437121/photo/1",
+            "id_str": "1930207948183052288",
+            "indices": [
+              280,
+              303
+            ],
+            "media_key": "3_1930207948183052288",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vYWIAAqHJd.jpg",
+            "type": "photo",
+            "url": "https://t.co/O3x7wPg3BH",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1132,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 663,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 376,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1498,
+              "width": 2710,
+              "focus_rects": [
+                {
+                  "x": 18,
+                  "y": 0,
+                  "w": 2675,
+                  "h": 1498
+                },
+                {
+                  "x": 606,
+                  "y": 0,
+                  "w": 1498,
+                  "h": 1498
+                },
+                {
+                  "x": 698,
+                  "y": 0,
+                  "w": 1314,
+                  "h": 1498
+                },
+                {
+                  "x": 981,
+                  "y": 0,
+                  "w": 749,
+                  "h": 1498
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2710,
+                  "h": 1498
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930207948183052288"
+              }
+            }
+          },
+          {
+            "display_url": "pic.x.com/O3x7wPg3BH",
+            "expanded_url": "https://x.com/TPRgovuk/status/1930207954235437121/photo/1",
+            "id_str": "1930207948229210113",
+            "indices": [
+              280,
+              303
+            ],
+            "media_key": "3_1930207948229210113",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vjWcAEYCC7.jpg",
+            "type": "photo",
+            "url": "https://t.co/O3x7wPg3BH",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1135,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 665,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 377,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2064,
+              "width": 3723,
+              "focus_rects": [
+                {
+                  "x": 18,
+                  "y": 0,
+                  "w": 3686,
+                  "h": 2064
+                },
+                {
+                  "x": 829,
+                  "y": 0,
+                  "w": 2064,
+                  "h": 2064
+                },
+                {
+                  "x": 956,
+                  "y": 0,
+                  "w": 1811,
+                  "h": 2064
+                },
+                {
+                  "x": 1345,
+                  "y": 0,
+                  "w": 1032,
+                  "h": 2064
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3723,
+                  "h": 2064
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930207948229210113"
+              }
+            }
+          },
+          {
+            "display_url": "pic.x.com/O3x7wPg3BH",
+            "expanded_url": "https://x.com/TPRgovuk/status/1930207954235437121/photo/1",
+            "id_str": "1930207948287909888",
+            "indices": [
+              280,
+              303
+            ],
+            "media_key": "3_1930207948287909888",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vxWIAAq2bs.jpg",
+            "type": "photo",
+            "url": "https://t.co/O3x7wPg3BH",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1091,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 639,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 362,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1492,
+              "width": 2800,
+              "focus_rects": [
+                {
+                  "x": 68,
+                  "y": 0,
+                  "w": 2664,
+                  "h": 1492
+                },
+                {
+                  "x": 654,
+                  "y": 0,
+                  "w": 1492,
+                  "h": 1492
+                },
+                {
+                  "x": 746,
+                  "y": 0,
+                  "w": 1309,
+                  "h": 1492
+                },
+                {
+                  "x": 1027,
+                  "y": 0,
+                  "w": 746,
+                  "h": 1492
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2800,
+                  "h": 1492
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930207948287909888"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "ow.ly/AIuZ50W3WzR",
+            "expanded_url": "https://ow.ly/AIuZ50W3WzR",
+            "url": "https://t.co/o77OYl6ITi",
+            "indices": [
+              256,
+              279
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "TPRgovuk",
+        "name": "ThePensionsRegulator",
+        "created_at": "Fri Oct 28 13:39:38 +0000 2011",
+        "description": "The official channel of The Pensions Regulator: the information we provide is for guidance only, please see our full policy at https://t.co/1M4HvzGYcr",
+        "rest_id": "400081247",
+        "followers_count": 13599,
+        "favourites_count": 1528,
+        "avatar": "https://pbs.twimg.com/profile_images/1572144976414347265/-wHhxLKT_normal.jpg",
+        "verified": false,
+        "friends_count": 544,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55uPWYAAMzl3.jpg",
+            "id": "1930207947876884480",
+            "sizes": {
+              "h": 637,
+              "w": 1200
+            }
+          },
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vYWIAAqHJd.jpg",
+            "id": "1930207948183052288",
+            "sizes": {
+              "h": 663,
+              "w": 1200
+            }
+          },
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vjWcAEYCC7.jpg",
+            "id": "1930207948229210113",
+            "sizes": {
+              "h": 665,
+              "w": 1200
+            }
+          },
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl55vxWIAAq2bs.jpg",
+            "id": "1930207948287909888",
+            "sizes": {
+              "h": 639,
+              "w": 1200
+            }
+          }
+        ]
+      }
+    }
+  }
+}

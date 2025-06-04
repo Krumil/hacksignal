@@ -10,65 +10,85 @@ import os
 from datetime import datetime
 import dotenv
 
+# Fix encoding issues on Windows
+if os.name == 'nt':  # Windows
+    import codecs
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
 dotenv.load_dotenv()    
 
 # Add the current directory to path to import our modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from ingestion import poll_sources
-from scoring import score_tweets_from_raw_data, save_scored_tweets, print_scoring_summary, send_top_tweets_to_telegram, archive_previous_top_tweets_and_clear_raw_data
+from scoring import send_top_tweets_to_telegram, archive_previous_top_tweets_and_clear_raw_data, print_scoring_summary
+from hackathon_transformer import process_raw_tweets_with_llm_scoring, save_hackathons
+
+
+def safe_print(text):
+    """Print text with Unicode emoji fallback for Windows compatibility."""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # Fallback: replace emojis with ASCII equivalents
+        fallback_text = text.replace("🚀", "[ROCKET]").replace("📁", "[FOLDER]").replace("🔍", "[SEARCH]").replace("⚠️", "[WARNING]").replace("✅", "[CHECK]").replace("🎯", "[TARGET]").replace("❌", "[X]").replace("💾", "[DISK]").replace("📊", "[CHART]").replace("📤", "[OUTBOX]").replace("🎉", "[PARTY]").replace("📈", "[GRAPH]").replace("⏹️", "[STOP]").replace("🧪", "[TEST]")
+        print(fallback_text)
 
 
 def main():
     """Main orchestrator function that runs the complete pipeline."""
-    print("🚀 Starting HackSignal Tweet Processing Pipeline")
+    safe_print("🚀 Starting HackSignal Tweet Processing Pipeline")
     print("=" * 50)
     
     try:
         
         # Step 0: Archive previous top tweets and clear raw data
-        print("\n📁 Step 0: Archiving previous top tweets and clearing raw data...")
+        safe_print("\n📁 Step 0: Archiving previous top tweets and clearing raw data...")
         archive_previous_top_tweets_and_clear_raw_data()
         
         # Step 1: Poll sources and collect tweets
-        print("\n🔍 Step 1: Collecting tweets from configured sources...")
+        safe_print("\n🔍 Step 1: Collecting tweets from configured sources...")
         tweets = poll_sources()
         
         if not tweets:
-            print("⚠️  No tweets collected. Check your sources configuration or API limits.")
+            safe_print("⚠️  No tweets collected. Check your sources configuration or API limits.")
             return False
         
-        print(f"✅ Collected {len(tweets)} unique tweets and stored in data/raw/")
+        safe_print(f"✅ Collected {len(tweets)} unique tweets and stored in data/raw/")
         
         # Step 2: Score the collected tweets
-        print("\n🎯 Step 2: Scoring tweets for relevance...")
-        scored_tweets = score_tweets_from_raw_data()
+        safe_print("\n🎯 Step 2: Scoring tweets for relevance with LLM...")
+        scored_tweets, hackathons = process_raw_tweets_with_llm_scoring()
         
         if not scored_tweets:
-            print("❌ No tweets were successfully scored.")
+            safe_print("❌ No tweets were successfully scored.")
             return False
         
-        print(f"✅ Successfully scored {len(scored_tweets)} tweets")
+        safe_print(f"✅ Successfully scored {len(scored_tweets)} tweets with LLM")
         
         # Step 3: Save scored results
-        print("\n💾 Step 3: Saving scored results...")
-        save_scored_tweets(scored_tweets)
+        safe_print("\n💾 Step 3: Saving scored results...")
+        save_scored_tweets_with_llm(scored_tweets)
+        save_hackathons(hackathons)
         
         # Save top 20 tweets separately
         top_tweets = scored_tweets[:20]
-        save_scored_tweets(top_tweets, "data/enriched/top_scored_tweets.json")
-        print("✅ Scored tweets saved to data/enriched/")
+        top_hackathons = hackathons[:20]
+        save_scored_tweets_with_llm(top_tweets, "data/enriched/top_scored_tweets.json")
+        save_hackathons(top_hackathons, "data/enriched/top_hackathons.json")
+        safe_print("✅ Scored tweets and hackathons saved to data/enriched/")
         
         # Step 4: Display summary
-        print("\n📊 Step 4: Generating summary...")
+        safe_print("\n📊 Step 4: Generating summary...")
         print_scoring_summary(scored_tweets, top_n=10)
         
         # Step 5: Send to Telegram
-        print("\n📤 Step 5: Sending top tweets to Telegram...")
+        safe_print("\n📤 Step 5: Sending top tweets to Telegram...")
         send_top_tweets_to_telegram(scored_tweets)
         
-        print("\n🎉 Pipeline completed successfully!")
-        print(f"📈 Final Stats:")
+        safe_print("\n🎉 Pipeline completed successfully!")
+        safe_print(f"📈 Final Stats:")
         print(f"   • Tweets collected: {len(tweets)}")
         print(f"   • Tweets scored: {len(scored_tweets)}")
         print(f"   • Top score: {scored_tweets[0]['score']:.3f}" if scored_tweets else "   • No scores available")
@@ -77,7 +97,7 @@ def main():
         return True
         
     except KeyboardInterrupt:
-        print("\n⏹️  Pipeline interrupted by user")
+        safe_print("\n⏹️  Pipeline interrupted by user")
         return False
     except Exception as e:
         print(f"\n❌ Pipeline failed with error: {e}")
@@ -87,25 +107,49 @@ def main():
 
 def run_quick_test():
     """Run a quick test to verify the pipeline works with minimal data."""
-    print("🧪 Running Quick Test Mode")
+    safe_print("🧪 Running Quick Test Mode")
     print("=" * 30)
     
     try:
         # Just test authentication and scoring existing data
-        print("\n1. Testing scoring on existing data...")
-        scored_tweets = score_tweets_from_raw_data()
+        print("\n1. Testing LLM scoring on existing data...")
+        scored_tweets, hackathons = process_raw_tweets_with_llm_scoring()
         
         if scored_tweets:
-            print(f"✅ Scoring works! Found {len(scored_tweets)} scored tweets")
+            safe_print(f"✅ LLM scoring works! Found {len(scored_tweets)} scored tweets")
             print(f"   Top score: {scored_tweets[0]['score']:.3f}")
+            print(f"   Generated {len(hackathons)} hackathon entries")
             return True
         else:
-            print("⚠️  No existing tweets to score. Run full pipeline first.")
+            safe_print("⚠️  No existing tweets to score. Run full pipeline first.")
             return False
             
     except Exception as e:
         print(f"❌ Test failed: {e}")
         return False
+
+
+def save_scored_tweets_with_llm(scored_tweets, output_file: str = "data/enriched/scored_tweets.json"):
+    """Save scored tweets from LLM processing to output file."""
+    import os
+    import json
+    from datetime import datetime
+    
+    # Get project root
+    from scoring import _find_project_root
+    script_dir = _find_project_root()
+    
+    # If output_file is relative, make it relative to the script directory
+    if not os.path.isabs(output_file):
+        output_file = os.path.join(script_dir, output_file)
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(scored_tweets, f, indent=2, ensure_ascii=False)
+    
+    print(f"Saved {len(scored_tweets)} scored tweets to {output_file}")
 
 
 if __name__ == "__main__":

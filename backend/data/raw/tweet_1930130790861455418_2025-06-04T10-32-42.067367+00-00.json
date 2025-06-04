@@ -1,0 +1,85 @@
+{
+  "collected_at": "2025-06-04T10:32:42.067367+00:00",
+  "tweet_data": {
+    "id": "1930130790861455418",
+    "text": "🚀 Getting ready for my first hackathon — super excited and a bit nervous! 😅\nI’d love to hear your tips, tricks, and must-dos for beginners 💡\nAlso, if you know any upcoming hackathons (online/offline), drop them below!👇\n#Hackathon #FirstHackathon #CodingTips #HackathonLife",
+    "user": {
+      "screen_name": "PoojaPatil122",
+      "followers_count": 0,
+      "name": "PoojaPatil122",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 05:13:35 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930130790861455418",
+      "screen_name": "PoojaPatil122",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 05:13:35 +0000 2025",
+      "text": "🚀 Getting ready for my first hackathon — super excited and a bit nervous! 😅\nI’d love to hear your tips, tricks, and must-dos for beginners 💡\nAlso, if you know any upcoming hackathons (online/offline), drop them below!👇\n#Hackathon #FirstHackathon #CodingTips #HackathonLife",
+      "lang": "en",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930130790861455418",
+      "retweets": 0,
+      "views": "12",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              219,
+              229
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              230,
+              245
+            ],
+            "text": "FirstHackathon"
+          },
+          {
+            "indices": [
+              246,
+              257
+            ],
+            "text": "CodingTips"
+          },
+          {
+            "indices": [
+              258,
+              272
+            ],
+            "text": "HackathonLife"
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "PoojaPatil122",
+        "name": "Pooja Patil",
+        "created_at": "Sat Sep 23 07:26:38 +0000 2023",
+        "description": "Full stack developer | Python developer | Sql",
+        "rest_id": "1705483705551294464",
+        "followers_count": 2,
+        "favourites_count": 174,
+        "avatar": "https://pbs.twimg.com/profile_images/1925743397051957248/HF_BX_Wf_normal.jpg",
+        "verified": false,
+        "friends_count": 38,
+        "location": null
+      },
+      "media": []
+    }
+  }
+}

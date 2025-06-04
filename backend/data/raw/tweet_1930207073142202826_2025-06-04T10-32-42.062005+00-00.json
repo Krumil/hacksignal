@@ -1,0 +1,232 @@
+{
+  "collected_at": "2025-06-04T10:32:42.062005+00:00",
+  "tweet_data": {
+    "id": "1930207073142202826",
+    "text": "👾 Builders, dreamers, explorers... \n\nyour new home is here:  📷 NERO LABS\n 📷 A cosmic vault of #hackathon heroes, grant legends, and #protocol pioneers 📷\n 📷 Start your development here 📷https://t.co/guw61UTLEr #NEROChain #Web3 https://t.co/lEGxx77iAv",
+    "user": {
+      "screen_name": "Sharan007X",
+      "followers_count": 0,
+      "name": "Sharan007X",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 10:16:42 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/guw61UTLEr",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930207073142202826",
+      "screen_name": "Sharan007X",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 10:16:42 +0000 2025",
+      "text": "👾 Builders, dreamers, explorers... \n\nyour new home is here:  📷 NERO LABS\n 📷 A cosmic vault of #hackathon heroes, grant legends, and #protocol pioneers 📷\n 📷 Start your development here 📷https://t.co/guw61UTLEr #NEROChain #Web3 https://t.co/lEGxx77iAv",
+      "lang": "en",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930207073142202826",
+      "retweets": 0,
+      "views": "7",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              94,
+              104
+            ],
+            "text": "hackathon"
+          },
+          {
+            "indices": [
+              132,
+              141
+            ],
+            "text": "protocol"
+          },
+          {
+            "indices": [
+              209,
+              219
+            ],
+            "text": "NEROChain"
+          },
+          {
+            "indices": [
+              220,
+              225
+            ],
+            "text": "Web3"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/lEGxx77iAv",
+            "expanded_url": "https://x.com/Sharan007X/status/1930207073142202826/photo/1",
+            "id_str": "1930206968737681408",
+            "indices": [
+              226,
+              249
+            ],
+            "media_key": "3_1930206968737681408",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl5AuqX0AAb6TI.jpg",
+            "type": "photo",
+            "url": "https://t.co/lEGxx77iAv",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 971,
+                    "y": 360,
+                    "h": 105,
+                    "w": 105
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 606,
+                    "y": 225,
+                    "h": 65,
+                    "w": 65
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 343,
+                    "y": 127,
+                    "h": 37,
+                    "w": 37
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 971,
+                    "y": 360,
+                    "h": 105,
+                    "w": 105
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "w": 1920,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 675,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 383,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 840,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 973,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 1218,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930206968737681408"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "nerochainlabs.com",
+            "expanded_url": "https://nerochainlabs.com",
+            "url": "https://t.co/guw61UTLEr",
+            "indices": [
+              185,
+              208
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "Sharan007X",
+        "name": "Sharan | NERO ⌘🛠️",
+        "created_at": "Sun Apr 07 13:40:27 +0000 2024",
+        "description": "Enthusiast @Nerochain_io 💜",
+        "rest_id": "1776968230957129728",
+        "followers_count": 31,
+        "favourites_count": 1019,
+        "avatar": "https://pbs.twimg.com/profile_images/1929162896338030592/xL1eqDNr_normal.jpg",
+        "verified": false,
+        "friends_count": 557,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl5AuqX0AAb6TI.jpg",
+            "id": "1930206968737681408",
+            "sizes": {
+              "h": 675,
+              "w": 1200
+            }
+          }
+        ]
+      }
+    }
+  }
+}

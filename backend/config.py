@@ -7,7 +7,6 @@ try:
     from dotenv import load_dotenv
     load_dotenv()  # Load .env file if it exists
 except ImportError:
-    # python-dotenv not installed, rely on system environment variables
     pass
 
 def load_config() -> Dict[str, Any]:

@@ -1,0 +1,200 @@
+{
+  "collected_at": "2025-06-04T10:32:42.059091+00:00",
+  "tweet_data": {
+    "id": "1930208362039316692",
+    "text": "Thanks to https://t.co/gZWQbCqlgr my business will become a reality . \n#hackathon @boltdotnew  #buildinpublic https://t.co/eYIy2Ji86p",
+    "user": {
+      "screen_name": "MokhethiSe",
+      "followers_count": 0,
+      "name": "MokhethiSe",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 10:21:49 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/gZWQbCqlgr",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930208362039316692",
+      "screen_name": "MokhethiSe",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 10:21:49 +0000 2025",
+      "text": "Thanks to https://t.co/gZWQbCqlgr my business will become a reality . \n#hackathon @boltdotnew  #buildinpublic https://t.co/eYIy2Ji86p",
+      "lang": "en",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930208362039316692",
+      "retweets": 0,
+      "views": "4",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              71,
+              81
+            ],
+            "text": "hackathon"
+          },
+          {
+            "indices": [
+              95,
+              109
+            ],
+            "text": "buildinpublic"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/eYIy2Ji86p",
+            "expanded_url": "https://x.com/MokhethiSe/status/1930208362039316692/photo/1",
+            "id_str": "1930208203628769280",
+            "indices": [
+              110,
+              133
+            ],
+            "media_key": "3_1930208203628769280",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl6Im_WcAAFrQY.jpg",
+            "type": "photo",
+            "url": "https://t.co/eYIy2Ji86p",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 755,
+                "w": 1280,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 708,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 401,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 755,
+              "width": 1280,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1280,
+                  "h": 717
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 755,
+                  "h": 755
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 662,
+                  "h": 755
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 378,
+                  "h": 755
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1280,
+                  "h": 755
+                }
+              ]
+            },
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930208203628769280"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "Bolt.new",
+            "expanded_url": "http://Bolt.new",
+            "url": "https://t.co/gZWQbCqlgr",
+            "indices": [
+              10,
+              33
+            ]
+          }
+        ],
+        "user_mentions": [
+          {
+            "id_str": "2279695508",
+            "name": "bolt.new",
+            "screen_name": "boltdotnew",
+            "indices": [
+              82,
+              93
+            ]
+          }
+        ]
+      },
+      "user_info": {
+        "screen_name": "MokhethiSe",
+        "name": "Selimo Mokhethi",
+        "created_at": "Mon Aug 12 14:50:18 +0000 2024",
+        "description": "🌟 Spiritual Healer & Software Developer | Creating apps for a better world | Explorer of nature",
+        "rest_id": "1823009068090286080",
+        "followers_count": 0,
+        "favourites_count": 9,
+        "avatar": "https://pbs.twimg.com/profile_images/1925904995179704320/AGVSZ4Ho_normal.jpg",
+        "verified": false,
+        "friends_count": 26,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl6Im_WcAAFrQY.jpg",
+            "id": "1930208203628769280",
+            "sizes": {
+              "h": 708,
+              "w": 1200
+            }
+          }
+        ]
+      }
+    }
+  }
+}

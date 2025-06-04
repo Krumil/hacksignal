@@ -8,7 +8,7 @@
         "backend"
     ],
     "scripts": {
-        "dev": "npm run dev:backend & npm run dev:frontend",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
         "dev:frontend": "npm run dev --workspace=frontend",
         "dev:backend": "cd backend && python main.py",
         "build": "npm run build:frontend",
@@ -32,5 +32,8 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yourusername/hacksignal.git"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
     }
 }

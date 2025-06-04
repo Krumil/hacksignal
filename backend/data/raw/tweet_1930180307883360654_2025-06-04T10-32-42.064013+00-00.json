@@ -1,0 +1,208 @@
+{
+  "collected_at": "2025-06-04T10:32:42.064013+00:00",
+  "tweet_data": {
+    "id": "1930180307883360654",
+    "text": "Today our #hackathon will bring together pensions professionals, service designers, and fintech founders to support innovation in savers’ interests. Read more about how we are helping industry innovate: https://t.co/cz8oJLUAnd. https://t.co/FWTAQGXMSF",
+    "user": {
+      "screen_name": "TPRgovuk",
+      "followers_count": 0,
+      "name": "TPRgovuk",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 08:30:21 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/cz8oJLUAnd.",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930180307883360654",
+      "screen_name": "TPRgovuk",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 08:30:21 +0000 2025",
+      "text": "Today our #hackathon will bring together pensions professionals, service designers, and fintech founders to support innovation in savers’ interests. Read more about how we are helping industry innovate: https://t.co/cz8oJLUAnd. https://t.co/FWTAQGXMSF",
+      "lang": "en",
+      "source": "<a href=\"https://www.hootsuite.com\" rel=\"nofollow\">Hootsuite Inc.</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930180307883360654",
+      "retweets": 0,
+      "views": "120",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              10,
+              20
+            ],
+            "text": "hackathon"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/FWTAQGXMSF",
+            "expanded_url": "https://x.com/TPRgovuk/status/1930180307883360654/photo/1",
+            "id_str": "1930180305630928896",
+            "indices": [
+              228,
+              251
+            ],
+            "media_key": "3_1930180305630928896",
+            "media_url_https": "https://pbs.twimg.com/media/Gslgwu2WIAAXU0h.jpg",
+            "type": "photo",
+            "url": "https://t.co/FWTAQGXMSF",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 44,
+                    "y": 152,
+                    "h": 39,
+                    "w": 39
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 44,
+                    "y": 152,
+                    "h": 39,
+                    "w": 39
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 37,
+                    "y": 129,
+                    "h": 33,
+                    "w": 33
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 44,
+                    "y": 152,
+                    "h": 39,
+                    "w": 39
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 420,
+                "w": 800,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 420,
+                "w": 800,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 357,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 420,
+              "width": 800,
+              "focus_rects": [
+                {
+                  "x": 25,
+                  "y": 0,
+                  "w": 750,
+                  "h": 420
+                },
+                {
+                  "x": 190,
+                  "y": 0,
+                  "w": 420,
+                  "h": 420
+                },
+                {
+                  "x": 216,
+                  "y": 0,
+                  "w": 368,
+                  "h": 420
+                },
+                {
+                  "x": 295,
+                  "y": 0,
+                  "w": 210,
+                  "h": 420
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 800,
+                  "h": 420
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930180305630928896"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "ow.ly/eOzT50W3aZm",
+            "expanded_url": "https://ow.ly/eOzT50W3aZm",
+            "url": "https://t.co/cz8oJLUAnd",
+            "indices": [
+              203,
+              226
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "TPRgovuk",
+        "name": "ThePensionsRegulator",
+        "created_at": "Fri Oct 28 13:39:38 +0000 2011",
+        "description": "The official channel of The Pensions Regulator: the information we provide is for guidance only, please see our full policy at https://t.co/1M4HvzGYcr",
+        "rest_id": "400081247",
+        "followers_count": 13599,
+        "favourites_count": 1528,
+        "avatar": "https://pbs.twimg.com/profile_images/1572144976414347265/-wHhxLKT_normal.jpg",
+        "verified": false,
+        "friends_count": 544,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gslgwu2WIAAXU0h.jpg",
+            "id": "1930180305630928896",
+            "sizes": {
+              "h": 420,
+              "w": 800
+            }
+          }
+        ]
+      }
+    }
+  }
+}

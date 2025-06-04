@@ -1,0 +1,108 @@
+{
+  "collected_at": "2025-06-04T10:32:42.065013+00:00",
+  "tweet_data": {
+    "id": "1930176851604853086",
+    "text": "Day 4 of the #hackathon for me! 😃  Today's will be a slower day, but still stuff to be done! \nBut tomorrow i go all in!! https://t.co/5Abwb94Hkp",
+    "user": {
+      "screen_name": "TekStak",
+      "followers_count": 0,
+      "name": "TekStak",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 08:16:37 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/5Abwb94Hkp",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930176851604853086",
+      "screen_name": "TekStak",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 08:16:37 +0000 2025",
+      "text": "Day 4 of the #hackathon for me! 😃  Today's will be a slower day, but still stuff to be done! \nBut tomorrow i go all in!! https://t.co/5Abwb94Hkp",
+      "lang": "en",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930176851604853086",
+      "retweets": 0,
+      "views": "29",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              13,
+              23
+            ],
+            "text": "hackathon"
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "x.com/TekStak/status…",
+            "expanded_url": "https://x.com/TekStak/status/1930176152271749510?t=vocmH7KgUZmKbhNIlpZdkg&s=19",
+            "url": "https://t.co/5Abwb94Hkp",
+            "indices": [
+              121,
+              144
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "TekStak",
+        "name": "Gary Mellerick",
+        "created_at": "Wed Nov 20 08:18:53 +0000 2024",
+        "description": "Creator of https://t.co/ugVUIXAUsR The UK's bug board, inspired by onlyinportugal (and others) participating in the https://t.co/gdeo2qIZdu hackathon! Follow the journey.",
+        "rest_id": "1859149321599385600",
+        "followers_count": 80,
+        "favourites_count": 662,
+        "avatar": "https://pbs.twimg.com/profile_images/1909703361470881792/XCW1aLJB_normal.jpg",
+        "verified": true,
+        "friends_count": 169,
+        "location": null
+      },
+      "media": [],
+      "community_id": "1928861140651520478",
+      "quoted": {
+        "tweet_id": "1930176152271749510",
+        "bookmarks": 0,
+        "created_at": "Wed Jun 04 08:13:50 +0000 2025",
+        "favorites": 1,
+        "text": "Day 4 of the @boltdotnew #hackathon 😃 \nToday's goals:\n\n• Build out more of the UI for my solo app, hopefully I'll have a preview for you later! It's pretty tricky. 🤔 \n\n• I have a couple posts scheduled ready for more community engagement for the community built app 📃 \n\n• https://t.co/Ba9zxowECZ",
+        "lang": "en",
+        "views": "68",
+        "quotes": 1,
+        "replies": 1,
+        "retweets": 0,
+        "conversation_id": "1930176152271749510",
+        "author": {
+          "rest_id": "1859149321599385600",
+          "created_at": "Wed Nov 20 08:18:53 +0000 2024",
+          "name": "Gary Mellerick",
+          "screen_name": "TekStak",
+          "avatar": "https://pbs.twimg.com/profile_images/1909703361470881792/XCW1aLJB_normal.jpg",
+          "blue_verified": true
+        },
+        "media": {
+          "photo": [
+            {
+              "media_url_https": "https://pbs.twimg.com/media/Gslc-0dWoAAGVIi.jpg",
+              "id": "1930176149608374272",
+              "sizes": {
+                "h": 1202,
+                "w": 2048
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

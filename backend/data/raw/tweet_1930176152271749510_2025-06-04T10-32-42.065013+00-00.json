@@ -1,0 +1,85 @@
+{
+  "collected_at": "2025-06-04T10:32:42.065013+00:00",
+  "tweet_data": {
+    "id": "1930176152271749510",
+    "text": "Day 4 of the @boltdotnew #hackathon 😃 \nToday's goals:\n\n• Build out more of the UI for my solo app, hopefully I'll have a preview for you later! It's pretty tricky. 🤔 \n\n• I have a couple posts scheduled ready for more community engagement for the community built app 📃 \n\n• Plan my day for tomorrow, I have a totally free day with no commitments so im going all in!!",
+    "user": {
+      "screen_name": "TekStak",
+      "followers_count": 0,
+      "name": "TekStak",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 08:13:50 +0000 2025",
+    "favorite_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "lang": "en",
+    "expanded_url": "",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930176152271749510",
+      "screen_name": "TekStak",
+      "bookmarks": 0,
+      "favorites": 1,
+      "created_at": "Wed Jun 04 08:13:50 +0000 2025",
+      "text": "Day 4 of the @boltdotnew #hackathon 😃 \nToday's goals:\n\n• Build out more of the UI for my solo app, hopefully I'll have a preview for you later! It's pretty tricky. 🤔 \n\n• I have a couple posts scheduled ready for more community engagement for the community built app 📃 \n\n• Plan my day for tomorrow, I have a totally free day with no commitments so im going all in!!",
+      "lang": "en",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "quotes": 1,
+      "replies": 1,
+      "conversation_id": "1930176152271749510",
+      "retweets": 0,
+      "views": "68",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              25,
+              35
+            ],
+            "text": "hackathon"
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "id_str": "2279695508",
+            "name": "bolt.new",
+            "screen_name": "boltdotnew",
+            "indices": [
+              13,
+              24
+            ]
+          }
+        ]
+      },
+      "user_info": {
+        "screen_name": "TekStak",
+        "name": "Gary Mellerick",
+        "created_at": "Wed Nov 20 08:18:53 +0000 2024",
+        "description": "Creator of https://t.co/ugVUIXAUsR The UK's bug board, inspired by onlyinportugal (and others) participating in the https://t.co/gdeo2qIZdu hackathon! Follow the journey.",
+        "rest_id": "1859149321599385600",
+        "followers_count": 80,
+        "favourites_count": 662,
+        "avatar": "https://pbs.twimg.com/profile_images/1909703361470881792/XCW1aLJB_normal.jpg",
+        "verified": true,
+        "friends_count": 169,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gslc-0dWoAAGVIi.jpg",
+            "id": "1930176149608374272",
+            "sizes": {
+              "h": 704,
+              "w": 1200
+            }
+          }
+        ]
+      }
+    }
+  }
+}
