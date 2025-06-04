@@ -1,0 +1,268 @@
+{
+    "collected_at": "2025-06-04T10:32:42.068368+00:00",
+    "tweet_data": {
+        "id": "1930110556117033369",
+        "text": "⚠️send us a direct message if you've been scammed. Your security is completely guaranteed 💯! #elsed #bist100\n#hisse #astor #borsa #zagabet #rinabet #yrkkh #naagin #infosec #hackathon #kalilinux #TargetedIndividuals #dollartreats #kryptovest #NFT #bcstorm #excoin #chainbil #USDT” https://t.co/lCtF84VURc",
+        "user": {
+            "screen_name": "crime_inc1",
+            "followers_count": 0,
+            "name": "crime_inc1",
+            "verified": false
+        },
+        "created_at": "Wed Jun 04 03:53:10 +0000 2025",
+        "favorite_count": 1,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "lang": "en",
+        "expanded_url": "https://t.co/lCtF84VURc",
+        "_raw_api_response": {
+            "type": "tweet",
+            "tweet_id": "1930110556117033369",
+            "screen_name": "crime_inc1",
+            "bookmarks": 0,
+            "favorites": 1,
+            "created_at": "Wed Jun 04 03:53:10 +0000 2025",
+            "text": "⚠️send us a direct message if you've been scammed. Your security is completely guaranteed 💯! #elsed #bist100\n#hisse #astor #borsa #zagabet #rinabet #yrkkh #naagin #infosec #hackathon #kalilinux #TargetedIndividuals #dollartreats #kryptovest #NFT #bcstorm #excoin #chainbil #USDT” https://t.co/lCtF84VURc",
+            "lang": "en",
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "quotes": 0,
+            "replies": 0,
+            "conversation_id": "1930110556117033369",
+            "retweets": 0,
+            "views": "459",
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [93, 99],
+                        "text": "elsed"
+                    },
+                    {
+                        "indices": [100, 108],
+                        "text": "bist100"
+                    },
+                    {
+                        "indices": [109, 115],
+                        "text": "hisse"
+                    },
+                    {
+                        "indices": [116, 122],
+                        "text": "astor"
+                    },
+                    {
+                        "indices": [123, 129],
+                        "text": "borsa"
+                    },
+                    {
+                        "indices": [130, 138],
+                        "text": "zagabet"
+                    },
+                    {
+                        "indices": [139, 147],
+                        "text": "rinabet"
+                    },
+                    {
+                        "indices": [148, 154],
+                        "text": "yrkkh"
+                    },
+                    {
+                        "indices": [155, 162],
+                        "text": "naagin"
+                    },
+                    {
+                        "indices": [163, 171],
+                        "text": "infosec"
+                    },
+                    {
+                        "indices": [172, 182],
+                        "text": "hackathon"
+                    },
+                    {
+                        "indices": [183, 193],
+                        "text": "kalilinux"
+                    },
+                    {
+                        "indices": [194, 214],
+                        "text": "TargetedIndividuals"
+                    },
+                    {
+                        "indices": [215, 228],
+                        "text": "dollartreats"
+                    },
+                    {
+                        "indices": [229, 240],
+                        "text": "kryptovest"
+                    },
+                    {
+                        "indices": [241, 245],
+                        "text": "NFT"
+                    },
+                    {
+                        "indices": [246, 254],
+                        "text": "bcstorm"
+                    },
+                    {
+                        "indices": [255, 262],
+                        "text": "excoin"
+                    },
+                    {
+                        "indices": [263, 272],
+                        "text": "chainbil"
+                    },
+                    {
+                        "indices": [273, 278],
+                        "text": "USDT"
+                    }
+                ],
+                "media": [
+                    {
+                        "display_url": "pic.x.com/lCtF84VURc",
+                        "expanded_url": "https://x.com/crime_inc1/status/1930110556117033369/photo/1",
+                        "id_str": "1930110549053911043",
+                        "indices": [280, 303],
+                        "media_key": "3_1930110549053911043",
+                        "media_url_https": "https://pbs.twimg.com/media/GskhUXWXsAMja-a.jpg",
+                        "type": "photo",
+                        "url": "https://t.co/lCtF84VURc",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {
+                                "faces": [
+                                    {
+                                        "x": 997,
+                                        "y": 113,
+                                        "h": 202,
+                                        "w": 202
+                                    }
+                                ]
+                            },
+                            "medium": {
+                                "faces": [
+                                    {
+                                        "x": 967,
+                                        "y": 109,
+                                        "h": 196,
+                                        "w": 196
+                                    }
+                                ]
+                            },
+                            "small": {
+                                "faces": [
+                                    {
+                                        "x": 548,
+                                        "y": 62,
+                                        "h": 111,
+                                        "w": 111
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "x": 997,
+                                        "y": 113,
+                                        "h": 202,
+                                        "w": 202
+                                    }
+                                ]
+                            }
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 695,
+                                "w": 1236,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "h": 675,
+                                "w": 1200,
+                                "resize": "fit"
+                            },
+                            "small": {
+                                "h": 382,
+                                "w": 680,
+                                "resize": "fit"
+                            },
+                            "thumb": {
+                                "h": 150,
+                                "w": 150,
+                                "resize": "crop"
+                            }
+                        },
+                        "original_info": {
+                            "height": 695,
+                            "width": 1236,
+                            "focus_rects": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 1236,
+                                    "h": 692
+                                },
+                                {
+                                    "x": 301,
+                                    "y": 0,
+                                    "w": 695,
+                                    "h": 695
+                                },
+                                {
+                                    "x": 343,
+                                    "y": 0,
+                                    "w": 610,
+                                    "h": 695
+                                },
+                                {
+                                    "x": 474,
+                                    "y": 0,
+                                    "w": 348,
+                                    "h": 695
+                                },
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 1236,
+                                    "h": 695
+                                }
+                            ]
+                        },
+                        "media_results": {
+                            "result": {
+                                "media_key": "3_1930110549053911043"
+                            }
+                        }
+                    }
+                ],
+                "symbols": [],
+                "timestamps": [],
+                "urls": [],
+                "user_mentions": []
+            },
+            "user_info": {
+                "screen_name": "crime_inc1",
+                "name": "CYBER CRIME INC",
+                "created_at": "Fri Feb 03 09:55:04 +0000 2023",
+                "description": "Blockchain investigator, blockchain forensics & tracking, cybersecurity, crypto Recovery Guru, web3 developer | Edge computing.",
+                "rest_id": "1621447081717030913",
+                "followers_count": 144,
+                "favourites_count": 3893,
+                "avatar": "https://pbs.twimg.com/profile_images/1908300260188807168/wzTi774V_normal.jpg",
+                "verified": false,
+                "friends_count": 10,
+                "location": null
+            },
+            "media": {
+                "photo": [
+                    {
+                        "media_url_https": "https://pbs.twimg.com/media/GskhUXWXsAMja-a.jpg",
+                        "id": "1930110549053911043",
+                        "sizes": {
+                            "h": 675,
+                            "w": 1200
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

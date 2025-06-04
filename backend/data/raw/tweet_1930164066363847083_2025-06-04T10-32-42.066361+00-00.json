@@ -1,0 +1,112 @@
+{
+  "collected_at": "2025-06-04T10:32:42.066361+00:00",
+  "tweet_data": {
+    "id": "1930164066363847083",
+    "text": "@chainlink AI → Tokenization → DeFi\n🚀 Bring your idea to life at the Chainlink Hackathon\n\n🔧 Dev-friendly workshops\n🧩 Simplify complex builds\n💰 Win your share of $200K+ in prizes\n\nReady to build the future?\n\n#Chainlink #Hackathon #DeFi #AI #Web3 #Tokenization",
+    "user": {
+      "screen_name": "Huzaifa1614402",
+      "followers_count": 0,
+      "name": "Huzaifa1614402",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 07:25:48 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930164066363847083",
+      "screen_name": "Huzaifa1614402",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 07:25:48 +0000 2025",
+      "text": "@chainlink AI → Tokenization → DeFi\n🚀 Bring your idea to life at the Chainlink Hackathon\n\n🔧 Dev-friendly workshops\n🧩 Simplify complex builds\n💰 Win your share of $200K+ in prizes\n\nReady to build the future?\n\n#Chainlink #Hackathon #DeFi #AI #Web3 #Tokenization",
+      "lang": "en",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1923380526724898900",
+      "retweets": 0,
+      "views": "35",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              207,
+              217
+            ],
+            "text": "Chainlink"
+          },
+          {
+            "indices": [
+              218,
+              228
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              229,
+              234
+            ],
+            "text": "DeFi"
+          },
+          {
+            "indices": [
+              235,
+              238
+            ],
+            "text": "AI"
+          },
+          {
+            "indices": [
+              239,
+              244
+            ],
+            "text": "Web3"
+          },
+          {
+            "indices": [
+              245,
+              258
+            ],
+            "text": "Tokenization"
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "id_str": "1530530365",
+            "name": "Chainlink",
+            "screen_name": "chainlink",
+            "indices": [
+              0,
+              10
+            ]
+          }
+        ]
+      },
+      "user_info": {
+        "screen_name": "Huzaifa1614402",
+        "name": "procrypto Web3 Enthusiast",
+        "created_at": "Wed Mar 27 14:49:34 +0000 2024",
+        "description": "Raider, Community manager,web3 enlighter.Blockchain Expert || Contributor \n\n@MEXC\n\n￼|| \n\n@Bitgetglobal\n\nKOL || \n\n@gate_io\n\nKOL || CM || Web3 growth strategist |",
+        "rest_id": "1772999348365758464",
+        "followers_count": 58,
+        "favourites_count": 102,
+        "avatar": "https://pbs.twimg.com/profile_images/1930166970919346176/5pJ8zxkb_normal.jpg",
+        "verified": false,
+        "friends_count": 291,
+        "location": null
+      },
+      "media": [],
+      "in_reply_to_screen_name": "chainlink",
+      "in_reply_to_status_id_str": "1923380526724898900",
+      "in_reply_to_user_id_str": "1530530365"
+    }
+  }
+}

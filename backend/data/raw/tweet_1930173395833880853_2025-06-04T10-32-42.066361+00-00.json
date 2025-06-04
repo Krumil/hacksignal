@@ -1,0 +1,91 @@
+{
+  "collected_at": "2025-06-04T10:32:42.066361+00:00",
+  "tweet_data": {
+    "id": "1930173395833880853",
+    "text": "With TrustGiveaway, we’re building contests you can truly trust.\n\nLearn more:\nhttps://t.co/PH95ag9uzA\n\n#Web3 #Hackathon #Blockchain",
+    "user": {
+      "screen_name": "BuilderRegis",
+      "followers_count": 0,
+      "name": "BuilderRegis",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 08:02:53 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/PH95ag9uzA",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930173395833880853",
+      "screen_name": "BuilderRegis",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 08:02:53 +0000 2025",
+      "text": "With TrustGiveaway, we’re building contests you can truly trust.\n\nLearn more:\nhttps://t.co/PH95ag9uzA\n\n#Web3 #Hackathon #Blockchain",
+      "lang": "en",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930173390171611486",
+      "retweets": 0,
+      "views": "6",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              103,
+              108
+            ],
+            "text": "Web3"
+          },
+          {
+            "indices": [
+              109,
+              119
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              120,
+              131
+            ],
+            "text": "Blockchain"
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "ethglobal.com/showcase/trust…",
+            "expanded_url": "https://ethglobal.com/showcase/trustgiveaway-vpego",
+            "url": "https://t.co/PH95ag9uzA",
+            "indices": [
+              78,
+              101
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "BuilderRegis",
+        "name": "Régis",
+        "created_at": "Sat Aug 05 19:40:24 +0000 2023",
+        "description": "Software Engineer | Web3 Developper | Hacker",
+        "rest_id": "1687911404630577153",
+        "followers_count": 32,
+        "favourites_count": 75,
+        "avatar": "https://pbs.twimg.com/profile_images/1863530084260614144/A-8iLqyw_normal.jpg",
+        "verified": false,
+        "friends_count": 63,
+        "location": null
+      },
+      "media": [],
+      "in_reply_to_screen_name": "BuilderRegis",
+      "in_reply_to_status_id_str": "1930173393644442072",
+      "in_reply_to_user_id_str": "1687911404630577153"
+    }
+  }
+}

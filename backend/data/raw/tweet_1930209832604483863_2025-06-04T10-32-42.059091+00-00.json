@@ -1,0 +1,270 @@
+{
+  "collected_at": "2025-06-04T10:32:42.059091+00:00",
+  "tweet_data": {
+    "id": "1930209832604483863",
+    "text": "🔥 Calling all builders!\nJoin the #AWSLambda Hackathon &amp; craft your next big thing with ⚡ serverless architecture!\nNo servers, just pure innovation 💡\n🚀 Start now 👉 [https://t.co/7P9mFrKdWh..]\n\n#Serverless #AWS #Hackathon #CloudComputing #DevCommunity https://t.co/9XLjACbMVT",
+    "user": {
+      "screen_name": "ReyedgeM",
+      "followers_count": 0,
+      "name": "ReyedgeM",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 10:27:40 +0000 2025",
+    "favorite_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "en",
+    "expanded_url": "https://t.co/7P9mFrKdWh..",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930209832604483863",
+      "screen_name": "ReyedgeM",
+      "bookmarks": 0,
+      "favorites": 0,
+      "created_at": "Wed Jun 04 10:27:40 +0000 2025",
+      "text": "🔥 Calling all builders!\nJoin the #AWSLambda Hackathon &amp; craft your next big thing with ⚡ serverless architecture!\nNo servers, just pure innovation 💡\n🚀 Start now 👉 [https://t.co/7P9mFrKdWh..]\n\n#Serverless #AWS #Hackathon #CloudComputing #DevCommunity https://t.co/9XLjACbMVT",
+      "lang": "en",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "quotes": 0,
+      "replies": 0,
+      "conversation_id": "1930209832604483863",
+      "retweets": 0,
+      "views": "6",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              33,
+              43
+            ],
+            "text": "AWSLambda"
+          },
+          {
+            "indices": [
+              196,
+              207
+            ],
+            "text": "Serverless"
+          },
+          {
+            "indices": [
+              208,
+              212
+            ],
+            "text": "AWS"
+          },
+          {
+            "indices": [
+              213,
+              223
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              224,
+              239
+            ],
+            "text": "CloudComputing"
+          },
+          {
+            "indices": [
+              240,
+              253
+            ],
+            "text": "DevCommunity"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/9XLjACbMVT",
+            "expanded_url": "https://x.com/ReyedgeM/status/1930209832604483863/photo/1",
+            "id_str": "1930209794251730944",
+            "indices": [
+              254,
+              277
+            ],
+            "media_key": "3_1930209794251730944",
+            "media_url_https": "https://pbs.twimg.com/media/Gsl7lMhasAADqzC.jpg",
+            "type": "photo",
+            "url": "https://t.co/9XLjACbMVT",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 327,
+                    "y": 582,
+                    "h": 87,
+                    "w": 87
+                  },
+                  {
+                    "x": 717,
+                    "y": 183,
+                    "h": 90,
+                    "w": 90
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 255,
+                    "y": 454,
+                    "h": 67,
+                    "w": 67
+                  },
+                  {
+                    "x": 560,
+                    "y": 142,
+                    "h": 70,
+                    "w": 70
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 144,
+                    "y": 257,
+                    "h": 38,
+                    "w": 38
+                  },
+                  {
+                    "x": 317,
+                    "y": 80,
+                    "h": 39,
+                    "w": 39
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 327,
+                    "y": 582,
+                    "h": 87,
+                    "w": 87
+                  },
+                  {
+                    "x": 717,
+                    "y": 183,
+                    "h": 90,
+                    "w": 90
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 1536,
+                "w": 1024,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 1200,
+                "w": 800,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 680,
+                "w": 453,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 1536,
+              "width": 1024,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 750,
+                  "w": 1024,
+                  "h": 573
+                },
+                {
+                  "x": 0,
+                  "y": 512,
+                  "w": 1024,
+                  "h": 1024
+                },
+                {
+                  "x": 0,
+                  "y": 369,
+                  "w": 1024,
+                  "h": 1167
+                },
+                {
+                  "x": 128,
+                  "y": 0,
+                  "w": 768,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 1536
+                }
+              ]
+            },
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930209794251730944"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "awslambdahackathon.devpost.com/?ref_feature=c…",
+            "expanded_url": "https://awslambdahackathon.devpost.com/?ref_feature=challenge&ref_medium=discover&_gl=1*r2kp5m*_gcl_au*NjgwMDQzNTI5LjE3NDIzNzg4MjQ.*_ga*MTQxNTA5MjgzMi4xNzQyMzc4ODI0*_ga_0YHJK3Y10M*czE3NDkwMzE4MjMkbzMyJGcxJHQxNzQ5MDMxODI4JGo1NSRsMCRoMA",
+            "url": "https://t.co/7P9mFrKdWh",
+            "indices": [
+              168,
+              191
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "ReyedgeM",
+        "name": "Anurag Nishad",
+        "created_at": "Tue Nov 16 11:15:17 +0000 2021",
+        "description": "Android App developer | KOTLIN | JAVA | Clean Architecture (MVVM, MVC) | FIREBASE | REST API SQLite, SQL | UI/UX Optimization | Git, GitHub, Bitbucket",
+        "rest_id": "1460567058748301320",
+        "followers_count": 47,
+        "favourites_count": 244,
+        "avatar": "https://pbs.twimg.com/profile_images/1701571243835551744/XQ4ufmK7_normal.jpg",
+        "verified": false,
+        "friends_count": 202,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/Gsl7lMhasAADqzC.jpg",
+            "id": "1930209794251730944",
+            "sizes": {
+              "h": 1200,
+              "w": 800
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "collected_at": "2025-06-04T10:32:42.067367+00:00",
+  "tweet_data": {
+    "id": "1930152234928460179",
+    "text": "Empower Startups!\nJOIN OUR HACKATHON! Use Web3 or AI to revolutionize the immigrant experience in a new country. Sign up now @ (https://t.co/B5lUvY9npJ) and let's shape the future together! \n\n#Techxcellence #ImmigrantEmpowerment #Hackathon #Web3 #AI #spentacademy #scholarly https://t.co/B7m0QZmpZn",
+    "user": {
+      "screen_name": "TechXcellence01",
+      "followers_count": 0,
+      "name": "TechXcellence01",
+      "verified": false
+    },
+    "created_at": "Wed Jun 04 06:38:47 +0000 2025",
+    "favorite_count": 4,
+    "retweet_count": 2,
+    "reply_count": 1,
+    "lang": "en",
+    "expanded_url": "https://t.co/B5lUvY9npJ",
+    "_raw_api_response": {
+      "type": "tweet",
+      "tweet_id": "1930152234928460179",
+      "screen_name": "TechXcellence01",
+      "bookmarks": 0,
+      "favorites": 4,
+      "created_at": "Wed Jun 04 06:38:47 +0000 2025",
+      "text": "Empower Startups!\nJOIN OUR HACKATHON! Use Web3 or AI to revolutionize the immigrant experience in a new country. Sign up now @ (https://t.co/B5lUvY9npJ) and let's shape the future together! \n\n#Techxcellence #ImmigrantEmpowerment #Hackathon #Web3 #AI #spentacademy #scholarly https://t.co/B7m0QZmpZn",
+      "lang": "en",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "quotes": 1,
+      "replies": 1,
+      "conversation_id": "1930152234928460179",
+      "retweets": 2,
+      "views": "75",
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              192,
+              206
+            ],
+            "text": "Techxcellence"
+          },
+          {
+            "indices": [
+              207,
+              228
+            ],
+            "text": "ImmigrantEmpowerment"
+          },
+          {
+            "indices": [
+              229,
+              239
+            ],
+            "text": "Hackathon"
+          },
+          {
+            "indices": [
+              240,
+              245
+            ],
+            "text": "Web3"
+          },
+          {
+            "indices": [
+              246,
+              249
+            ],
+            "text": "AI"
+          },
+          {
+            "indices": [
+              250,
+              263
+            ],
+            "text": "spentacademy"
+          },
+          {
+            "indices": [
+              264,
+              274
+            ],
+            "text": "scholarly"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/B7m0QZmpZn",
+            "expanded_url": "https://x.com/TechXcellence01/status/1930152234928460179/photo/1",
+            "id_str": "1930152221779415040",
+            "indices": [
+              275,
+              298
+            ],
+            "media_key": "3_1930152221779415040",
+            "media_url_https": "https://pbs.twimg.com/media/GslHOCWX0AAkyrR.jpg",
+            "type": "photo",
+            "url": "https://t.co/B7m0QZmpZn",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "x": 996,
+                    "y": 512,
+                    "h": 68,
+                    "w": 68
+                  },
+                  {
+                    "x": 478,
+                    "y": 584,
+                    "h": 76,
+                    "w": 76
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "x": 583,
+                    "y": 300,
+                    "h": 39,
+                    "w": 39
+                  },
+                  {
+                    "x": 280,
+                    "y": 342,
+                    "h": 44,
+                    "w": 44
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "x": 330,
+                    "y": 170,
+                    "h": 22,
+                    "w": 22
+                  },
+                  {
+                    "x": 158,
+                    "y": 193,
+                    "h": 25,
+                    "w": 25
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "x": 996,
+                    "y": 512,
+                    "h": 68,
+                    "w": 68
+                  },
+                  {
+                    "x": 478,
+                    "y": 584,
+                    "h": 76,
+                    "w": 76
+                  }
+                ]
+              }
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "w": 2048,
+                "resize": "fit"
+              },
+              "medium": {
+                "h": 1200,
+                "w": 1200,
+                "resize": "fit"
+              },
+              "small": {
+                "h": 680,
+                "w": 680,
+                "resize": "fit"
+              },
+              "thumb": {
+                "h": 150,
+                "w": 150,
+                "resize": "crop"
+              }
+            },
+            "original_info": {
+              "height": 2048,
+              "width": 2048,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 809,
+                  "w": 2048,
+                  "h": 1147
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2048,
+                  "h": 2048
+                },
+                {
+                  "x": 252,
+                  "y": 0,
+                  "w": 1796,
+                  "h": 2048
+                },
+                {
+                  "x": 972,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2048,
+                  "h": 2048
+                }
+              ]
+            },
+            "media_results": {
+              "result": {
+                "media_key": "3_1930152221779415040"
+              }
+            }
+          }
+        ],
+        "symbols": [],
+        "timestamps": [],
+        "urls": [
+          {
+            "display_url": "TECHXCELLENCE.ORG/HACKATHON",
+            "expanded_url": "http://TECHXCELLENCE.ORG/HACKATHON",
+            "url": "https://t.co/B5lUvY9npJ",
+            "indices": [
+              128,
+              151
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "user_info": {
+        "screen_name": "TechXcellence01",
+        "name": "Techxcellence",
+        "created_at": "Mon Aug 05 16:39:36 +0000 2024",
+        "description": "The largest student technology conference designed to inspire, educate, and connect the next generation of tech leaders! Powered by @spentacademy",
+        "rest_id": "1820499591415861248",
+        "followers_count": 1020,
+        "favourites_count": 98,
+        "avatar": "https://pbs.twimg.com/profile_images/1888705138270818304/EQQPqYdH_normal.jpg",
+        "verified": false,
+        "friends_count": 7,
+        "location": null
+      },
+      "media": {
+        "photo": [
+          {
+            "media_url_https": "https://pbs.twimg.com/media/GslHOCWX0AAkyrR.jpg",
+            "id": "1930152221779415040",
+            "sizes": {
+              "h": 1200,
+              "w": 1200
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,215 +1,289 @@
 [
-    {
-        "tweet_id": "1929223304587465196",
-        "score": 0.864,
-        "account_followers": 18107,
-        "keyword_matches": ["ends", "challenge", "competition"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/CryptoJournaal/status/1929223304587465196",
-        "source_file": "tweet_1929223304587465196_2025-06-02T11-22-11.580934.json",
-        "collected_at": "2025-06-02T11:22:11.580934"
-    },
-    {
-        "tweet_id": "1929291867411136715",
-        "score": 0.7,
-        "account_followers": 6255,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/andresvilarino/status/1929291867411136715",
-        "source_file": "tweet_1929291867411136715_2025-06-02T11-22-11.563615.json",
-        "collected_at": "2025-06-02T11:22:11.563615"
-    },
-    {
-        "tweet_id": "1929108697328029887",
-        "score": 0.6000000000000001,
-        "account_followers": 1577,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/OkiksFi_02/status/1929108697328029887",
-        "source_file": "tweet_1929108697328029887_2025-06-02T11-22-11.420420.json",
-        "collected_at": "2025-06-02T11:22:11.420420"
-    },
-    {
-        "tweet_id": "1929133254222979359",
-        "score": 0.6000000000000001,
-        "account_followers": 13014,
-        "keyword_matches": ["Web3 hackathon", "prize pool", "hackathon", "hack"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/vbi_academy/status/1929133254222979359",
-        "source_file": "tweet_1929133254222979359_2025-06-02T11-22-11.161743.json",
-        "collected_at": "2025-06-02T11:22:11.161743"
-    },
-    {
-        "tweet_id": "1929347410163053045",
-        "score": 0.6000000000000001,
-        "account_followers": 1061,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/ebere_onyibor/status/1929347410163053045",
-        "source_file": "tweet_1929347410163053045_2025-06-02T11-22-11.653048.json",
-        "collected_at": "2025-06-02T11:22:11.653048"
-    },
-    {
-        "tweet_id": "1929461324611731621",
-        "score": 0.6000000000000001,
-        "account_followers": 4750,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/comidoc/status/1929461324611731621",
-        "source_file": "tweet_1929461324611731621_2025-06-02T11-22-11.508453.json",
-        "collected_at": "2025-06-02T11:22:11.508453"
-    },
-    {
-        "tweet_id": "1929427883514098053",
-        "score": 0.6,
-        "account_followers": 3523,
-        "keyword_matches": [
-            "AI agent",
-            "agentic",
-            "agentic internet",
-            "autonomous infrastructure",
-            "cross-chain",
-            "submit by",
-            "opens",
-            "prizes",
-            "Genesis",
-            "hackathon",
-            "hack",
-            "challenge"
-        ],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/nearhorizon/status/1929427883514098053",
-        "source_file": "tweet_1929427883514098053_2025-06-02T11-22-11.156422.json",
-        "collected_at": "2025-06-02T11:22:11.156422"
-    },
-    {
-        "tweet_id": "1929103088381518109",
-        "score": 0.5640000000000001,
-        "account_followers": 2063,
-        "keyword_matches": ["cross-chain", "interoperability"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/Dablendo01/status/1929103088381518109",
-        "source_file": "tweet_1929103088381518109_2025-06-02T11-22-11.600273.json",
-        "collected_at": "2025-06-02T11:22:11.600273"
-    },
-    {
-        "tweet_id": "1929467893684801758",
-        "score": 0.5640000000000001,
-        "account_followers": 11606,
-        "keyword_matches": ["ends", "prize pool"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/Pandemic_Games_/status/1929467893684801758",
-        "source_file": "tweet_1929467893684801758_2025-06-02T11-22-11.360881.json",
-        "collected_at": "2025-06-02T11:22:11.360881"
-    },
-    {
-        "tweet_id": "1929433053547344028",
-        "score": 0.536,
-        "account_followers": 1278,
-        "keyword_matches": ["hackathon", "hack"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/Blockhacks/status/1929433053547344028",
-        "source_file": "tweet_1929433053547344028_2025-06-02T11-22-11.187355.json",
-        "collected_at": "2025-06-02T11:22:11.187355"
-    },
-    {
-        "tweet_id": "1929446413290590542",
-        "score": 0.536,
-        "account_followers": 1278,
-        "keyword_matches": ["hackathon", "hack"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/Blockhacks/status/1929446413290590542",
-        "source_file": "tweet_1929446413290590542_2025-06-02T11-22-11.180793.json",
-        "collected_at": "2025-06-02T11:22:11.180793"
-    },
-    {
-        "tweet_id": "1929087231698022794",
-        "score": 0.532,
-        "account_followers": 3283,
-        "keyword_matches": ["opens"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/trang110998/status/1929087231698022794",
-        "source_file": "tweet_1929087231698022794_2025-06-02T11-22-11.425633.json",
-        "collected_at": "2025-06-02T11:22:11.425633"
-    },
-    {
-        "tweet_id": "1929245830986285211",
-        "score": 0.532,
-        "account_followers": 12760,
-        "keyword_matches": ["registration"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/MetaDAOProject/status/1929245830986285211",
-        "source_file": "tweet_1929245830986285211_2025-06-02T11-22-11.641136.json",
-        "collected_at": "2025-06-02T11:22:11.641136"
-    },
-    {
-        "tweet_id": "1929338331394883940",
-        "score": 0.516,
-        "account_followers": 1770,
-        "keyword_matches": ["challenge"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/gabrielbajohn/status/1929338331394883940",
-        "source_file": "tweet_1929338331394883940_2025-06-02T11-22-11.564771.json",
-        "collected_at": "2025-06-02T11:22:11.564771"
-    },
-    {
-        "tweet_id": "1929416100242214953",
-        "score": 0.516,
-        "account_followers": 13289,
-        "keyword_matches": ["hack"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/1nf0s3cpt/status/1929416100242214953",
-        "source_file": "tweet_1929416100242214953_2025-06-02T11-22-11.289945.json",
-        "collected_at": "2025-06-02T11:22:11.289945"
-    },
-    {
-        "tweet_id": "1929468270018715667",
-        "score": 0.516,
-        "account_followers": 3093,
-        "keyword_matches": ["challenge"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/Dragon_Taiwan/status/1929468270018715667",
-        "source_file": "tweet_1929468270018715667_2025-06-02T11-22-11.557206.json",
-        "collected_at": "2025-06-02T11:22:11.557206"
-    },
-    {
-        "tweet_id": "1929123375319851198",
-        "score": 0.5,
-        "account_followers": 4146,
-        "keyword_matches": ["winners", "judges", "hackathon", "hack"],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/crtr0/status/1929123375319851198",
-        "source_file": "tweet_1929123375319851198_2025-06-02T11-22-11.509875.json",
-        "collected_at": "2025-06-02T11:22:11.509875"
-    },
-    {
-        "tweet_id": "1929277316158599605",
-        "score": 0.5,
-        "account_followers": 1070,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/nice012023/status/1929277316158599605",
-        "source_file": "tweet_1929277316158599605_2025-06-02T11-22-11.573313.json",
-        "collected_at": "2025-06-02T11:22:11.573313"
-    },
-    {
-        "tweet_id": "1929302914138276224",
-        "score": 0.5,
-        "account_followers": 4747,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://x.com/soyjaviergil/status/1929302914138276224",
-        "source_file": "tweet_1929302914138276224_2025-06-02T11-22-11.342599.json",
-        "collected_at": "2025-06-02T11:22:11.342599"
-    },
-    {
-        "tweet_id": "1929303024993804571",
-        "score": 0.5,
-        "account_followers": 1109,
-        "keyword_matches": [],
-        "follower_fit": 1,
-        "expanded_url": "https://www.geekmetaverse.com/how-ai-is-creating-self-owned-crypto-companies-the-dao-revolution/",
-        "source_file": "tweet_1929303024993804571_2025-06-02T11-22-11.339594.json",
-        "collected_at": "2025-06-02T11:22:11.339594"
-    }
+  {
+    "tweet_id": "1930152234928460179",
+    "score": 0.5,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "#AI",
+      "web3",
+      "hack",
+      "#Hackathon",
+      "#ImmigrantEmpowerment",
+      "ai",
+      "#Techxcellence",
+      "#Web3"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/TechXcellence01/status/1930152234928460179",
+    "source_file": "tweet_1930152234928460179_2025-06-04T10-32-42.067367+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.067367+00:00",
+    "text": "Empower Startups!\nJOIN OUR HACKATHON! Use Web3 or AI to revolutionize the immigrant experience in a new country. Sign up now @ (https://t.co/B5lUvY9npJ) and let's shape the future together! \n\n#Techxce..."
+  },
+  {
+    "tweet_id": "1930197931090493796",
+    "score": 0.5,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "innovation",
+      "#AI",
+      "hack",
+      "#Hackathon",
+      "ai",
+      "#AgriTech"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/ShlokKhairnar33/status/1930197931090493796",
+    "source_file": "tweet_1930197931090493796_2025-06-04T10-32-42.063008+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.063008+00:00",
+    "text": "It’s appalling that a basic univariate LSTM model — built only on past crop price data — just won ₹7.5L as runner-up at the Pune AgriTech Hackathon. This is not innovation. It’s an average undergrad p..."
+  },
+  {
+    "tweet_id": "1930209832604483863",
+    "score": 0.5,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "#AWSLambda",
+      "build",
+      "innovation",
+      "hack",
+      "#Hackathon",
+      "#AWS",
+      "#CloudComputing",
+      "#Serverless"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/ReyedgeM/status/1930209832604483863",
+    "source_file": "tweet_1930209832604483863_2025-06-04T10-32-42.059091+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.059091+00:00",
+    "text": "🔥 Calling all builders!\nJoin the #AWSLambda Hackathon &amp; craft your next big thing with ⚡ serverless architecture!\nNo servers, just pure innovation 💡\n🚀 Start now 👉 [https://t.co/7P9mFrKdWh..]\n\n#Ser..."
+  },
+  {
+    "tweet_id": "1930164066363847083",
+    "score": 0.3,
+    "account_followers": 0,
+    "keyword_matches": [
+      "defi",
+      "hackathon",
+      "build",
+      "#AI",
+      "web3",
+      "hack",
+      "#Hackathon",
+      "#DeFi",
+      "#Chainlink",
+      "ai",
+      "#Web3"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/Huzaifa1614402/status/1930164066363847083",
+    "source_file": "tweet_1930164066363847083_2025-06-04T10-32-42.066361+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.066361+00:00",
+    "text": "@chainlink AI → Tokenization → DeFi\n🚀 Bring your idea to life at the Chainlink Hackathon\n\n🔧 Dev-friendly workshops\n🧩 Simplify complex builds\n💰 Win your share of $200K+ in prizes\n\nReady to build the fu..."
+  },
+  {
+    "tweet_id": "1930173896419893427",
+    "score": 0.3,
+    "account_followers": 0,
+    "keyword_matches": [
+      "#Ideathon",
+      "#ai",
+      "hackathon",
+      "#NYTechWeek",
+      "hack",
+      "#Hackathon",
+      "ai"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/0d_xyzet/status/1930173896419893427",
+    "source_file": "tweet_1930173896419893427_2025-06-04T10-32-42.065013+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.065013+00:00",
+    "text": "5 hours to start. \n+160 registrations.\n\nStill room to join: https://t.co/EoYKKj3HjP\n\n#NYTechWeek #Ideathon #Hackathon #ai https://t.co/WS1idcvhwy"
+  },
+  {
+    "tweet_id": "1930208362039316692",
+    "score": 0.3,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "build",
+      "#hackathon",
+      "#buildinpublic",
+      "hack"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/MokhethiSe/status/1930208362039316692",
+    "source_file": "tweet_1930208362039316692_2025-06-04T10-32-42.059091+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.059091+00:00",
+    "text": "Thanks to https://t.co/gZWQbCqlgr my business will become a reality . \n#hackathon @boltdotnew  #buildinpublic https://t.co/eYIy2Ji86p"
+  },
+  {
+    "tweet_id": "1930176851604853086",
+    "score": 0.25,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "#hackathon",
+      "hack"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/TekStak/status/1930176851604853086",
+    "source_file": "tweet_1930176851604853086_2025-06-04T10-32-42.065013+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.065013+00:00",
+    "text": "Day 4 of the #hackathon for me! 😃  Today's will be a slower day, but still stuff to be done! \nBut tomorrow i go all in!! https://t.co/5Abwb94Hkp"
+  },
+  {
+    "tweet_id": "1930173395833880853",
+    "score": 0.2,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "build",
+      "#Blockchain",
+      "hack",
+      "web3",
+      "blockchain",
+      "#Hackathon",
+      "contest",
+      "ai",
+      "#Web3"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/BuilderRegis/status/1930173395833880853",
+    "source_file": "tweet_1930173395833880853_2025-06-04T10-32-42.066361+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.066361+00:00",
+    "text": "With TrustGiveaway, we’re building contests you can truly trust.\n\nLearn more:\nhttps://t.co/PH95ag9uzA\n\n#Web3 #Hackathon #Blockchain"
+  },
+  {
+    "tweet_id": "1930207954235437121",
+    "score": 0.2,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "#hackathon",
+      "innovation",
+      "hack"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/TPRgovuk/status/1930207954235437121",
+    "source_file": "tweet_1930207954235437121_2025-06-04T10-32-42.060555+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.060555+00:00",
+    "text": "At our #hackathon today, we are challenging attendees to develop solutions to some of the toughest problems in pensions. If you have answers to the questions we posed, share them with us in the commen..."
+  },
+  {
+    "tweet_id": "1930110556117033369",
+    "score": 0.1,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "hack",
+      "#hisse",
+      "#astor",
+      "#borsa",
+      "nft",
+      "#bist100",
+      "ai",
+      "#elsed"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/crime_inc1/status/1930110556117033369",
+    "source_file": "tweet_1930110556117033369_2025-06-04T10-32-42.068368+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.068368+00:00",
+    "text": "⚠️send us a direct message if you've been scammed. Your security is completely guaranteed 💯! #elsed #bist100\n#hisse #astor #borsa #zagabet #rinabet #yrkkh #naagin #infosec #hackathon #kalilinux #Targe..."
+  },
+  {
+    "tweet_id": "1930130790861455418",
+    "score": 0.1,
+    "account_followers": 0,
+    "keyword_matches": [
+      "#FirstHackathon",
+      "hackathon",
+      "coding",
+      "hack",
+      "#Hackathon",
+      "#CodingTips",
+      "#HackathonLife"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/PoojaPatil122/status/1930130790861455418",
+    "source_file": "tweet_1930130790861455418_2025-06-04T10-32-42.067367+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.067367+00:00",
+    "text": "🚀 Getting ready for my first hackathon — super excited and a bit nervous! 😅\nI’d love to hear your tips, tricks, and must-dos for beginners 💡\nAlso, if you know any upcoming hackathons (online/offline),..."
+  },
+  {
+    "tweet_id": "1930176152271749510",
+    "score": 0.1,
+    "account_followers": 0,
+    "keyword_matches": [
+      "#hackathon",
+      "hackathon",
+      "build",
+      "hack"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/TekStak/status/1930176152271749510",
+    "source_file": "tweet_1930176152271749510_2025-06-04T10-32-42.065013+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.065013+00:00",
+    "text": "Day 4 of the @boltdotnew #hackathon 😃 \nToday's goals:\n\n• Build out more of the UI for my solo app, hopefully I'll have a preview for you later! It's pretty tricky. 🤔 \n\n• I have a couple posts schedule..."
+  },
+  {
+    "tweet_id": "1930180307883360654",
+    "score": 0.1,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "#hackathon",
+      "innovation",
+      "hack"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/TPRgovuk/status/1930180307883360654",
+    "source_file": "tweet_1930180307883360654_2025-06-04T10-32-42.064013+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.064013+00:00",
+    "text": "Today our #hackathon will bring together pensions professionals, service designers, and fintech founders to support innovation in savers’ interests. Read more about how we are helping industry innovat..."
+  },
+  {
+    "tweet_id": "1930207073142202826",
+    "score": 0.1,
+    "account_followers": 0,
+    "keyword_matches": [
+      "hackathon",
+      "build",
+      "web3",
+      "hack",
+      "#hackathon",
+      "#protocol",
+      "#NEROChain",
+      "ai",
+      "#Web3"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/Sharan007X/status/1930207073142202826",
+    "source_file": "tweet_1930207073142202826_2025-06-04T10-32-42.062005+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.062005+00:00",
+    "text": "👾 Builders, dreamers, explorers... \n\nyour new home is here:  📷 NERO LABS\n 📷 A cosmic vault of #hackathon heroes, grant legends, and #protocol pioneers 📷\n 📷 Start your development here 📷https://t.co/gu..."
+  },
+  {
+    "tweet_id": "1930196184683171894",
+    "score": 0.0,
+    "account_followers": 100,
+    "keyword_matches": [
+      "hackathon",
+      "build",
+      "web3",
+      "hack",
+      "#hackathon",
+      "#protocol",
+      "#NEROChain",
+      "ai",
+      "#Web3"
+    ],
+    "follower_fit": 0,
+    "expanded_url": "https://x.com/Nerochain_io/status/1930196184683171894",
+    "source_file": "tweet_1930196184683171894_2025-06-04T10-32-42.063008+00-00.json",
+    "collected_at": "2025-06-04T10:32:42.063008+00:00",
+    "text": "👾 Builders, dreamers, explorers... your new home is here:\n\n🏛️ NERO LABS 🔥\n🧬 A cosmic vault of #hackathon heroes, grant legends, and #protocol pioneers 🛠️\n\n🪙 Start your development here 👇\nhttps://t.co/..."
+  }
 ]
