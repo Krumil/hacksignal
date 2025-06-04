@@ -1,63 +1,80 @@
 import { NextResponse } from "next/server";
 import { BackendAPI } from "@/lib/backend-api";
 
-// This would connect to the Python backend in a real implementation
+// This connects to the Python backend hackathons endpoint
 export async function GET() {
+    console.log("🔌 API Route: /api/hackathons GET called");
     try {
-        // Get top tweets from the backend (these represent potential hackathons)
-        const tweets = await BackendAPI.getTopTweets(20);
+        console.log("🏆 Attempting to fetch hackathons from backend...");
+        // Get pre-transformed hackathon data from the backend
+        const hackathonsData = await BackendAPI.getTopHackathons(10);
+        console.log("✅ Backend hackathons response received:", hackathonsData);
 
-        // Transform tweets data into hackathon format if needed
-        // For now, returning the tweets as they are from the backend
-        return NextResponse.json({
-            hackathons: tweets,
+        // Return the hackathon data directly since it's already formatted
+        const response = {
+            hackathons: hackathonsData,
             source: "backend_api",
-        });
+        };
+        console.log("📤 Returning backend hackathon data:", response);
+        return NextResponse.json(response);
     } catch (error) {
-        console.error("Failed to fetch hackathons from backend:", error);
+        console.error("❌ Failed to fetch hackathons from backend:", error);
 
         // Fallback to mock data if backend is unavailable
         const fallbackHackathons = [
             {
-                id: 1,
+                id: "hack_fallback_1",
                 title: "AI Innovation Challenge",
                 organizer: "TechCorp",
                 prizePool: 25000,
                 duration: 14,
                 relevanceScore: 95,
                 tags: ["AI", "Machine Learning", "Innovation"],
-                deadline: "2024-03-15T00:00:00Z",
+                description:
+                    "Build innovative solutions using artificial intelligence and machine learning. Compete with developers worldwide for $25,000 in total prizes. Great opportunity to showcase your skills and win significant rewards.",
+                deadline: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
+                registrationUrl: "https://example.com/ai-challenge",
                 website: "https://example.com/ai-challenge",
+                location: "Remote/Online",
             },
             {
-                id: 2,
+                id: "hack_fallback_2",
                 title: "Blockchain Builders Hackathon",
                 organizer: "CryptoFoundation",
                 prizePool: 15000,
                 duration: 7,
                 relevanceScore: 88,
                 tags: ["Crypto", "Blockchain", "Web3"],
-                deadline: "2024-03-10T00:00:00Z",
+                description:
+                    "Build innovative solutions using blockchain and distributed ledger technology. Compete with developers worldwide for $15,000 in total prizes. Perfect for learning, networking, and building your portfolio.",
+                deadline: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+                registrationUrl: "https://example.com/blockchain-hack",
                 website: "https://example.com/blockchain-hack",
+                location: "Remote/Online",
             },
         ];
 
-        return NextResponse.json({
+        const fallbackResponse = {
             hackathons: fallbackHackathons,
             source: "fallback_data",
             error: "Backend unavailable",
-        });
+        };
+        console.log("🔄 Returning fallback hackathon data:", fallbackResponse);
+        return NextResponse.json(fallbackResponse);
     }
 }
 
-// Future endpoint to connect to Python backend
+// Trigger backend pipeline refresh
 export async function POST() {
+    console.log("🔌 API Route: /api/hackathons POST called");
     try {
+        console.log("🚀 Triggering backend pipeline...");
         // Trigger the backend pipeline to refresh data
         const result = await BackendAPI.runPipeline();
+        console.log("✅ Pipeline result:", result);
         return NextResponse.json(result);
     } catch (error) {
-        console.error("Failed to trigger pipeline:", error);
+        console.error("❌ Failed to trigger pipeline:", error);
         return NextResponse.json({ error: "Failed to trigger pipeline refresh" }, { status: 500 });
     }
 }

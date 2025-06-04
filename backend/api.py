@@ -24,6 +24,8 @@ RAW_DIR = DATA_DIR / "raw"
 ENRICHED_DIR = DATA_DIR / "enriched"
 DEFAULT_SCORED_FILE = ENRICHED_DIR / "scored_tweets.json"
 TOP_SCORED_FILE = ENRICHED_DIR / "top_scored_tweets.json"
+HACKATHONS_FILE = ENRICHED_DIR / "hackathons.json"
+TOP_HACKATHONS_FILE = ENRICHED_DIR / "top_hackathons.json"
 
 
 @app.get("/health", tags=["Utility"])
@@ -80,4 +82,64 @@ def get_raw_tweets() -> List[Dict[str, Any]]:
     # Load the most recent raw file for simplicity
     with raw_files[0].open("r", encoding="utf-8") as f:
         tweets = json.load(f)
-    return tweets 
+    return tweets
+
+
+@app.get("/hackathons", tags=["Hackathons"])
+def get_hackathons(limit: int = 50) -> Dict[str, Any]:
+    """Return transformed hackathon data up to *limit* (default 50)."""
+    if not HACKATHONS_FILE.exists():
+        raise HTTPException(
+            status_code=404, 
+            detail="Hackathons file not found. Run the pipeline first to generate hackathon data."
+        )
+    
+    try:
+        with HACKATHONS_FILE.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        hackathons = data.get('hackathons', [])
+        metadata = data.get('metadata', {})
+        
+        # Apply limit
+        limited_hackathons = hackathons[:limit]
+        
+        return {
+            "hackathons": limited_hackathons,
+            "metadata": {
+                **metadata,
+                "returned_count": len(limited_hackathons),
+                "total_count": len(hackathons),
+                "limit_applied": limit
+            }
+        }
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=500, detail="Invalid hackathons data file")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading hackathons data: {str(e)}")
+
+
+@app.get("/hackathons/top", tags=["Hackathons"])
+def get_top_hackathons(limit: int = 20) -> List[Dict[str, Any]]:
+    """Return the top hackathons (highest relevance scores) up to *limit* (default 20)."""
+    # Always use the main hackathons file to get full dataset
+    if not HACKATHONS_FILE.exists():
+        raise HTTPException(
+            status_code=404, 
+            detail="Hackathons file not found. Run the pipeline first to generate hackathon data."
+        )
+    
+    try:
+        with HACKATHONS_FILE.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        hackathons = data.get('hackathons', [])
+        
+        # Sort by relevance score and return top entries
+        sorted_hackathons = sorted(hackathons, key=lambda x: x.get('relevanceScore', 0), reverse=True)
+        return sorted_hackathons[:limit]
+        
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=500, detail="Invalid hackathons data file")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading hackathons data: {str(e)}") 
