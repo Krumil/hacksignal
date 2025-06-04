@@ -74,5 +74,5 @@ python -m pytest
 
 For detailed documentation, see:
 
--   [SCORING_README.md](SCORING_README.md) - Scoring algorithm details
+-   [SCORING_README.md](documentation/SCORING_README.md) - Scoring algorithm details
 -   [Policy.md](Policy.md) - Data retention and privacy policies

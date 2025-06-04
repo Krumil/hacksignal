@@ -141,7 +141,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📚 Documentation
 
 -   [Backend Documentation](backend/README.md)
--   [Backend Scoring Algorithm](backend/SCORING_README.md)
+-   [Backend Scoring Algorithm](backend/documentation/SCORING_README.md)
 -   [Privacy & Compliance Policy](backend/Policy.md)
 -   [Changelog](CHANGELOG.md)
 
